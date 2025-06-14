@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>María Fabregat - Psicología</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f1f1f1;
+      color: #333;
+       font-size: 16px;
+      overflow-x: hidden;
+    }
+    header.top-bar {
+      background-color: #e6d4ef;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+    header.top-bar a {
+      margin: 0 0.5rem;
+      text-decoration: none;
+      color: #333;
+    }
+    .lang-switcher {
+      margin-left: auto;
+    }
+    .main-header {
+      background-color: #bfa4d1;
+      color: white;
+      text-align: left;
+      padding: 4rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .main-header-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 100%;
+}
+
+    .main-header .header-content {
+      flex: 1;
+    }
+    .main-header img {
+      height: 160px;
+      margin-bottom: 0;
+      margin-left: 2rem;
+    }
+    .main-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin: 0.5rem 0;
+    }
+    .main-header p {
+      margin: 0.5rem 0 1.5rem;
+    }
+    .btn {
+      background-color: #9f7db4;
+      color: rgb(255, 255, 255);
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+    .about img {
+      max-width: 200px;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+h2, h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+    .about div {
+      flex: 1; 
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      text-align: center;
+    }
+    .service {
+      background-color: #f9f3fc;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .service-icon {
+      font-size: 2rem;
+      color: #ddc8f1;
+      margin-bottom: 0.5rem;
+    }
+    #servicios-detalle {
+  display: none;
+  max-width: 600px;
+  min-height: 260px;   /* Altura mínima */
+  max-height: 320px;   /* Altura máxima */
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 2rem;
+  position: relative;
+  overflow: auto;      /* Scroll si el texto es muy largo */
+  transition: min-height 0.2s, max-height 0.2s;
+}
+    .quote {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      padding: 2rem 1rem;
+      background-color: #e5daf0;
+    }
+    .testimonios {
+      background-color: #bfa4d1;
+      padding: 3.5rem 0;
+      text-align: center;
+      width: 100vw;
+      min-width: 100vw;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+      position: relative;
+      box-sizing: border-box;
+    }
+.testimonial-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto 1.5rem auto;
+  height: auto;
+  gap: 0;
+}
+.testimonial-prev, .testimonial-next {
+  background: #9f7db4;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.testimonial-carousel-controls .testimonial-container {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0;
+  padding: 0 1rem;
+}
+@media (max-width: 1300px) {
+  .testimonial-carousel-controls .testimonial-container {
+    max-width: 98vw;
+    padding: 0 0.5rem;
+    gap: 1rem;
+  }
+}
+@media (max-width: 900px) {
+  .testimonial-carousel-controls .testimonial-container {
+    gap: 0.5rem;
+  }
+}
+    .testimonial-container {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: nowrap;
+      overflow: hidden;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 5rem; /* más espacio para flechas y comentarios largos */
+    }
+
+    .testimonial {
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 12px;
+      padding: 2rem 1.5rem;
+      width: 370px;
+      min-height: 180px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .testimonial p {
+      margin: 1.5rem 0 0;
+      font-size: 1.05rem;
+      color: #333;
+      line-height: 1.6;
+    }
+    .testimonial i {
+      color: #bfa4d1;
+      font-size: 1.7rem;
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center; /* Centers the image horizontally */
+      align-items: center; /* Centers the image vertically (if needed) */
+      margin-top: 1rem; /* Optional: Adds spacing above the image */
+    }
+
+    .image-container img {
+      width: 40%; /* Adjust the size of the image */
+      border-radius: 8px; /* Keeps the rounded corners */
+    }
+.image-carousel {
+  position: relative;
+  width: 100%;
+  min-width: 250px;
+  max-width: 100%; /* Cambia esto para que ocupe todo el ancho de la columna */
+  aspect-ratio: 4/3;
+  margin: 1rem 0; /* Elimina el auto para alinear a la izquierda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+}
+.carousel-img {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.carousel-img.active {
+  display: block;
+
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(159, 125, 180, 0.8);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 2.2rem;
+  height: 2.2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+.carousel-btn:hover { background: #9f7db4; }
+    form {
+      display: grid;
+      gap: 1rem;
+      max-width: 500px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: 'Open Sans', sans-serif;
+    }
+    button[type="submit"].btn {
+      font-size: 1rem;
+    }
+ .content-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center; /* centra verticalmente */
+  justify-content: center; /* centra horizontalmente */
+  margin-bottom: 2rem;
+}
+.carousel-col {
+  flex: 1 1 0;
+  min-width: 250px;
+  max-width: 500px; /* Cambiado a 600px */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 300px;
+}
+.image-carousel {
+  position: relative;
+  width: 100%;
+  min-width: 250px;
+  max-width: 500px; /* Cambiado a 600px */
+  aspect-ratio: 4/3;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 8px;
+  background: #fff;
+}
+.map-col {
+  flex: 1 1 0;
+  min-width: 250px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 300px;
+}
+.map-col iframe {
+  width: 100%;
+  height: 100%;
+  min-width: 250px;
+  max-width: 500px;
+  min-height: 250px;
+  max-height: 300px;
+  border-radius: 8px;
+  border: 0;
+  display: block;
+  box-sizing: border-box;
+}
+@media (max-width: 900px) {
+  .content-flex {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .map-col, .carousel-col {
+    max-width: 100%;
+  }
+}
+    footer {
+      background-color: #38264e;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    footer a {
+      color: white;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+.tabs-modalidad {
+  display: flex;
+  gap: 2.2rem;
+  justify-content: flex-start;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+.tab-btn {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  background: none;
+  border: none;
+  color: #9f7db4;
+  padding: 0.7rem 2.2rem;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+.tab-btn.active {
+  background: #e6d4ef;
+  color: #38264e;
+}
+.tab-btn:focus {
+  outline: 2px solid #bfa4d1;
+}
+@media (max-width: 1000px) {
+  .tabs-modalidad {
+    margin-left: 1rem;
+    max-width: 100%;
+    gap: 1.2rem;
+  }
+  .tab-btn {
+    font-size: 1.08rem;
+    padding: 0.7rem 1.2rem;
+  }
+}
+#contacto h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Botón flotante de WhatsApp */
+  .whatsapp-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    background: #25d366;
+    color: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+    font-size: 2.2rem;
+    transition: box-shadow 0.2s, background 0.2s;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    text-decoration: none;
+  }
+  .whatsapp-float:hover {
+    background: #1ebe5d;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.22);
+  }
+  </style>
+</head>
+<body>
+<header class="top-bar">
+  <div>
+    Sígueme y contáctame:
+    <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
+    <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+ <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo.%20%C2%BFPodr%C3%ADas%20decirme%20c%C3%B3mo%20podemos%20concretarla%3F%20Gracias" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+  </div>
+  <div class="lang-switcher">
+    <a href="#">Castellano</a> | <a href="#">Català</a>
+  </div>
+</header>
+
+<div class="main-header">
+  <div class="main-header-inner">
+    <div class="header-content">
+      <h1>Espacio para comprenderte y acompañarte</h1>
+      <p>Psicoterapia integradora para adultos y parejas</p>
+      <a href="#contacto" class="btn">Reserva una sesión</a>
+    </div>
+    <img src="logoH_negatiu.png" alt="Logo María Fabregat">
+  </div>
+</div>
+
+  <section class="about">
+    <img src="maria_perfil.jpg" alt="María Fabregat">
+    <div>
+      <h2>Sobre mí</h2>
+      <p>Soy psicóloga y psicoterapeuta con 10 años de experiencia.<br>Será un placer acompañarte en tu proceso de transformación personal,<br>en un espacio seguro en el que puedes sentirte con total libertad.</p>
+      <br> 
+      <a href="#" class="btn" id="open-cv-modal">Ver mi formación</a>
+    </div>
+  </section>
+
+   <section>
+    <h2>Servicios</h2>
+    <div class="services">
+      <div class="service">
+        <div class="service-icon"><i class="fas fa-user"></i></div>
+        <h3>Psicoterapia individual</h3>
+        <a href="#" class="btn">Saber más</a>
+      </div>
+      <div class="service">
+        <div class="service-icon"><i class="fas fa-users"></i></div>
+        <h3>Terapia de pareja</h3>
+        <a href="#" class="btn">Saber más</a>
+      </div>
+      <div class="service">
+        <div class="service-icon"><i class="fas fa-spa"></i></div>
+        <h3>Kinesiología emocional</h3>
+        <a href="#" class="btn">Saber más</a>
+      </div>
+      <div class="service">
+        <div class="service-icon"><i class="fas fa-brain"></i></div>
+        <h3>Supervisión de terapias</h3>
+        <a href="#" class="btn">Saber más</a>
+      </div>
+    </div>
+  </section>
+<!-- Sección oculta de explicaciones de servicios -->
+<section id="servicios-detalle" style="display:none; max-width:600px; margin:2rem auto; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:2rem; position:relative;">
+  <button id="cerrar-servicios" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+  <div id="servicio-explicacion">
+    <!-- Aquí se mostrará la explicación -->
+  </div>
+  <div style="display:flex; justify-content:space-between; margin-top:2rem;">
+    <button id="anterior-servicio" class="btn">Anterior</button>
+    <button id="siguiente-servicio" class="btn">Siguiente</button>
+  </div>
+</section>
+  <div class="quote">
+    El primer paso no te lleva donde quieres ir,<br>pero te saca de donde estás.
+  </div>
+
+  <section>
+    <h2>Método y enfoque</h2>
+    <ul>
+      <li>1. Escucha profunda</li>
+      <li>2. Mirada integradora</li>
+      <li>3. Proceso personalizado</li>
+      <li>4. Espacio seguro y sin juicio</li>
+    </ul>
+  </section>
+
+<section class="presencial-online">
+
+  <div class="tabs-modalidad" style="max-width:600px;margin:0 auto 2rem; justify-content:flex-start;">
+    <button class="tab-btn active" data-tab="barcelona" style="margin-right:0;">Psicóloga en Barcelona</button>
+    <button class="tab-btn" data-tab="online" style="margin-left:0;">Terapia online</button>
+  </div>
+  <div class="tab-content" id="tab-barcelona" style="display:block;">
+    <div class="content-flex">
+      <div class="carousel-col">
+        <div class="image-carousel">
+          <img src="despatx.jpg" alt="Consulta psicológica" class="carousel-img active">
+          <img src="cuadros.jpg" alt="Cuadros en la consulta" class="carousel-img">
+          <img src="agua.jpg" alt="Agua para pacientes" class="carousel-img">
+          <img src="panuelos.jpg" alt="Pañuelos en la consulta" class="carousel-img">
+          <button class="carousel-btn prev">&#10094;</button>
+          <button class="carousel-btn next">&#10095;</button>
+        </div>
+      </div>
+      <div class="map-col">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.668792385364!2d2.1718998121556505!3d41.42470789355895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3a28c1e7b05%3A0xbd73673816a85ae!2sPsicologa%20Maria%20Fabregat!5e0!3m2!1sca!2ses!4v1749044221132!5m2!1sca!2ses"
+          style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+  <div class="tab-content" id="tab-online" style="display:none;">
+    <div class="content" style="max-width:600px;margin:2rem auto;">
+      <h3>¿Cómo funciona la terapia online?</h3>
+      <p>La terapia online se realiza por videollamada, en un entorno seguro y confidencial. Es ideal si prefieres la comodidad de tu hogar, tienes dificultades de desplazamiento o vives fuera de Barcelona. Solo necesitas un dispositivo con cámara y conexión a internet. El proceso y la calidad de la atención son los mismos que en la modalidad presencial.</p>
+      <ul>
+        <li>Flexibilidad horaria y geográfica</li>
+        <li>Privacidad y comodidad</li>
+        <li>Enlace de videollamada seguro (Zoom, Google Meet, etc.)</li>
+        <li>Atención personalizada y cercana</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <section class="testimonios">
+    <h2>Testimonios</h2>
+    <div class="testimonial-carousel-controls">
+      <button class="testimonial-prev btn" aria-label="Anterior">&#10094;</button>
+      <div class="testimonial-container" id="testimonial-container">
+        <!-- Los testimonios se insertarán aquí por JS -->
+      </div>
+      <button class="testimonial-next btn" aria-label="Siguiente">&#10095;</button>
+    </div>
+  </section>
+
+  <section class="doctoralia-strip" style="background:#e6d4ef; width:100vw; min-width:100vw; margin-left:-50vw; left:50%; right:50%; position:relative; display:flex; justify-content:center; padding:2.5rem 1rem; box-sizing:border-box;">
+    <div style="background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.10); max-width:370px; width:100%; padding:2rem 1.5rem; display:flex; flex-direction:column; align-items:center;">
+      <div style="display:flex; align-items:center; width:100%; margin-bottom:1rem;">
+        <img src="maria_perfil.jpg" alt="María Fabregat" style="width:56px; height:56px; border-radius:8px; object-fit:cover; margin-right:1rem;">
+        <div style="flex:1;">
+          <div style="font-weight:700; font-size:1.1rem; color:#222;">Maria Fabregat i Giribet <span style="color:#00bfae; font-size:1rem; vertical-align:middle;">&#10003;</span></div>
+        </div>
+      </div>
+      <div style="font-size:0.98rem; color:#666; width:100%; text-align:left; margin-bottom:0.2rem;">Psicóloga</div>
+      <div style="color:#00bfae; font-size:1.1rem; margin-top:0.2rem; width:100%; text-align:left;">
+        <span style="font-size:1.1rem; color:#00bfae;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span style="color:#444; font-size:0.95rem; margin-left:0.3rem;">62 opiniones</span>
+      </div>
+      <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona#profile-reviews" target="_blank" style="display:block; width:100%; background:#00bfae; color:#fff; text-align:center; font-weight:600; font-size:1.1rem; border-radius:6px; padding:0.9rem 0; text-decoration:none; margin-bottom:0.7rem; transition:background 0.2s;">Reservar cita</a>
+      <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona#profile-reviews" target="_blank" style="color:#00bfae; font-size:0.98rem; text-decoration:none; margin-top:0.2rem;">Doctoralia</a>
+    </div>
+  </section>
+
+  <section id="contacto">
+    <h2 style="text-align:left; max-width:500px; margin:0 auto 2rem auto;">Contacto</h2>
+    <form>
+      <input type="text" name="nombre" placeholder="Nombre" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <input type="tel" name="telefono" placeholder="Teléfono">
+      <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+      <button type="submit" class="btn">Enviar</button>
+    </form>
+  </section>
+
+<!-- Se eliminan los bloques de modalidades y la sección oculta explicativa -->
+<!-- ...footer... -->
+<footer>
+  <p>Sígueme y contáctame:
+    <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
+    <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+    <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo.%20%C2%BFPodr%C3%ADas%20decirme%20c%C3%B3mo%20podemos%20concretarla%3F%20Gracias" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+  </p>
+  <p>&copy; 2025 Maria Fabregat</p>
+</footer>
+
+<!-- AÑADE AQUÍ EL MODAL Y EL SCRIPT, ANTES DE </body> -->
+<div id="cv-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:9999; justify-content:center; align-items:center;">
+  <div style="background:#f1f1f1; padding:2rem; border-radius:8px; max-width:90vw; max-height:90vh; overflow:auto; text-align:left; position:relative;">
+    <button id="close-cv-modal" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
+    <h2 style="color:#9f7db4;">Mi formación</h2>
+    <ul style="display:flex; flex-direction:column; gap:1.1rem;">
+      <li>Grado en Psicología - Universidad de Barcelona</li>
+      <li>Máster en Terapia Cognitivo Social - Universidad de Barcelona</li>
+      <li>Monográfico de Terapia de Pareja - Dendros Centro de Psicología</li>
+      <li>Curso de Kinesiología Emocional - Centro Uniun</li>
+      <li>10 años de experiencia clínica. Psicóloga General Sanitaria</li>
+    </ul>
+  </div>
+</div>
+
+<script>
+document.getElementById('open-cv-modal').onclick = function(e) {
+  e.preventDefault();
+  document.getElementById('cv-modal').style.display = 'flex';
+};
+document.getElementById('close-cv-modal').onclick = function() {
+  document.getElementById('cv-modal').style.display = 'none';
+};
+document.getElementById('cv-modal').onclick = function(e) {
+  if (e.target === this) this.style.display = 'none';
+};
+</script>
+<script>
+const servicios = [
+  {
+    titulo: "Psicoterapia individual",
+    texto: "Espacio seguro para trabajar tus emociones, pensamientos y conductas. Te acompaño en procesos de ansiedad, autoestima, duelo, toma de decisiones y crecimiento personal."
+  },
+  {
+    titulo: "Terapia de pareja",
+    texto: "Intervención para mejorar la comunicación, resolver conflictos y fortalecer el vínculo afectivo. Trabajo con ambas partes para encontrar soluciones y bienestar conjunto."
+  },
+  {
+    titulo: "Kinesiología emocional",
+    texto: "Técnica que ayuda a identificar y liberar bloqueos emocionales a través del cuerpo. Complementa la terapia psicológica para un abordaje más integral."
+  },
+  {
+    titulo: "Supervisión de terapias",
+    texto: "Espacio para profesionales que buscan orientación, revisión de casos y apoyo en su práctica clínica. Supervisión basada en la experiencia y el enfoque integrador."
+  }
+];
+
+let idxServicio = 0;
+
+function mostrarServicio(idx) {
+  const s = servicios[idx];
+  document.getElementById('servicio-explicacion').innerHTML =
+    `<h3>${s.titulo}</h3><p>${s.texto}</p>`;
+}
+
+document.querySelectorAll('.service .btn').forEach((btn, i) => {
+  btn.onclick = function(e) {
+    e.preventDefault();
+    idxServicio = i;
+    mostrarServicio(idxServicio);
+    document.getElementById('servicios-detalle').style.display = 'block';
+  };
+});
+
+document.getElementById('anterior-servicio').onclick = function() {
+  idxServicio = (idxServicio - 1 + servicios.length) % servicios.length;
+  mostrarServicio(idxServicio);
+};
+document.getElementById('siguiente-servicio').onclick = function() {
+  idxServicio = (idxServicio + 1) % servicios.length;
+  mostrarServicio(idxServicio);
+};
+document.getElementById('cerrar-servicios').onclick = function() {
+  document.getElementById('servicios-detalle').style.display = 'none';
+};
+</script>
+<script>
+// Carrusel de imágenes
+const imgs = document.querySelectorAll('.image-carousel .carousel-img');
+const prevBtn = document.querySelector('.image-carousel .prev');
+const nextBtn = document.querySelector('.image-carousel .next');
+let current = 0;
+
+function showImg(idx) {
+  imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
+}
+prevBtn.onclick = () => {
+  current = (current - 1 + imgs.length) % imgs.length;
+  showImg(current);
+};
+nextBtn.onclick = () => {
+  current = (current + 1) % imgs.length;
+  showImg(current);
+};
+</script>
+<script>
+// Tabs para modalidad presencial/online
+const tabBtns = document.querySelectorAll('.tab-btn');
+const tabContents = {
+  barcelona: document.getElementById('tab-barcelona'),
+  online: document.getElementById('tab-online')
+};
+tabBtns.forEach(btn => {
+  btn.onclick = function() {
+    tabBtns.forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    if (this.dataset.tab === 'barcelona') {
+      tabContents.barcelona.style.display = 'block';
+      tabContents.online.style.display = 'none';
+    } else {
+      tabContents.barcelona.style.display = 'none';
+      tabContents.online.style.display = 'block';
+    }
+  };
+});
+</script>
+<script>
+// Carrusel de testimonios por grupos
+const testimonios = [
+  {
+    texto: "Maria me ayudó a ver las cosas desde otra perspectiva. Es cálida, profesional y muy cercana."
+  },
+  {
+    texto: "Gracias a su acompañamiento, he podido avanzar en muchos aspectos de mi vida."
+  },
+  {
+    texto: "Su enfoque integrador me permitió sentirme comprendido y avanzar en mi proceso personal."
+  },
+  {
+    texto: "Me sentí escuchada y acompañada en todo momento. Recomiendo a Maria sin dudarlo."
+  },
+  {
+    texto: "La consulta es un espacio muy acogedor y profesional."
+  }
+];
+const testimoniosPorVista = 3; // Cambia a 4 si quieres mostrar 4 a la vez
+let idxTestimonio = 0;
+
+function renderTestimonios() {
+  const cont = document.getElementById('testimonial-container');
+  cont.innerHTML = '';
+  for (let i = 0; i < testimoniosPorVista; i++) {
+    const tIdx = (idxTestimonio + i) % testimonios.length;
+    const t = testimonios[tIdx];
+    const div = document.createElement('div');
+    div.className = 'testimonial';
+    div.innerHTML = '<i class="fas fa-quote-left"></i><p>“' + t.texto + '”</p>';
+    cont.appendChild(div);
+  }
+}
+
+document.querySelector('.testimonial-prev').onclick = function() {
+  idxTestimonio = (idxTestimonio - testimoniosPorVista + testimonios.length) % testimonios.length;
+  renderTestimonios();
+};
+document.querySelector('.testimonial-next').onclick = function() {
+  idxTestimonio = (idxTestimonio + testimoniosPorVista) % testimonios.length;
+  renderTestimonios();
+};
+renderTestimonios();
+</script>
+
+<a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo.%20%C2%BFPodr%C3%ADas%20decirme%20c%C3%B3mo%20podemos%20concretarla%3F%20Gracias" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+</body>
+</html>
