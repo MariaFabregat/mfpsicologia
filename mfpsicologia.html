@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>María Fabregat - Psicología</title>
+  <title>Maria Fabregat - Psicología</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
@@ -125,8 +125,26 @@ h2, h3 {
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   padding: 2rem;
   position: relative;
-  overflow: auto;      /* Scroll si el texto es muy largo */
+  overflow: visible;
   transition: min-height 0.2s, max-height 0.2s;
+}
+.modal {
+  position: relative;
+  width: 100%; /* o el ancho que uses */
+  height: 100%; /* o la altura que uses */
+  /* ...otros estilos... */
+}
+
+.modal-footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background: white; /* o el color de fondo de tu modal */
+  box-sizing: border-box;
 }
     .quote {
       text-align: center;
@@ -376,12 +394,10 @@ h2, h3 {
       text-decoration: none;
     }
 .tabs-modalidad {
-  display: flex;
-  gap: 2.2rem;
-  justify-content: flex-start;
+  display: block;
   margin-bottom: 2rem;
-  max-width: 600px;
-  margin: 0 auto 2rem;
+  max-width: 1200px; /* pon el ancho que prefieras */
+  margin: 2rem auto 2rem;
 }
 .tab-btn {
   font-family: 'Playfair Display', serif;
@@ -478,7 +494,7 @@ h2, h3 {
     <img src="maria_perfil.jpg" alt="Maria Fabregat">
     <div>
       <h2>Sobre mí</h2>
-      <p>Soy psicóloga y psicoterapeuta con 10 años de experiencia.<br>Será un placer acompañarte en tu proceso de transformación personal,<br>en un espacio seguro en el que puedes sentirte con total libertad.</p>
+      <p>Soy psicóloga y psicoterapeuta con <b>10 años de experiencia</b>.<br>Será un placer acompañarte en tu proceso de transformación personal,<br>ofreciéndote un espacio seguro donde puedes sentirte con total libertad.</p>
       <br> 
       <a href="#" class="btn" id="open-cv-modal">Ver mi formación</a>
     </div>
@@ -510,14 +526,24 @@ h2, h3 {
     </div>
   </section>
 <!-- Sección oculta de explicaciones de servicios -->
-<section id="servicios-detalle" style="display:none; max-width:600px; margin:2rem auto; background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:2rem; position:relative;">
+<section id="servicios-detalle" style="
+  display:none;
+  max-width:700px;
+  min-height:400px;
+  margin:2rem auto;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.08);
+  padding:2rem;
+  position:relative;
+">
   <button id="cerrar-servicios" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
   <div id="servicio-explicacion">
     <!-- Aquí se mostrará la explicación -->
   </div>
-  <div style="display:flex; justify-content:space-between; margin-top:2rem;">
-    <button id="anterior-servicio" class="btn">Anterior</button>
-    <button id="siguiente-servicio" class="btn">Siguiente</button>
+  <div style="width:100%; display:flex; justify-content:space-between; margin-top:2rem;">
+    <button id="anterior-servicio" style="background:none; border:none; font-size:2rem; cursor:pointer; color:#9f7db4;">&#8592;</button>
+    <button id="siguiente-servicio" style="background:none; border:none; font-size:2rem; cursor:pointer; color:#9f7db4;">&#8594;</button>
   </div>
 </section>
   <div class="quote">
@@ -526,11 +552,12 @@ h2, h3 {
 
   <section>
     <h2>Método y enfoque</h2>
-    <ul>
-      <li>1. Escucha profunda</li>
-      <li>2. Mirada integradora</li>
-      <li>3. Proceso personalizado</li>
-      <li>4. Espacio seguro y sin juicio</li>
+    <ul style="display:flex; flex-direction:column; gap:1.1rem;"></ul>
+      <li>Trabajo desde un enfoque <b>integrativo</b>, constructivista y <b>sistémico</b>.</li>
+      <li>Aplico diversas <b>técnicas</b> como <b>EMDR</b> / estimulación bilateral, de <b>PNL</b> y de <b>terapia Gestalt</b>, cuando es adecuado.</li>
+      <li>Explico conceptos y <b>teorías</b> para facilitar una mejor comprensión del ser humano.</li>
+      <li>Ofrezco <b>recursos</b> y herramientas prácticas para gestionar las emociones y la actitud ante la vida.</li>
+    <li>Si la persona lo desea, propongo <b>tareas</b> o reflexiones entre sesiones para seguir integrando el proceso.</li>
     </ul>
   </section>
 
@@ -561,21 +588,21 @@ h2, h3 {
     </div>
   </div>
   <div class="tab-content" id="tab-online" style="display:none;">
-    <div class="content" style="max-width:600px;margin:2rem auto;">
-      <h3>¿Cómo funciona la terapia online?</h3>
-      <p>La terapia online se realiza por videollamada, en un entorno seguro y confidencial. Es ideal si prefieres la comodidad de tu hogar, tienes dificultades de desplazamiento o vives fuera de Barcelona. Solo necesitas un dispositivo con cámara y conexión a internet. El proceso y la calidad de la atención son los mismos que en la modalidad presencial.</p>
-      <ul>
-        <li>Flexibilidad horaria y geográfica</li>
-        <li>Privacidad y comodidad</li>
-        <li>Enlace de videollamada seguro (Zoom, Google Meet, etc.)</li>
-        <li>Atención personalizada y cercana</li>
+    <div class="tabs-modalidad" style="max-width:800px; margin:2rem auto">
+      <p>La terapia online es <b>igualmente eficaz</b> y permite un acompañamiento cercano, estés donde estés.</p>
+       <ul style="display:block; margin:0; padding:0;">
+        <li>Videollamada a través de un <b>enlace de Google Meet</b>. No necesitas descargar ninguna aplicación.</li>
+        <li>Es importante que estés en un <b>espacio tranquilo</b> y con privacidad para poder expresarte con libertad.</li>
+        <li>Es recomendable <b>apoyar el móvil</b> para mayor comodidad si lo usas en lugar del ordenador.</li>
+        <li>Las sesiones online tienen la <b>misma duración y coste</b> que las presenciales.</li>
+        <li>Existe la <b>posibilidad de combinar</b> sesiones online y presenciales, si lo necesitas.</li>
       </ul>
     </div>
   </div>
 </section>
 
   <section class="testimonios">
-    <h2>Testimonis</h2>
+    <h2>Testimonios</h2>
     <div class="testimonial-carousel-controls">
       <button class="testimonial-prev btn" aria-label="Anterior">&#10094;</button>
       <div class="testimonial-container" id="testimonial-container">
@@ -637,7 +664,7 @@ h2, h3 {
       <li>Máster en Terapia Cognitivo Social - Universidad de Barcelona</li>
       <li>Monográfico de Terapia de Pareja - Dendros Centro de Psicología</li>
       <li>Curso de Kinesiología Emocional - Centro Uniun</li>
-      <li>10 años de experiencia clínica. Psicóloga General Sanitaria</li>
+      <li>Psicóloga General Sanitaria</li>
     </ul>
   </div>
 </div>
@@ -655,31 +682,60 @@ document.getElementById('cv-modal').onclick = function(e) {
 };
 </script>
 <script>
+  
 const servicios = [
   {
-    titulo: "Psicoterapia individual",
-    texto: "Espacio seguro para trabajar tus emociones, pensamientos y conductas. Te acompaño en procesos de ansiedad, autoestima, duelo, toma de decisiones y crecimiento personal."
+    titulo: "Psicoterapia individual - 60€/1h",
+    introduccion: "Acompaño a cada persona en un proceso cuidado y respetuoso de autoconocimiento y transformación.",
+    puntos: [
+      "Ofrezco un espacio <b>seguro</b> para expresarse con <b>libertad</b> y sin juicio.",
+      "Facilito la <b>comprensión</b> personal y aporto <b>herramientas</b> para gestionar las emociones.",
+      "Acompaño en la <b>transformación</b> de emociones y creencias que generan malestar (ansiedad, autoexigencia, dificultad para poner límites, pensamientos rumiantes, inseguridades, dificultades en las relaciones, etc.)."
+    ]
   },
   {
-    titulo: "Terapia de pareja",
-    texto: "Intervención para mejorar la comunicación, resolver conflictos y fortalecer el vínculo afectivo. Trabajo con ambas partes para encontrar soluciones y bienestar conjunto."
+    titulo: "Terapia de pareja - 70€/1h",
+    introduccion: "Acompaño a parejas que buscan mejorar su relación desde un enfoque consciente y respetuoso.",
+    puntos: [
+      "Facilito una <b>comunicación</b> más abierta y auténtica entre ambos.",
+      "Ayudo a <b>comprender</b> y <b>atender</b> las emociones y necesidades de cada persona.",
+      "Acompaño en la <b>resolución de conflictos</b> y en el fortalecimiento del <b>vínculo</b> afectivo."
+    ]
   },
   {
-    titulo: "Kinesiología emocional",
-    texto: "Técnica que ayuda a identificar y liberar bloqueos emocionales a través del cuerpo. Complementa la terapia psicológica para un abordaje más integral."
+    titulo: "Kinesiología emocional - 70€/1h",
+    introduccion: "Acompaño a través de un trabajo emocional, guiado por el test muscular de la kinesiología.",
+    puntos: [
+      "Utilizo el test muscular para acceder a información del <b>cuerpo</b> y del <b>inconsciente</b>.",
+      "Esta técnica permite identificar con <b>precisión</b> emociones y creencias que causan malestar.",
+      "Facilita la <b>liberación emocional</b> y la <b>transformación</b> personal."
+    ],
+  fraseFinal: "Esta técnica puede <b>integrarse</b> dentro de un proceso de psicoterapia o realizarse en sesiones <b>puntuales</b>, según las necesidades de cada persona."
   },
   {
-    titulo: "Supervisión de terapias",
-    texto: "Espacio para profesionales que buscan orientación, revisión de casos y apoyo en su práctica clínica. Supervisión basada en la experiencia y el enfoque integrador."
+    titulo: "Supervisión de terapias - 60€/1h",
+    introduccion: "Acompaño a psicólogos/as que deseen una mirada externa, guía y apoyo en los procesos terapéuticos que realizan.",
+    puntos: [
+      "Ofrezco acompañamiento <b>emocional</b> y resuelvo <b>dudas</b> respecto a la práctica profesional.",
+      "Comparto conceptos <b>teóricos</b> y <b>técnicas de intervención</b>.",
+      "Aporto recursos y propuestas de tareas para los pacientes."
+    ],
+  fraseFinal: "Puede realizarse de forma <b>individual</b> o en pequeño <b>grupo</b>, con un coste compartido entre los asistentes."
   }
 ];
 
 let idxServicio = 0;
 
-function mostrarServicio(idx) {
-  const s = servicios[idx];
-  document.getElementById('servicio-explicacion').innerHTML =
-    `<h3>${s.titulo}</h3><p>${s.texto}</p>`;
+function mostrarServicio(indice) {
+  const servicio = servicios[indice];
+  document.getElementById('servicio-explicacion').innerHTML = `
+    <h2 style="color:#9f7db4; margin-bottom:1rem;">${servicio.titulo}</h2>
+    <p style="margin-bottom:1rem;">${servicio.introduccion}</p>
+    <ul style="display:flex; flex-direction:column; gap:1rem;">
+      ${servicio.puntos.map(punto => `<li>${punto}</li>`).join('')}
+    </ul>
+    <p style="margin-top:1.5rem;">${servicio.fraseFinal || ""}</p>
+  `;
 }
 
 document.querySelectorAll('.service .btn').forEach((btn, i) => {
