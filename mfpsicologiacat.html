@@ -688,27 +688,12 @@ h2, h3 {
   <div id="pago-detalle-cat" style="display:none;"></div>
   <ul style="display:flex; flex-direction:column; gap:1.1rem;">
     <li>Treballo des d'un enfocament <b>integratiu</b>, constructivista i <b>sistèmic</b>.</li>
-    <li>Aplico diverses <b>tècniques</b> como <b>EMDR</b> / estimulació bilateral, de <b>PNL</b> i de <b>teràpia Gestalt</b>, quan és adequat.</li>
+    <li>Aplico diverses <b>tècniques</b> com <b>EMDR</b> / estimulació bilateral, de <b>PNL</b> i de <b>teràpia Gestalt</b>, quan és adequat.</li>
     <li>Explico conceptes i <b>teories</b> per facilitar una millor comprensió de l'ésser humà.</li>
-    <li>Ofereixo <b>recursos</b> i eines pràtiques per gestionar les emocions i l'actitud en la vida.</li>
+    <li>Ofereixo <b>recursos</b> i eines pràtiques per gestionar les emocions i l'actitud davant la vida.</li>
     <li>Si la persona ho desitja, proposo <b>tasques</b> o reflexions entre sessions per seguir integrant el procés.</li>
   </ul>
 </section>
-
-<!-- Modal formas de pago con el mismo estilo que "mi formación" -->
-<div id="modal-pago" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:9999; justify-content:center; align-items:center;">
-  <div style="background:#f1f1f1; padding:2rem; border-radius:8px; max-width:90vw; max-height:90vh; overflow:auto; text-align:left; position:relative;">
-    <button id="cerrar-pago" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
-    <h2 style="color:#9f7db4;">Formes de pagament</h2>
-    <p>Ofereixo XXXX diverses opcions per facilitar-ho:</p>
-    <ul style="display:flex; flex-direction:column; gap:1.1rem;">
-      <li>Transferència bancària</li>
-      <li>Targeta</li>
-      <li>Efectiu</li>
-    </ul>
-    <p>El pagament pot realitzar-se abans o just després de la sessió, segons el que et sigui més còmode.</p>
-  </div>
-</div>
 
 <script>
 document.getElementById('abrir-pago').onclick = function() {
@@ -817,7 +802,7 @@ Les sessions online tenen la <b>mateixa durada i cost</b> que les presencials.</
 <div id="cv-modal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:9999; justify-content:center; align-items:center;">
   <div style="background:#f1f1f1; padding:2rem; border-radius:8px; max-width:90vw; max-height:90vh; overflow:auto; text-align:left; position:relative;">
     <button id="close-cv-modal" style="position:absolute; top:1rem; right:1rem; background:none; border:none; font-size:1.5rem; cursor:pointer;">&times;</button>
-    <h2 style="color:#9f7db4;">Mi formación</h2>
+    <h2 style="color:#9f7db4;">La meva formació</h2>
     <ul style="display:flex; flex-direction:column; gap:1.1rem;">
       <li>Grau en Psicologia - Universitat de Barcelona</li>
       <li>Màster en Teràpia Cognitivo Social - Universitat de Barcelona</li>
@@ -1015,14 +1000,14 @@ renderTestimonios();
   const detalle = document.getElementById('pago-detalle-cat');
   detalle.innerHTML = `
     <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:1.2rem; margin-top:1rem;">
-      <h4 style="color:#9f7db4; margin-bottom:1rem;">Formas de pago</h4>
-      <p>Ofrezco XXX distintas opciones para facilitarlo:</p>
+      <h4 style="color:#9f7db4; margin-bottom:1rem;">Formes de pagament</h4>
+      <p>Ofereixo diverses opcions per facilitar-ho:</p>
       <ul style="display:flex; flex-direction:column; gap:1.1rem;">
-        <li>Transferencia bancaria</li>
-        <li>Tarjeta</li>
-        <li>Efectivo</li>
+        <li>Transferència bancària</li>
+        <li>Targeta</li>
+        <li>Efectiu</li>
       </ul>
-      <p>El pago puede realizarse antes o justo después de la sesión, según lo que te sea más cómodo.</p>
+      <p>El pagament es pot realitzar abans o just després de la sessió, segons el que et sigui més còmode.</p>
       <button class="btn cerrar-pago" style="margin-top:1.2rem;">Cerrar</button>
     </div>
   `;
@@ -1036,7 +1021,7 @@ renderTestimonios();
 <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo.%20%C2%BFPodr%C3%ADas%20decirme%20c%C3%B3mo%20podemos%20concretarla%3F%20Gracias"
      class="whatsapp-float"
      target="_blank"
-     aria-label="Contactar por WhatsApp">
+     aria-label="Contactar per WhatsApp">
      <i class="fab fa-whatsapp"></i>
   </a>
 </body>
