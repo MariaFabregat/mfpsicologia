@@ -167,6 +167,24 @@ h2, h3 {
       position: relative;
       box-sizing: border-box;
     }
+.doctoralia-strip {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem; /* espacio entre intro y tarjeta */
+  padding: 2.5rem 1rem; /* conserva el padding */
+  box-sizing: border-box;
+}
+.doctoralia-intro {
+  max-width: 980px;
+  width: 100%;
+  text-align: center;
+  color: #38264e;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin: 0 auto; /* mantener centrado */
+  padding: 0 1rem; /* evita que el texto pegue en los laterales */
+}
 .testimonial-carousel-controls {
   display: flex;
   align-items: center;
@@ -775,7 +793,10 @@ document.getElementById('cerrar-pago').onclick = function() {
   </div>
 </section>
 <section class="doctoralia-strip" style="background:#e6d4ef; width:100vw; min-width:100vw; margin-left:-50vw; left:50%; right:50%; position:relative; display:flex; justify-content:center; padding:2.5rem 1rem; box-sizing:border-box;">
-    <div style="background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.10); max-width:370px; width:100%; padding:2rem 1.5rem; display:flex; flex-direction:column; align-items:center;">
+  <div class="doctoralia-intro">
+    <p>Puedes conocer la experiencia de otras personas en su proceso de terapia conmigo a través de mi perfil en Doctoralia:</p>
+  </div>  
+  <div style="background:#fff; border-radius:12px; box-shadow:0 2px 12px rgba(0,0,0,0.10); max-width:370px; width:100%; padding:2rem 1.5rem; display:flex; flex-direction:column; align-items:center;">
       <div style="display:flex; align-items:center; width:100%; margin-bottom:1rem;">
         <img src="https://static.wixstatic.com/media/3685ed_baa5f24357e04315a0c9251a809a5da6~mv2.jpg" alt="María Fabregat" style="width:56px; height:56px; border-radius:8px; object-fit:cover; margin-right:1rem;">
         <div style="flex:1;">
