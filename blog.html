@@ -1,0 +1,15 @@
+---
+layout: default
+title: Blog de Psicología
+---
+<h1>📰 Últimas Entradas del Blog</h1>
+
+{% for post in site.posts %}
+  <article>
+    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+    <p class="post-meta">Publicado el {{ post.date | date: "%B %-d, %Y" }} por {{ post.author | default: "Maria Fabregat" }}</p>
+    {{ post.excerpt }} 
+    <a href="{{ post.url | relative_url }}">Continuar leyendo...</a>
+  </article>
+  <hr>
+{% endfor %}
