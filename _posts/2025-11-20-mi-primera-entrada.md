@@ -1,1 +1,0 @@
---- layout: post title: "La Importancia de la Autocompasión en la Vida Diaria" date: 2025-11-20 10:00:00 -0400 author: Maria Fabregat categories: [bienestar, mindfulness] --- ## ¿Qué es la Autocompasión? La autocompasión implica tratarnos a nosotros mismos con la misma amabilidad, cuidado y apoyo que le daríamos a un buen amigo que está sufriendo o ha cometido un error.
