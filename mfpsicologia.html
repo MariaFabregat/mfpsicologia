@@ -682,6 +682,32 @@ h2, h3 {
   .faq-band { padding: 1.25rem 0.75rem; }
   .faq-item { padding: 0.75rem; }
 }
+/* enlaces inline (excluir botones .btn) */
+main a:not(.btn),
+section a:not(.btn),
+.article a:not(.btn),
+.doctoralia-intro a:not(.btn),
+.faq-a a:not(.btn) {
+  color: #9f7db4;
+  text-decoration: none;
+}
+/* forzar si alguna regla lo sobreescribe */
+main a:not(.btn),
+section a:not(.btn),
+.doctoralia-intro a:not(.btn),
+.faq-a a:not(.btn) {
+  color: #9f7db4 !important;
+}
+/* Mantener colores específicos dentro de Doctoralia */
+.doctoralia-strip a[href*="#profile-reviews"],
+.doctoralia-strip a[style*="background:#00bfae"] {
+  color: #fff !important; /* 'Opiniones' en blanco */
+  text-decoration: none;
+}
+.doctoralia-strip a[style*="color:#00bfae"] {
+  color: #00bfae !important; /* 'Reserva cita' en verde */
+  text-decoration: none;
+}
   </style>
 </head>
 <body>
