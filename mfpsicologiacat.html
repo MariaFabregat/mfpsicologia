@@ -623,6 +623,97 @@ h2, h3 {
     padding: 1.2rem;
   }
 }
+.faq-band {
+  background: #e6d4ef;
+  width: 100vw;
+  min-width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  position: relative;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+.faq-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.faq-intro {
+  text-align: center;
+  color: #38264e;
+  margin-bottom: 1rem;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.faq-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-weight: 700;
+  color: #38264e;
+  padding: 0;
+}
+.faq-q .arrow { color: #9f7db4; transition: transform .25s ease; }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .3s ease, opacity .2s ease, padding .2s;
+  padding-top: 0;
+}
+.faq-item.open .faq-a {
+  opacity: 1;
+  padding-top: 0.6rem;
+  max-height: 400px; /* suficiente alto para respuestas */
+}
+.faq-item.open .faq-q .arrow {
+  transform: rotate(180deg);
+}
+/* pequeña mejora responsive */
+@media (max-width:600px){
+  .faq-band { padding: 1.25rem 0.75rem; }
+  .faq-item { padding: 0.75rem; }
+}
+/* enlaces inline (excluir botones .btn) */
+main a:not(.btn),
+section a:not(.btn),
+.article a:not(.btn),
+.doctoralia-intro a:not(.btn),
+.faq-a a:not(.btn) {
+  color: #9f7db4;
+  text-decoration: none;
+}
+/* forzar si alguna regla lo sobreescribe */
+main a:not(.btn),
+section a:not(.btn),
+.doctoralia-intro a:not(.btn),
+.faq-a a:not(.btn) {
+  color: #9f7db4 !important;
+}
+/* Mantener colores específicos dentro de Doctoralia */
+.doctoralia-strip a[href*="#profile-reviews"],
+.doctoralia-strip a[style*="background:#00bfae"] {
+  color: #fff !important; /* 'Opiniones' en blanco */
+  text-decoration: none;
+}
+.doctoralia-strip a[style*="color:#00bfae"] {
+  color: #00bfae !important; /* 'Reserva cita' en verde */
+  text-decoration: none;
+}
   </style>
 </head>
 <body>
@@ -824,7 +915,104 @@ document.getElementById('cerrar-pago').onclick = function() {
     </div>
   </section>
 
-  
+   <!-- FAQ: franja lila con acordeón -->
+<section class="faq-band" aria-labelledby="faq-title">
+  <div class="faq-container">
+    <h2 id="faq-title" style="text-align:center; margin:0 0 0.5rem;">Preguntes freqüents</h2>
+    <p class="faq-intro" style="text-align:center; color:#38264e; margin-bottom:1rem;">
+      Aquí tens respostes breus als dubtes més habituals:
+    </p>
+
+    <div class="faq-list" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Com puc reservar una sessió?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>El meu calendari està actualitzat. <b>Només has de triar el dia i l'hora que et vagi millor</b> i fer la reserva gratuïta. Em posaré en contacte amb tu i rebràs un recordatori abans de la visita. <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" rel="noopener">Reserva una sessió</a>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Per a quan podria tenir una sessió?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>Depenent de la setmana, <b>sovint hi ha hores disponibles</b> dins dels pròxims dies. Les hores més demanades són les de la tarda, a les 18h i les 19h. Et recomano consultar la meva agenda i escollir el dia i l'hora que millor s'adapti a tu. <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" rel="noopener">Reserva una sessió</a>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Treballes amb asseguradores?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>No treballo amb asseguradores. Les meves sessions són per a <b>pacients particulars</b>. Si ho necessites, et puc facilitar <b>el justificant o la factura</b> perquè la teva empresa et pugui abonar part o la totalitat de les sessions.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Què passa a la primera sessió?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>A la primera sessió ens coneixem i explorem <b>què t'ha portat a demanar ajuda, com t'estàs sentint i què necessites</b>. Parlem del que t'agradaria aconseguir amb la teràpia i valorem com enfocar-ho plegats. El més important és <b>fer el primer pas</b> per començar a comprendre't i acompanyar-te millor.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>Quina durada i freqüència tenen les sessions?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>Les sessions duren <b>una hora</b>. La freqüència depèn de cada cas: al principi acostuma a ser <b>setmanal o quinzenal</b>, i més endavant s'adapta segons el nivell de malestar, el moment vital i les preferències de la persona.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Acordeón FAQ básico: insertar después del HTML (evita múltiples inclusiones)
+  (function(){
+    const list = document.getElementById('faq-list');
+    if(!list) return;
+    // inicializa colapsadas
+    list.querySelectorAll('.faq-a').forEach(a => a.style.maxHeight = '0');
+    list.addEventListener('click', function(e){
+      const btn = e.target.closest('.faq-q');
+      if(!btn) return;
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-a');
+      const open = item.classList.contains('open');
+
+      // cerrar otros (mantener solo uno abierto)
+      list.querySelectorAll('.faq-item.open').forEach(it => {
+        if(it !== item) {
+          it.classList.remove('open');
+          it.querySelector('.faq-q').setAttribute('aria-expanded','false');
+          const a = it.querySelector('.faq-a');
+          if(a) a.style.maxHeight = '0';
+        }
+      });
+
+      if(open) {
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        if(answer) answer.style.maxHeight = '0';
+      } else {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        if(answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  })();
+</script>
 
   <section id="contacto">
     <h2 style="text-align:left; max-width:500px; margin:0 auto 2rem auto;">Contacte</h2>
