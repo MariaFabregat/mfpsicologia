@@ -617,6 +617,71 @@ h2, h3 {
     padding: 1.2rem;
   }
 }
+.faq-band {
+  background: #e6d4ef;
+  width: 100vw;
+  min-width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  position: relative;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+.faq-container {
+  max-width: 980px;
+  margin: 0 auto;
+}
+.faq-intro {
+  text-align: center;
+  color: #38264e;
+  margin-bottom: 1rem;
+}
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.faq-item {
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-weight: 700;
+  color: #38264e;
+  padding: 0;
+}
+.faq-q .arrow { color: #9f7db4; transition: transform .25s ease; }
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height .3s ease, opacity .2s ease, padding .2s;
+  padding-top: 0;
+}
+.faq-item.open .faq-a {
+  opacity: 1;
+  padding-top: 0.6rem;
+  max-height: 400px; /* suficiente alto para respuestas */
+}
+.faq-item.open .faq-q .arrow {
+  transform: rotate(180deg);
+}
+/* pequeña mejora responsive */
+@media (max-width:600px){
+  .faq-band { padding: 1.25rem 0.75rem; }
+  .faq-item { padding: 0.75rem; }
+}
   </style>
 </head>
 <body>
@@ -834,7 +899,104 @@ document.getElementById('cerrar-pago').onclick = function() {
     </div>
   </section>
 
-  
+  <!-- FAQ: franja lila con acordeón -->
+<section class="faq-band" aria-labelledby="faq-title">
+  <div class="faq-container">
+    <h2 id="faq-title" style="text-align:center; margin:0 0 0.5rem;">Preguntas frecuentes</h2>
+    <p class="faq-intro" style="text-align:center; color:#38264e; margin-bottom:1rem;">
+      Aquí tienes respuestas breves a las dudas más habituales:
+    </p>
+
+    <div class="faq-list" id="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>¿Cómo puedo reservar una cita?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>Mi calendario está actualizado. Solo tienes que elegir el día y la hora que mejor te vayan y hacer la reserva gratuita. Me pondré en contacto contigo y recibirás un recordatorio antes de la visita. <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" rel="noopener">Reserva una sesión</a>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>¿Para cuándo podría tener una sesión?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>Dependiendo de la semana, a menudo hay horas disponibles dentro de los próximos días. Las más solicitadas son las de la tarde, a las 18h y 19h. Te recomiendo consultar mi agenda y escoger el día y la hora que mejor se adapte a ti. <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" rel="noopener">Reserva una sesión</a>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>¿Trabajas con aseguradoras?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>No trabajo con aseguradoras. Mis sesiones son para pacientes particulares. Si lo necesitas, puedo facilitarte el justificante o la factura para que tu empresa pueda reembolsarte parte o la totalidad del coste de las sesiones.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>¿Qué ocurre en la primera sesión?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>En la primera sesión nos conocemos y exploramos qué te ha llevado a pedir ayuda, cómo te sientes y qué necesitas. Hablamos de lo que te gustaría conseguir con la terapia y valoramos cómo enfocarlo juntos. Lo más importante es dar el primer paso para empezar a comprenderte y acompañarte mejor.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" type="button" aria-expanded="false">
+          <span>¿Qué duración y frecuencia tienen las sesiones?</span>
+          <span class="arrow">▾</span>
+        </button>
+        <div class="faq-a">
+          <p>Las sesiones duran una hora. La frecuencia depende de cada caso: al principio suele ser semanal o quincenal y más adelante se adapta según el nivel de malestar, el momento vital y las preferencias de la persona.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Acordeón FAQ básico: insertar después del HTML (evita múltiples inclusiones)
+  (function(){
+    const list = document.getElementById('faq-list');
+    if(!list) return;
+    // inicializa colapsadas
+    list.querySelectorAll('.faq-a').forEach(a => a.style.maxHeight = '0');
+    list.addEventListener('click', function(e){
+      const btn = e.target.closest('.faq-q');
+      if(!btn) return;
+      const item = btn.parentElement;
+      const answer = item.querySelector('.faq-a');
+      const open = item.classList.contains('open');
+
+      // cerrar otros (mantener solo uno abierto)
+      list.querySelectorAll('.faq-item.open').forEach(it => {
+        if(it !== item) {
+          it.classList.remove('open');
+          it.querySelector('.faq-q').setAttribute('aria-expanded','false');
+          const a = it.querySelector('.faq-a');
+          if(a) a.style.maxHeight = '0';
+        }
+      });
+
+      if(open) {
+        item.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+        if(answer) answer.style.maxHeight = '0';
+      } else {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+        if(answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  })();
+</script>
 
   <section id="contacto">
     <h2 style="text-align:left; max-width:500px; margin:0 auto 2rem auto;">Contacto</h2>
