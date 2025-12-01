@@ -2,14 +2,24 @@
 layout: default
 title: Blog de Psicología
 ---
-<h1>📰 Últimas Entradas del Blog</h1>
 
-{% for post in site.posts %}
-  <article>
-    <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-    <p class="post-meta">Publicado el {{ post.date | date: "%B %-d, %Y" }} por {{ post.author | default: "Maria Fabregat" }}</p>
-    {{ post.excerpt }} 
-    <a href="{{ post.url | relative_url }}">Continuar leyendo...</a>
-  </article>
-  <hr>
-{% endfor %}
+<div class="mfpsicologia">  <-- ¡Añadimos un contenedor para el estilo!
+    <h1>📰 Últimas Entradas del Blog</h1>
+    
+    {% for post in site.posts %}
+    <article class="post-item">
+        <a href="{{ post.url | relative_url }}">
+            <h2>{{ post.title }}</h2>
+        </a>
+        <p class="post-meta">Publicado el {{ post.date | date: "%B %-d, %Y" }} por {{ post.author | default: "Maria Fabregat" }}</p>
+        
+        <div class="post-excerpt">
+            {{ post.excerpt }}
+        </div>
+        
+        <a href="{{ post.url | relative_url }}" class="read-more">Continuar Leyendo...</a>
+    </article>
+    <hr>
+    {% endfor %}
+
+</div>
