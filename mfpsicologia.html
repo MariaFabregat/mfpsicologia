@@ -887,11 +887,15 @@ document.getElementById('cerrar-pago').onclick = function() {
         <p>Existe la <b>posibilidad de combinar</b> sesiones online y presenciales, si lo necesitas.</p>
     </div>
     
-    <div style="text-align: center; margin-top: 20px; max-width:800px; margin:0 auto;">
-        <a href="terapia_online.html" class="btn" style="background:#fff; color:#222; border:1px solid #222;">
-            Cómo funciona
-        </a>
-    </div>
+    <a href="terapia_online.html" 
+       class="btn" 
+       style="background:#fff; color:#222; border:1px solid #222; 
+              display: block; /* Lo hace un bloque */
+              width: fit-content; /* Ajusta el ancho al contenido */
+              margin: 20px auto 0 auto; /* Centra el bloque */">
+        Cómo funciona
+    </a>
+</div>
 </div>
 </section>
 <section class="doctoralia-strip" style="background:#e6d4ef; width:100vw; min-width:100vw; margin-left:-50vw; left:50%; right:50%; position:relative; display:flex; justify-content:center; padding:2.5rem 1rem; box-sizing:border-box;">
