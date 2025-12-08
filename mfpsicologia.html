@@ -903,11 +903,16 @@ document.getElementById('cerrar-pago').onclick = function() {
   </a>
   
   <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona"
-     class="btn"
-     style="background:#9f7db4; border:1px solid #9f7db4; color:#fff;
-            display:inline-block; width:fit-content; text-decoration: none; padding: 10px 20px;">
-    Reserva una sesión
-  </a>
+   target="_blank"  
+   class="btn"
+   style="background:#8b73b8; border:1px solid #8b73b8; color:#fff;
+          display:inline-block;
+          width:fit-content; text-decoration: none; padding: 10px 20px;
+          /* --- CORRECCIÓN FORZADA DE CAPAS --- */
+          position: relative;
+          z-index: 999;"> 
+   Reservar Sesión
+</a>
 </div>
 </section>
 <section class="doctoralia-strip" style="background:#e6d4ef; width:100vw; min-width:100vw; margin-left:-50vw; left:50%; right:50%; position:relative; display:flex; justify-content:center; padding:2.5rem 1rem; box-sizing:border-box;">
