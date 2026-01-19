@@ -58,6 +58,53 @@
             text-decoration: none;
             color: #38264e;
         }
+       .blog-categories-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e6d4ef;
+    padding: 1.2rem 0;
+    text-align: center;
+}
+.blog-categories-bar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
+.blog-categories-bar a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+.blog-categories-bar a:hover, .blog-categories-bar a.active {
+    color: #38264e;
+    border-bottom: 2px solid #bfa4d1;
+}
+
+/* Estilos de Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin: 2rem 0;
+}
+.pagination a, .pagination span {
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: #38264e;
+    background: #fff;
+}
+.pagination .current {
+    background: #38264e;
+    color: #fff;
+}
     </style>
 </head>
 <body>
@@ -79,8 +126,15 @@
                 <h1>Blog de Psicología</h1>
                 <p style="margin:0.5rem 0 0;">Un espacio de reflexión psicológica donde la comprensión abre camino a la transformación personal.</p>
             </div>
-            </div>
-    </div>
+          
+    <nav class="blog-categories-bar">
+    <ul>
+        <li><a href="#" class="active">Todos</a></li>
+        <li><a href="#">Procesos Psicológicos</a></li>
+        <li><a href="#">Recursos</a></li>
+        <li><a href="#">Técnicas</a></li>
+    </ul>
+    </nav>
     
     <div class="blog-list">
         
