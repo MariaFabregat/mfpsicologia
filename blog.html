@@ -8,103 +8,34 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        /* estilos tomados del sitio principal (compactados para esta página) */
         body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
         header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
         header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
         .main-header{ background:#bfa4d1; color:white; text-align:left; padding:3.2rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
         .main-header-inner{ max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; width:100%; }
         .main-header h1{ font-family:'Playfair Display',serif; font-size:2rem; margin:.5rem 0; color:#fff; }
-        .btn{ background:#9f7db4; color:#fff; padding:.6rem 1.2rem; border:none; border-radius:5px; text-decoration:none; display:inline-block; }
-        section{ padding:2.5rem 1rem; max-width:1000px; margin:auto; }
-        .service-hero{ max-width:980px; margin:2rem auto; background:#fff; border-radius:8px; padding:2rem; box-shadow:0 2px 10px rgba(0,0,0,.06); }
-        .service-hero h1{ font-family:'Playfair Display',serif; color:#38264e; margin:0 0 0.6rem 0; }
-        .service-hero p.lead{ margin:0 0 1rem 0; color:#444; font-size:1.05rem; line-height:1.5; }
-        .service-puntos{ display:flex; flex-direction:column; gap:1rem; margin-top:1rem; }
-        .service-puntos li{ background:#f9f3fc; padding:1rem; border-radius:8px; list-style:none; border-left:4px solid #9f7db4; color:#333; }
-        .service-footer{ text-align:center; margin-top:2rem; }
-        footer a { color: #fff; text-decoration: none; margin: 0 .4rem;}
-        footer a i { color: inherit;}
-        footer a, footer a i { color: #fff !important; }
-        footer{ background:#38264e; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
-        .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); transition:all .3s; }
-        .whatsapp-float:hover{ background:#1ebe57; transform:scale(1.05); }
-        @media (max-width:900px){ .main-header{ padding:2rem 1rem; } .service-hero{ padding:1.2rem; } }
         
-        /* Estilos específicos para la lista del blog (para que no se vea el código Jekyll) */
-        .blog-list {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,.06);
-        }
-        .blog-list article {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .blog-list article:last-child {
-            border-bottom: none;
-        }
-        .blog-list h2 {
-            font-family: 'Playfair Display', serif; 
-            font-size: 1.8rem; 
-            margin-bottom: 5px;
-            color: #38264e; /* Color principal */
-        }
-        .blog-list a {
-            text-decoration: none;
-            color: #38264e;
-        }
-       .blog-categories-bar {
-    background: #ffffff;
-    border-bottom: 1px solid #e6d4ef;
-    padding: 1.2rem 0;
-    text-align: center;
-}
-.blog-categories-bar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-}
-.blog-categories-bar a {
-    text-decoration: none;
-    color: #555;
-    font-weight: 600;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-}
-.blog-categories-bar a:hover, .blog-categories-bar a.active {
-    color: #38264e;
-    border-bottom: 2px solid #bfa4d1;
-}
+        /* Barra de Categorías */
+        .blog-categories-bar { background: #ffffff; border-bottom: 1px solid #e6d4ef; padding: 1.2rem 0; text-align: center; width: 100%; clear: both; }
+        .blog-categories-bar ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
+        .blog-categories-bar a { text-decoration: none; color: #555; font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease; cursor: pointer; }
+        .blog-categories-bar a:hover, .blog-categories-bar a.active { color: #38264e; border-bottom: 2px solid #bfa4d1; }
 
-/* Estilos de Paginación */
-.pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px;
-    margin: 2rem 0;
-}
-.pagination a, .pagination span {
-    padding: 8px 14px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
-    text-decoration: none;
-    color: #38264e;
-    background: #fff;
-}
-.pagination .current {
-    background: #38264e;
-    color: #fff;
-}
+        /* Lista del Blog */
+        .blog-list { max-width: 900px; margin: 2rem auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+        .blog-list article { border-bottom: 1px solid #ddd; padding-bottom: 20px; margin-bottom: 20px; }
+        .blog-list article:last-child { border-bottom: none; }
+        .blog-list h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 5px; color: #38264e; }
+        .blog-list a { text-decoration: none; color: #38264e; }
+
+        /* Paginación */
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 2rem 0; padding-bottom: 1rem; }
+        .pagination a, .pagination span { padding: 8px 14px; border-radius: 4px; border: 1px solid #ccc; text-decoration: none; color: #38264e; background: #fff; }
+        .pagination .current { background: #38264e; color: #fff; }
+
+        footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
+        footer a { color: #fff !important; text-decoration: none; margin: 0 .4rem; }
+        .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); }
     </style>
 </head>
 <body>
@@ -113,160 +44,123 @@
             Sígueme y contáctame:
             <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> |
             <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> |
-            <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo.%20%C2%BFPodr%C3%ADas%20decirme%20c%C3%B3mo%20podemos%20concretarla%3F%20Gracias" target="_blank"><i class="fab fa-whatsapp"></i></a> |
-            <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo"><i class="fas fa-envelope"></i></a> |
-            <a href="tel:+34695136810" aria-label="Llamar por teléfono"><i class="fas fa-phone"></i></a>
+            <a href="https://wa.me/34695136810" target="_blank"><i class="fab fa-whatsapp"></i></a>
         </div>
-        <div class="lang-switcher"><a href="blog-cat.html">Català</a></div>
+        <div class="lang-switcher"><a href="#">Català</a></div>
     </header>
 
     <div class="main-header">
         <div class="main-header-inner">
             <div class="header-content">
                 <h1>Blog de Psicología</h1>
-                <p style="margin:0.5rem 0 0;">Un espacio de reflexión psicológica donde la comprensión abre camino a la transformación personal.</p>
+                <p>Un espacio de reflexión psicológica donde la comprensión abre camino a la transformación personal.</p>
             </div>
-          
-    <nav class="blog-categories-bar">
-    <ul>
-        <li><a href="#" class="active">Todos</a></li>
-        <li><a href="#">Procesos Psicológicos</a></li>
-        <li><a href="#">Recursos</a></li>
-        <li><a href="#">Técnicas</a></li>
-    </ul>
+        </div>
+    </div> <nav class="blog-categories-bar">
+        <ul>
+            <li><a class="active">Todos</a></li>
+            <li><a>Procesos Psicológicos</a></li>
+            <li><a>Recursos</a></li>
+            <li><a>Técnicas</a></li>
+        </ul>
     </nav>
     
     <div class="blog-list">
-        
-        <article>
-            <a href="articulo_necesito_terapia.html">
-                <h2>¿Necesito terapia? 5 señales de que es tu momento</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicado el 2 de diciembre de 2025 por Maria Fabregat
-            </p>
-            <p style="margin-top: 10px;">
-                Una guía honesta y profunda para identificar 5 señales clave que indican que tu malestar es significativo. Es hora de buscar ayuda profesional sin juicio. Conoce cuándo es el momento de invertir en tu bienestar mental conmigo, psicóloga Maria Fabregat.
-            </p>
-            <a href="articulo_necesito_terapia.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar leyendo...
-            </a>
+        <article class="category-procesos">
+            <a href="articulo_necesito_terapia.html"><h2>¿Necesito terapia? 5 señales de que es tu momento</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 2 de diciembre de 2025</p>
+            <p>Una guía honesta y profunda para identificar 5 señales clave...</p>
+            <a href="articulo_necesito_terapia.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
-        <article>
-            <a href="articulo_crisis_pareja.html">
-                <h2>"Ya no somos los mismos": navegando crisis de pareja</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicado el 2 de diciembre de 2025 por Maria Fabregat
-            </p>
-            <p style="margin-top: 10px;">
-                Guía exhaustiva para comprender las dinámicas destructivas en la pareja desde el enfoque sistémico. Aprende a mejorar la comunicación, romper patrones rígidos y decidir si es el momento de reparar o cerrar ciclos de forma sana.
-            </p>
-            <a href="articulo_crisis_pareja.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar leyendo...
-            </a>
-        </article>
-        
-         <article>
-            <a href="articulo-roles-reactivos.html">
-                <h2>Víctima, salvador y perseguidor: roles que dañan tus relaciones</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicado el 18 de diciembre de 2025 por Maria Fabregat
-            </p>
-            <p style="margin-top: 10px;">
-               Descubre cómo reconocer los roles reactivos que afectan tus vínculos y aprende a responder con calma, claridad y respeto para construir relaciones más conscientes y equilibradas.
-            </p>
-            <a href="articulo-roles-reactivos.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar leyendo...
-            </a>
+        <article class="category-recursos">
+            <a href="articulo-roles-reactivos.html"><h2>Víctima, salvador y perseguidor: roles que dañan tus relaciones</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 18 de diciembre de 2025</p>
+            <p>Descubre cómo reconocer los roles reactivos que afectan tus vínculos...</p>
+            <a href="articulo-roles-reactivos.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
-         <article>
-            <a href="articulo-valores-personales.html">
-                <h2>Valores personales: la brújula interna para vivir con coherencia</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicado el 18 de diciembre de 2025 por Maria Fabregat
-            </p>
-            <p style="margin-top: 10px;">
-               Conecta con tus valores personales para tomar decisiones con mayor claridad. Te ofrezco una actividad práctica para que puedas identificarlos y vivir con mayor coherencia contigo mismo/a.
-            </p>
-            <a href="articulo-valores-personales.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar leyendo...
-            </a>
+        <article class="category-recursos">
+            <a href="articulo-valores-personales.html"><h2>Valores personales: la brújula interna</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 18 de diciembre de 2025</p>
+            <p>Conecta con tus valores personales para tomar decisiones con mayor claridad...</p>
+            <a href="articulo-valores-personales.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
-        <article>
-            <a href="articulo_kinesiologia_emocional.html">
-                <h2>Kinesiología Emocional: gestionar emociones y bloqueos</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicado el 21 de diciembre de 2025 por Maria Fabregat
-            </p>
-            <p style="margin-top: 10px;">
-                Descubre cómo el cuerpo actúa como un archivo biológico de tus emociones y cómo el test muscular puede ayudarte a liberar bloqueos profundos de forma integrativa.
-            </p>
-            <a href="articulo_kinesiologia_emocional.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar leyendo...
-            </a>
+        <article class="category-tecnicas">
+            <a href="articulo_kinesiologia_emocional.html"><h2>Kinesiología Emocional: gestionar emociones</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 21 de diciembre de 2025</p>
+            <p>Descubre cómo el cuerpo actúa como un archivo biológico...</p>
+            <a href="articulo_kinesiologia_emocional.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
-        <article>
-            <a href="articulo_preguntas_frecuentes.html">
-                <h2>Preguntas Frecuentes sobre Terapia</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicado el 22 de diciembre de 2025 por Maria Fabregat
-            </p>
-            <p style="margin-top: 10px;">
-                Resuelvo las dudas más comunes sobre la duración de las sesiones, la frecuencia y cómo es el primer contacto para que te sientas con confianza antes de empezar tu proceso.
-            </p>
-            <a href="articulo_preguntas_frecuentes.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar leyendo...
-            </a>
+        <article class="category-procesos">
+            <a href="articulo_preguntas_frecuentes.html"><h2>Preguntas Frecuentes sobre Terapia</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 22 de diciembre de 2025</p>
+            <p>Resuelvo las dudas más comunes sobre la duración de las sesiones...</p>
+            <a href="articulo_preguntas_frecuentes.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
-         <article>
-            <a href="articulo-reprocesamiento-de-traumas.html">
-                <h2>Reescribe tu Historia: Cómo Reprocesar Recuerdos que Te Han Atrapado</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicado el 11 de enero de 2026 por Maria Fabregat
-            </p>
-            <p style="margin-top: 10px;">
-                Tu historia no es tu cárcel. Descubre cómo las técnicas de reprocesamiento (como EMDR) ayudan al cerebro a archivar recuerdos dolorosos o traumáticos, liberándolos para que dejen de dictar tu vida actual.
-            </p>
-            <a href="articulo_preguntas_frecuentes.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar leyendo...
-            </a>
+        <article class="category-tecnicas">
+            <a href="articulo-reprocesamiento-de-traumas.html"><h2>Reescribe tu Historia: EMDR</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 11 de enero de 2026</p>
+            <p>Tu historia no es tu cárcel. Descubre cómo las técnicas de reprocesamiento...</p>
+            <a href="articulo-reprocesamiento-de-traumas.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
+        <div class="pagination">
+            <a href="#">&laquo; Anterior</a>
+            <span class="current">1</span>
+            <a href="#">2</a>
+            <a href="#">Siguiente &raquo;</a>
         </div>
+    </div>
 
     <footer>
         <p>Sígueme y contáctame:
-            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
-            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
-            <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo.%20%C2%BFPodr%C3%ADas%20decirme%20c%C3%B3mo%20podemos%20concretarla%3F%20Gracias" target="_blank">
-                <i class="fab fa-whatsapp"></i>
-            </a> |
-            <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo">
-                <i class="fas fa-envelope"></i>
-            </a> |
-            <a href="tel:+34695136810">
-                <i class="fas fa-phone"></i>
-            </a>
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+            <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo." target="_blank"><i class="fab fa-whatsapp"></i></a> |
+            <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo"><i class="fas fa-envelope"></i></a> |
+            <a href="tel:+34695136810" aria-label="Llamar por teléfono"><i class="fas fa-phone"></i></a>
         </p>
-        <p>&copy; 2025 Maria Fabregat</p>
+        <p>&copy; 2026 Maria Fabregat | Psicóloga Col. nº 20542</p>
     </footer>
 
-    <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo.%20%C2%BFPodr%C3%ADas%20decirme%20c%C3%B3mo%20podemos%20concretarla%3F%20Gracias"
+    <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo."
         class="whatsapp-float"
         target="_blank"
         aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <script>
+        document.querySelectorAll('.blog-categories-bar a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Evita que la página salte al inicio
+                
+                // Cambiar clase activa
+                document.querySelectorAll('.blog-categories-bar a').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+                
+                const cat = this.textContent.trim().toLowerCase();
+                const articles = document.querySelectorAll('.blog-list article');
+                
+                articles.forEach(art => {
+                    if (cat === 'todos') {
+                        art.style.display = 'block';
+                    } else if (cat === 'procesos psicológicos' && art.classList.contains('category-procesos')) {
+                        art.style.display = 'block';
+                    } else if (cat === 'recursos' && art.classList.contains('category-recursos')) {
+                        art.style.display = 'block';
+                    } else if (cat === 'técnicas' && art.classList.contains('category-tecnicas')) {
+                        art.style.display = 'block';
+                    } else {
+                        art.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
