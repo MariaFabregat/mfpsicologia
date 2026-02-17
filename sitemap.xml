@@ -2,12 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.mariafabregat.com/</loc>
-    <lastmod>2026-01-07</lastmod>
+    <lastmod>2026-02-17</lastmod>
     <priority>1.0</priority>
   </url>
+  
   <url>
-    <loc>https://www.mariafabregat.com/mfpsicologia/mfpsicologia.html</loc>
-    <lastmod>2026-01-07</lastmod>
+    <loc>https://www.mariafabregat.com/blog.html</loc>
+    <lastmod>2026-02-17</lastmod>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://www.mariafabregat.com/blog-2.html</loc>
+    <lastmod>2026-02-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <url><loc>https://www.mariafabregat.com/articulo_necesito_terapia.html</loc></url>
+  <url><loc>https://www.mariafabregat.com/articulo_crisis_pareja.html</loc></url>
+  <url><loc>https://www.mariafabregat.com/articulo-roles-reactivos.html</loc></url>
+  <url><loc>https://www.mariafabregat.com/articulo-valores-personales.html</loc></url>
+  <url><loc>https://www.mariafabregat.com/articulo_del_deseo_a_la_accion.html</loc></url>
 </urlset>
