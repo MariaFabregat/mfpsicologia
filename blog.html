@@ -139,34 +139,7 @@
         aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <script>
-        document.querySelectorAll('.blog-categories-bar a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault(); // Evita que la página salte al inicio
-                
-                // Cambiar clase activa
-                document.querySelectorAll('.blog-categories-bar a').forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-                
-                const cat = this.textContent.trim().toLowerCase();
-                const articles = document.querySelectorAll('.blog-list article');
-                
-                articles.forEach(art => {
-                    if (cat === 'todos') {
-                        art.style.display = 'block';
-                    } else if (cat === 'procesos psicológicos' && art.classList.contains('category-procesos')) {
-                        art.style.display = 'block';
-                    } else if (cat === 'recursos' && art.classList.contains('category-recursos')) {
-                        art.style.display = 'block';
-                    } else if (cat === 'técnicas' && art.classList.contains('category-tecnicas')) {
-                        art.style.display = 'block';
-                    } else {
-                        art.style.display = 'none';
-                    }
-                });
-            });
-        });
-    </script>
+</body>
+</html>
 </body>
 </html>
