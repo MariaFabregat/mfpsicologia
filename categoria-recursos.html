@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos - Maria Fabregat</title>
+    <meta name="description" content="Recursos y herramientas psicológicas para el crecimiento personal | Maria Fabregat">
+    <title>Recursos | Maria Fabregat Psicóloga</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
@@ -13,30 +14,46 @@
         header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
         header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
         .main-header{ background:#bfa4d1; color:white; text-align:left; padding:3.2rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
-        .main-header-inner{ max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; width:100%; }
+        .main-header-inner{ max-width:1000px; margin:0 auto; width:100%; }
         .main-header h1{ font-family:'Playfair Display',serif; font-size:2rem; margin:.5rem 0; color:#fff; }
+        
+        /* Barra de Categorías Arreglada */
         .blog-categories-bar { background: #ffffff; border-bottom: 1px solid #e6d4ef; padding: 1.2rem 0; text-align: center; width: 100%; }
         .blog-categories-bar ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
         .blog-categories-bar a { text-decoration: none; color: #555; font-weight: 600; font-size: 0.95rem; }
-        .blog-categories-bar a:hover, .blog-categories-bar a.active { color: #38264e; border-bottom: 2px solid #bfa4d1; }
+        .blog-categories-bar a:hover, .blog-categories-bar a.active { color: #38264e; border-bottom: 2px solid #bfa4d1; padding-bottom: 5px; }
+
+        /* Lista del Blog */
         .blog-list { max-width: 900px; margin: 2rem auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
         .blog-list article { border-bottom: 1px solid #ddd; padding-bottom: 20px; margin-bottom: 20px; }
-        .blog-list h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #38264e; }
+        .blog-list article:last-child { border-bottom: none; }
+        .blog-list h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 5px; color: #38264e; }
+        .blog-list a { text-decoration: none; color: #38264e; }
+
         footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
-        .whatsapp-float{ position:fixed; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; }
+        footer a { color: #fff !important; text-decoration: none; margin: 0 .4rem; }
+        .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); }
     </style>
 </head>
 <body>
     <header class="top-bar">
-        <div><a href="https://wa.me/34695136810" target="_blank"><i class="fab fa-whatsapp"></i> Contactar</a></div>
+        <div>
+            Sígueme y contáctame:
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> |
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> |
+            <a href="https://wa.me/34695136810" target="_blank"><i class="fab fa-whatsapp"></i></a> |
+            <a href="mailto:mariafabregat@copc.cat"><i class="fas fa-envelope"></i></a>
+        </div>
         <div class="lang-switcher"><a href="blog.html">Volver al Blog</a></div>
     </header>
+
     <div class="main-header">
         <div class="main-header-inner">
-            <h1>Categoría: Recursos</h1>
-            <p>Herramientas y lecturas para tu crecimiento cotidiano.</p>
+            <h1>Blog de Psicología</h1>
+            <p>Categoría: Recursos</p>
         </div>
     </div> 
+
     <nav class="blog-categories-bar">
         <ul>
             <li><a href="blog.html">Todos</a></li>
@@ -45,8 +62,31 @@
             <li><a href="categoria-tecnicas.html">Técnicas</a></li>
         </ul>
     </nav>
+
     <div class="blog-list">
         <article>
             <a href="articulo-roles-reactivos.html"><h2>Víctima, salvador y perseguidor: roles que dañan tus relaciones</h2></a>
-            <p>Descubre cómo reconocer los roles reactivos que afectan tus vínculos...</p>
-            <a href="articulo-roles-reactivos.html" style="color:#9
+            <p style="color:#6d6d6d; font-size:0.9rem;">Publicado el 18 de diciembre de 2025</p>
+            <p>Descubre cómo reconocer los roles reactivos del triángulo dramático que afectan tus vínculos y cómo moverte hacia relaciones más conscientes...</p>
+            <a href="articulo-roles-reactivos.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
+        </article>
+
+        <article>
+            <a href="articulo-valores-personales.html"><h2>Valores personales: la brújula interna</h2></a>
+            <p style="color:#6d6d6d; font-size:0.9rem;">Publicado el 18 de diciembre de 2025</p>
+            <p>Conecta con tus valores personales para tomar decisiones con mayor claridad y vivir una vida alineada con lo que realmente te importa...</p>
+            <a href="articulo-valores-personales.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
+        </article>
+    </div>
+
+    <footer>
+        <p>Sígueme y contáctame:
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
+            <a href="https://wa.me/34695136810" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </p>
+        <p>&copy; 2026 Maria Fabregat | Psicóloga Col. nº 22083</p>
+    </footer>
+
+    <a href="https://wa.me/34695136810" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
+</body>
+</html>
