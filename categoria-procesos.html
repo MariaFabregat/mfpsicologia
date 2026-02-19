@@ -4,47 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Procesos Psicológicos - Maria Fabregat</title>
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Mismo CSS que el anterior para mantener la estética */
+        body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; }
+        header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; }
+        .main-header{ background:#bfa4d1; color:white; padding:3.2rem 1rem; }
+        .blog-categories-bar { background: #ffffff; border-bottom: 1px solid #e6d4ef; padding: 1.2rem 0; text-align: center; }
+        .blog-categories-bar ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 2rem; }
+        .blog-categories-bar a { text-decoration: none; color: #555; font-weight: 600; }
+        .blog-categories-bar a:hover, .blog-categories-bar a.active { color: #38264e; border-bottom: 2px solid #bfa4d1; }
+        .blog-list { max-width: 900px; margin: 2rem auto; padding: 20px; background: #fff; border-radius: 8px; }
+        .blog-list article { border-bottom: 1px solid #ddd; padding-bottom: 20px; margin-bottom: 20px; }
+        .blog-list h2 { font-family: 'Playfair Display', serif; color: #38264e; }
+        footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
+    </style>
+</head>
 <body>
-
-    <header>
-        <h1>Blog de Psicología</h1>
-        <p>Categoría: Procesos Psicológicos - Comprendiendo nuestra mente.</p>
+    <header class="top-bar">
+        <div><a href="https://wa.me/34695136810" target="_blank"><i class="fab fa-whatsapp"></i> Contactar</a></div>
+        <div class="lang-switcher"><a href="blog.html">Volver al Blog</a></div>
     </header>
-
-    <nav class="categories">
-        <a href="blog.html">Todos</a>
-        <a href="categoria-procesos.html" class="active">Procesos Psicológicos</a>
-        <a href="categoria-recursos.html">Recursos</a>
-        <a href="categoria-tecnicas.html">Técnicas</a>
+    <div class="main-header">
+        <div class="main-header-inner">
+            <h1>Categoría: Procesos Psicológicos</h1>
+            <p>Entendiendo las etapas y desafíos de la mente humana.</p>
+        </div>
+    </div> 
+    <nav class="blog-categories-bar">
+        <ul>
+            <li><a href="blog.html">Todos</a></li>
+            <li><a href="categoria-procesos.html" class="active">Procesos Psicológicos</a></li>
+            <li><a href="categoria-recursos.html">Recursos</a></li>
+            <li><a href="categoria-tecnicas.html">Técnicas</a></li>
+        </ul>
     </nav>
-
-    <main class="blog-container">
-        <article class="post-card">
-            <h2>El Círculo Vicioso de la Ansiedad: ¿Cómo Romperlo?</h2>
-            <p>Publicado el 19 de febrero de 2026</p>
-            <p>La ansiedad se alimenta de pensamientos catastrofistas y conductas de evitación...</p>
-            <a href="articulo-ansiedad.html">Continuar leyendo...</a>
+    <div class="blog-list">
+        <article>
+            <a href="articulo-ansiedad.html"><h2>El Círculo Vicioso de la Ansiedad</h2></a>
+            <p>La ansiedad se alimenta de pensamientos catastrofistas. Aprende a romperlo...</p>
+            <a href="articulo-ansiedad.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
-
-        <article class="post-card">
-            <h2>¿Cómo saber si necesito terapia?</h2>
-            <p>Publicado el 22 de diciembre de 2025</p>
+        <article>
+            <a href="articulo_crisis_pareja.html"><h2>"Ya no somos los mismos": navegando crisis de pareja</h2></a>
+            <p>Descubre cómo entender la dinámica de la relación y decidir el camino...</p>
+            <a href="articulo_crisis_pareja.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
+        </article>
+        <article>
+            <a href="articulo_necesito_terapia.html"><h2>¿Necesito Terapia? 5 Señales Inequívocas</h2></a>
             <p>Reconocer el momento de pedir ayuda es el primer paso hacia el bienestar...</p>
-            <a href="articulo_necesito_terapia.html">Continuar leyendo...</a>
+            <a href="articulo_necesito_terapia.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
-
-        <article class="post-card">
-            <h2>Crisis de pareja: ¿El fin o un nuevo comienzo?</h2>
-            <p>Publicado el 22 de diciembre de 2025</p>
-            <p>Las crisis son oportunidades para reevaluar la relación y fortalecer el vínculo...</p>
-            <a href="articulo_crisis_pare_ja.html">Continuar leyendo...</a>
+        <article>
+            <a href="articulo_preguntas_frecuentes.html"><h2>Preguntas frecuentes sobre Terapia</h2></a>
+            <p>Resuelvo las dudas más comunes sobre la duración y el proceso terapéutico...</p>
+            <a href="articulo_preguntas_frecuentes.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
-    </main>
-
-    <footer>
-        <p>© 2026 Maria Fabregat | Psicóloga Col. nº 22083</p>
-    </footer>
-
+    </div>
+    <footer><p>© 2026 Maria Fabregat | Psicóloga Col. nº 22083</p></footer>
 </body>
 </html>
