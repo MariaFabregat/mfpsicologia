@@ -3,41 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recursos - Blog de Psicología</title>
-    </head>
+    <title>Recursos - Maria Fabregat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
+        header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
+        header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
+        .main-header{ background:#bfa4d1; color:white; text-align:left; padding:3.2rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+        .main-header-inner{ max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; width:100%; }
+        .main-header h1{ font-family:'Playfair Display',serif; font-size:2rem; margin:.5rem 0; color:#fff; }
+        .blog-categories-bar { background: #ffffff; border-bottom: 1px solid #e6d4ef; padding: 1.2rem 0; text-align: center; width: 100%; }
+        .blog-categories-bar ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
+        .blog-categories-bar a { text-decoration: none; color: #555; font-weight: 600; font-size: 0.95rem; }
+        .blog-categories-bar a:hover, .blog-categories-bar a.active { color: #38264e; border-bottom: 2px solid #bfa4d1; }
+        .blog-list { max-width: 900px; margin: 2rem auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+        .blog-list article { border-bottom: 1px solid #ddd; padding-bottom: 20px; margin-bottom: 20px; }
+        .blog-list h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: #38264e; }
+        footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
+        .whatsapp-float{ position:fixed; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; }
+    </style>
+</head>
 <body>
-
-    <header>
-        <h1>Blog de Psicología</h1>
-        <p>Categoría: Recursos - Herramientas para tu bienestar.</p>
+    <header class="top-bar">
+        <div><a href="https://wa.me/34695136810" target="_blank"><i class="fab fa-whatsapp"></i> Contactar</a></div>
+        <div class="lang-switcher"><a href="blog.html">Volver al Blog</a></div>
     </header>
-
-    <nav class="categories">
-        <a href="blog.html">Todos</a>
-        <a href="categoria-procesos.html">Procesos Psicológicos</a>
-        <a href="categoria-recursos.html" class="active">Recursos</a>
-        <a href="categoria-tecnicas.html">Técnicas</a>
+    <div class="main-header">
+        <div class="main-header-inner">
+            <h1>Categoría: Recursos</h1>
+            <p>Herramientas y lecturas para tu crecimiento cotidiano.</p>
+        </div>
+    </div> 
+    <nav class="blog-categories-bar">
+        <ul>
+            <li><a href="blog.html">Todos</a></li>
+            <li><a href="categoria-procesos.html">Procesos Psicológicos</a></li>
+            <li><a href="categoria-recursos.html" class="active">Recursos</a></li>
+            <li><a href="categoria-tecnicas.html">Técnicas</a></li>
+        </ul>
     </nav>
-
-    <main class="blog-container">
-        <article class="post-card">
-            <h2>Víctima, salvador y perseguidor: roles que dañan tus relaciones</h2>
-            <p>Publicado el 18 de diciembre de 2025</p>
+    <div class="blog-list">
+        <article>
+            <a href="articulo-roles-reactivos.html"><h2>Víctima, salvador y perseguidor: roles que dañan tus relaciones</h2></a>
             <p>Descubre cómo reconocer los roles reactivos que afectan tus vínculos...</p>
-            <a href="articulo-roles-reactivos.html">Continuar leyendo...</a>
-        </article>
-
-        <article class="post-card">
-            <h2>Valores personales: la brújula interna</h2>
-            <p>Publicado el 18 de diciembre de 2025</p>
-            <p>Conecta con tus valores personales para tomar decisiones con mayor claridad...</p>
-            <a href="articulo-valores-personales.html">Continuar leyendo...</a>
-        </article>
-    </main>
-
-    <footer>
-        <p>© 2026 Maria Fabregat | Psicóloga Col. nº 22083</p>
-    </footer>
-
-</body>
-</html>
+            <a href="articulo-roles-reactivos.html" style="color:#9
