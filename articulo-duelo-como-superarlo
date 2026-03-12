@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El duelo no es una enfermedad que hay que curar, sino un proceso que hay que transitar. Descubre cómo integrar la pérdida y volver a encontrar un sentido con acompañamiento psicológico en Barcelona.">
+    <title>Superando el Duelo: más allá del adiós | Psicóloga Barcelona</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* ESTILOS BASE */
+        body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
+        header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
+        header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
+        .main-header{ background:#bfa4d1; color:white; text-align:left; padding:3.2rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+        .main-header-inner{ max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; width:100%; }
+        .main-header h1{ font-family:'Playfair Display',serif; font-size:2rem; margin:.5rem 0; color:#fff; line-height: 1.2; }
+        .btn{ background:#9f7db4; color:#fff; padding:.6rem 1.2rem; border:none; border-radius:5px; text-decoration:none; display:inline-block; transition: background 0.3s; text-align: center; }
+        .btn:hover { background: #8a66a0; }
+
+        /* ESTILOS DEL ARTÍCULO */
+        .article-content-wrapper { 
+            max-width: 800px; 
+            margin: 2rem auto; 
+            padding: 2rem;
+            line-height: 1.7; 
+            background:#fff; 
+            border-radius:8px; 
+            box-shadow:0 2px 10px rgba(0,0,0,.06);
+        }
+        .article-content-wrapper h2 {
+            font-family: 'Playfair Display', serif;
+            color: #38264e;
+            margin-top: 2rem;
+            padding-top: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .article-content-wrapper h3 {
+            color: #38264e;
+            margin-top: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .article-content-wrapper ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+        .highlight-box {
+            background-color: #f9f6fb;
+            border-left: 4px solid #bfa4d1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        /* FOOTER Y FLOTANTE */
+        footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
+        footer a { color: #fff; text-decoration: none; margin: 0 .4rem;}
+        footer a, footer a i { color: #fff !important; }
+        .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); transition:all .3s; }
+        .whatsapp-float:hover{ background:#1ebe57; transform:scale(1.05); }
+        
+        @media (max-width:900px){ 
+            .main-header{ padding:2rem 1rem; } 
+            .main-header h1 { font-size: 1.6rem; }
+            .article-content-wrapper { margin: 1rem; padding: 1.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top-bar">
+        <div>
+            Sígueme y contáctame:
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> |
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> |
+            <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo." target="_blank"><i class="fab fa-whatsapp"></i></a> |
+            <a href="mailto:mariafabregat@copc.cat"><i class="fas fa-envelope"></i></a> |
+            <a href="tel:+34695136810"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="lang-switcher"><a href="article-dol-parella.html">Català</a></div>
+    </header>
+
+    <div class="main-header">
+        <div class="main-header-inner">
+            <div class="header-content">
+                <h1>Superando el Duelo: más allá del adiós</h1>
+                <p style="margin:0.5rem 0 0; color: #fff; opacity: 0.9;">Publicado el 12 de marzo de 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-content-wrapper">
+        <p>Hay momentos en la vida en los que el reloj parece pararse en seco. Una pérdida —ya sea por el fallecimiento de un ser querido, una ruptura de pareja o incluso el fin de una etapa vital importante— nos deja en un territorio desconocido. Como psicóloga, he acompañado a muchas personas en este paisaje gris, y lo primero que siempre les digo es: <strong>el duelo no es una enfermedad que hay que curar, sino un proceso que hay que transitar</strong>.</p>
+
+        <p>No se trata de "superarlo" para volver a ser la misma persona de antes. Se trata de aprender a vivir con esa ausencia, integrándola en nuestra nueva identidad.</p>
+
+        <div class="highlight-box">
+            "El duelo no es una escalera recta, sino más bien una espiral. Hay días en los que sientes que has avanzado y, de repente, un olor o una canción te devuelven al punto de partida."
+        </div>
+
+        <h2>Las fases del duelo: Un camino que no es lineal</h2>
+        <p>Seguramente habrás oído hablar de las etapas del duelo: negación, ira, negociación, depresión y aceptación. Puedo confirmar que el duelo no es una escalera recta, sino más bien una espiral. Hay días en los que sientes que has avanzado y, de repente, un olor o una canción te devuelven al punto de partida.</p>
+        <p>Desde el enfoque humanista y existencial, entendemos que este caos emocional es necesario. No hay un tiempo "correcto" para estar mal. Cada persona tiene su propio ritmo y su propia manera de decir adiós. La clave no es evitar el dolor, sino no dejar que el dolor se convierta en sufrimiento crónico por no permitirnos sentirlo.</p>
+
+        <h2>Herramientas para integrar la pérdida</h2>
+        <p>Si estás atravesando un proceso de duelo, me gustaría compartir contigo algunas claves que trabajamos en terapia para ayudarte a encontrar un poco de luz entre las sombras:</p>
+        <ul>
+            <li><strong>Valida tu emoción:</strong> No te fuerces a estar bien "por los demás". Si necesitas llorar, llora. Si sientes rabia, permítete sentirla. La resistencia a la emoción solo la hace más fuerte y persistente.</li>
+            <li><strong>Crea tus propios rituales:</strong> A veces, las despedidas formales no son suficientes. Escribir una carta a la persona que ya no está, plantar un árbol o dedicar un espacio de tu casa a su memoria puede ayudarte a canalizar ese amor que ya no tiene un destinatario físico.</li>
+            <li><strong>El autocuidado como ancla:</strong> En pleno duelo, las necesidades básicas suelen olvidarse. Comer, dormir y caminar un poco cada día son actos de regulación emocional. Tu cuerpo necesita energía para procesar el impacto emocional.</li>
+            <li><strong>Busca el "para qué":</strong> Puedes plantearte cómo esta pérdida transforma tu visión del mundo. No para buscar un "porqué" (que a menudo no tiene respuesta), sino un "para qué": ¿Qué legado me deja esta persona? ¿Qué he aprendido sobre mi propia capacidad de resiliencia?</li>
+        </ul>
+
+        <h2>Encontrar un nuevo significado</h2>
+        <p>El final del duelo no es el olvido. Olvidar sería perder una parte de nosotros mismos. El objetivo es llegar a un lugar donde el recuerdo ya no lastime, sino que acompañe. Es pasar del <strong>"dolor que paraliza"</strong> al <strong>"amor que recuerda"</strong>.</p>
+        <p>A menudo, la pérdida nos pone frente a frente con nuestra propia finitud, y eso, aunque asusta, también nos da una oportunidad única para reevaluar nuestras prioridades y decidir cómo queremos vivir el tiempo que tenemos por delante.</p>
+
+        <h2>Mi acompañamiento para ti</h2>
+        <p>Sé que ahora mismo puede parecerte imposible ver el final del túnel. Sé que el vacío se siente inmenso. Pero también sé, por lo que veo cada día en mi consulta, que el ser humano tiene una capacidad asombrosa para reconstruirse sobre sus propias cenizas.</p>
+        <p>Si sientes que te has quedado bloqueado/a en alguna etapa, que el peso es demasiado grande para llevarlo a solas o que necesitas un espacio seguro donde poder hablar de tu pérdida sin juicios ni prisas, estoy aquí para caminar a tu lado.</p>
+        <p><strong>El duelo es un proceso sagrado que merece ser respetado y acompañado con ternura.</strong> Si necesitas ayuda para integrar tu pérdida y volver a encontrar un sentido, ponte en contacto conmigo: buscaremos la manera de honrar tu pasado mientras reconstruyes tu presente.</p>
+
+        <div style="text-align: center; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+            <h3>¿Necesitas un espacio seguro para transitar tu duelo?</h3>
+            <p>No tienes que cargar con este peso en soledad. Trabajaremos juntos para integrar la pérdida y encontrar de nuevo un camino hacia adelante.</p>
+            <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn" style="font-weight: bold; padding: 12px 30px;">
+                Reservar sesión aquí
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Sígueme y contáctame:
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+            <a href="https://wa.me/34695136810" target="_blank"><i class="fab fa-whatsapp"></i></a> |
+            <a href="mailto:mariafabregat@copc.cat"><i class="fas fa-envelope"></i></a>
+            <a href="tel:+34695136810"><i class="fas fa-phone"></i></a>
+        </p>
+        <p>&copy; 2026 Maria Fabregat | Psicóloga en Barcelona</p>
+    </footer>
+
+    <a href="https://wa.me/34695136810" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
 
