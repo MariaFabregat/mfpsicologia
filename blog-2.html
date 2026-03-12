@@ -36,6 +36,20 @@
         footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
         footer a { color: #fff !important; text-decoration: none; margin: 0 .4rem; }
         .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); }
+
+        /* Botón Inicio */
+        .top-bar-nav { display: flex; align-items: center; gap: 0.8rem; }
+        .btn-inicio { 
+            background: #9f7db4; 
+            color: #fff !important; 
+            padding: 0.3rem 0.9rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .btn-inicio:hover { background: #8a66a0; }
     </style>
 </head>
 <body>
@@ -48,7 +62,10 @@
             <a href="mailto:mariafabregat@copc.cat"><i class="fas fa-envelope"></i></a> |
             <a href="tel:+34695136810"><i class="fas fa-phone"></i></a>
         </div>
-        <div class="lang-switcher"><a href="blog-cat.html">Català</a></div>
+        <div class="top-bar-nav">
+            <a href="mfpsicologia.html" class="btn-inicio">Inicio</a>
+            <a href="blog-cat.html">Català</a>
+        </div>
     </header>
 
     <div class="main-header">
@@ -70,7 +87,7 @@
     </nav>
     
     <div class="blog-list">
-           <article class="category-herramientas">
+        <article class="category-herramientas">
             <a href="articulo_crisis_pareja.html"><h2>"Ya no somos los mismos": navegando crisis de pareja</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 2 de diciembre de 2025</p>
             <p>Descubre cómo entender la dinámica de la relación y decidir si reparar o terminarla...</p>
@@ -95,7 +112,7 @@
             <a href="articulo_necesito_terapia.html"><h2>"¿Necesito Terapia? 5 Señales Inequívocas de que es tu Momento"</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 2 de diciembre de 2025</p>
             <p>Ayudar al lector a reconocer cuándo el malestar es lo suficientemente significativo como para buscar ayuda profesional.</p>
-            <a href="articulo_crisis_pareja.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
+            <a href="articulo_necesito_terapia.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
         <div class="pagination">
@@ -104,19 +121,20 @@
             <span class="current">2</span>
             <span>Siguiente &raquo;</span>
         </div>
-</div>
+    </div>
+
     <footer>
         <p>Sígueme y contáctame:
             <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
             <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
-            <a href="https://wa.me/34695136810?text=Hola%20Maria" target="_blank"><i class="fab fa-whatsapp"></i></a> |
+            <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo." target="_blank"><i class="fab fa-whatsapp"></i></a> |
             <a href="mailto:mariafabregat@copc.cat"><i class="fas fa-envelope"></i></a> |
             <a href="tel:+34695136810"><i class="fas fa-phone"></i></a>
         </p>
         <p>&copy; 2026 Maria Fabregat | Psicóloga Col. nº 22083</p>
     </footer>
 
-    <a href="https://wa.me/34695136810" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/34695136810" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 </body>
