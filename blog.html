@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Un espacio de reflexión psicológica donde la comprensión abre camino a la transformación personal. Artículos para comprenderte, cuidarte y crecer.">
     <title>Blog de Psicología | Reflexión, bienestar y crecimiento personal | Maria Fabregat psicóloga</title>
-    <!-- Preconnect to external domains for faster resource loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -40,6 +39,20 @@
         footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
         footer a { color: #fff !important; text-decoration: none; margin: 0 .4rem; }
         .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); }
+
+        /* Botón Inicio */
+        .top-bar-nav { display: flex; align-items: center; gap: 0.8rem; }
+        .btn-inicio { 
+            background: #9f7db4; 
+            color: #fff !important; 
+            padding: 0.3rem 0.9rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .btn-inicio:hover { background: #8a66a0; }
     </style>
 </head>
 <body>
@@ -52,7 +65,10 @@
             <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo"><i class="fas fa-envelope"></i></a> |
             <a href="tel:+34695136810" aria-label="Llamar por teléfono"><i class="fas fa-phone"></i></a>
         </div>
-        <div class="lang-switcher"><a href="blog-cat.html">Català</a></div>
+        <div class="top-bar-nav">
+            <a href="mfpsicologia.html" class="btn-inicio">Inicio</a>
+            <a href="blog-cat.html">Català</a>
+        </div>
     </header>
 
     <div class="main-header">
@@ -78,14 +94,14 @@
         <article class="category-procesos">
             <a href="articulo-duelo-como-superarlo.html"><h2>Superando el Duelo: más allá del adiós</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 12 de marzo de 2026</p>
-            <p>El duelo tras una pérdida puede ser abrumador. Descubre cómo afrontar el proceso de duelo, integrar la ausencia y encontrar sentido para seguir adelante....</p>
+            <p>El duelo tras una pérdida puede ser abrumador. Descubre cómo afrontar el proceso de duelo, integrar la ausencia y encontrar sentido para seguir adelante....</p>
             <a href="articulo-duelo-como-superarlo.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
         <article class="category-herramientas">
             <a href="articulo-poner-limites-sin-culpa.html"><h2>El Arte de Poner Límites Sin Sentir Culpa</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 12 de marzo de 2026</p>
-            <p>Aprende a poner límites sin sentir culpa. Descubre cómo decir “no”, proteger tu energía y fortalecer tu autoestima sin dañar tus relaciones...</p>
+            <p>Aprende a poner límites sin sentir culpa. Descubre cómo decir "no", proteger tu energía y fortalecer tu autoestima sin dañar tus relaciones...</p>
             <a href="articulo-poner-limites-sin-culpa.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
@@ -103,44 +119,40 @@
             <a href="articulo-ansiedad.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
         
-         <article class="category-tecnicas">
+        <article class="category-tecnicas">
             <a href="articulo_del_deseo_a_la_accion.html"><h2>Del deseo a la acción: Claves para la motivación duradera</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 27 de enero de 2026</p>
             <p>¿Por qué cuesta mantener la motivación? Desde la terapia cognitiva...</p>
             <a href="articulo_del_deseo_a_la_accion.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
-    <article class="category-tecnicas">
+        <article class="category-tecnicas">
             <a href="articulo-reprocesamiento-de-traumas.html"><h2>Reescribe tu Historia con EMDR</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 11 de enero de 2026</p>
             <p>Tu historia no es tu cárcel. Descubre cómo las técnicas de reprocesamiento...</p>
             <a href="articulo-reprocesamiento-de-traumas.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
-    <article class="category-procesos">
+        <article class="category-procesos">
             <a href="articulo_preguntas_frecuentes.html"><h2>Preguntas frecuentes sobre Terapia</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 22 de diciembre de 2025</p>
             <p>Resuelvo las dudas más comunes sobre la duración de las sesiones...</p>
             <a href="articulo_preguntas_frecuentes.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
-     <article class="category-tecnicas">
+        <article class="category-tecnicas">
             <a href="articulo_kinesiologia_emocional.html"><h2>Kinesiología Emocional: gestionar emociones</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicado el 21 de diciembre de 2025</p>
             <p>Descubre cómo el cuerpo actúa como un archivo biológico...</p>
             <a href="articulo_kinesiologia_emocional.html" style="color:#9f7db4; font-weight:bold;">Continuar leyendo...</a>
         </article>
 
-
         <div class="pagination">
-    <span>&laquo; Anterior</span> 
-    
-    <span class="current">1</span>
-    
-    <a href="blog-2.html">2</a>
-    
-    <a href="blog-2.html">Siguiente &raquo;</a>
-</div>
+            <span>&laquo; Anterior</span> 
+            <span class="current">1</span>
+            <a href="blog-2.html">2</a>
+            <a href="blog-2.html">Siguiente &raquo;</a>
+        </div>
     </div>
 
     <footer>
@@ -160,7 +172,5 @@
         aria-label="Contactar por WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
-</body>
-</html>
 </body>
 </html>
