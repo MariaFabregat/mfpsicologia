@@ -10,7 +10,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
     <style>
-        /* ESTILOS BASE MANTENIDOS */
         body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
         header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
         header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
@@ -20,7 +19,6 @@
         .btn{ background:#9f7db4; color:#fff; padding:.6rem 1.2rem; border:none; border-radius:5px; text-decoration:none; display:inline-block; transition: background 0.3s; }
         .btn:hover { background: #8a66a0; }
 
-        /* ESTILOS DEL ARTÍCULO */
         .article-content-wrapper { 
             max-width: 800px; 
             margin: 2rem auto; 
@@ -55,12 +53,25 @@
             font-style: italic;
         }
 
-        /* FOOTER Y FLOTANTE */
         footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
         footer a { color: #fff; text-decoration: none; margin: 0 .4rem;}
         footer a, footer a i { color: #fff !important; }
         .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); transition:all .3s; }
         .whatsapp-float:hover{ background:#1ebe57; transform:scale(1.05); }
+
+        /* Botón Volver */
+        .top-bar-nav { display: flex; align-items: center; gap: 0.8rem; }
+        .btn-volver { 
+            background: #9f7db4; 
+            color: #fff !important; 
+            padding: 0.3rem 0.9rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .btn-volver:hover { background: #8a66a0; }
         
         @media (max-width:900px){ 
             .main-header{ padding:2rem 1rem; } 
@@ -77,10 +88,13 @@
             <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> |
             <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> |
             <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo." target="_blank"><i class="fab fa-whatsapp"></i></a> |
-            <a href="mailto:mariafabregat@copc.cat"><i class="fas fa-envelope"></i></a> |
+            <a href="/cdn-cgi/l/email-protection#86ebe7f4efe7e0e7e4f4e3e1e7f2c6e5e9f6e5a8e5e7f2"><i class="fas fa-envelope"></i></a> |
             <a href="tel:+34695136810"><i class="fas fa-phone"></i></a>
         </div>
-        <div class="lang-switcher"><a href="article-ansietat.html">Català</a></div>
+        <div class="top-bar-nav">
+            <a href="blog.html" class="btn-volver">← Volver</a>
+            <a href="article-ansietat.html">Català</a>
+        </div>
     </header>
 
     <div class="main-header">
@@ -153,15 +167,10 @@
             <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
             <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
             <a href="https://wa.me/34695136810" target="_blank"><i class="fab fa-whatsapp"></i></a> |
-            <a href="mailto:mariafabregat@copc.cat"><i class="fas fa-envelope"></i></a>
+            <a href="/cdn-cgi/l/email-protection#4d202c3f242c2b2c2f3f282a2c390d2e223d2e632e2c39"><i class="fas fa-envelope"></i></a>
             <a href="tel:+34695136810"><i class="fas fa-phone"></i></a>
         </p>
         <p>&copy; 2026 Maria Fabregat | Psicóloga en La Sagrera, Barcelona</p>
     </footer>
 
-    <a href="https://wa.me/34695136810" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-</body>
-</html>
+    <a href="https://wa.me/34695136810" class="whatsapp-float" target="_blank" aria-label="C
