@@ -10,7 +10,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
     <style>
-        /* ESTILOS BASE */
         body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
         header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
         header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
@@ -20,7 +19,6 @@
         .btn{ background:#9f7db4; color:#fff; padding:.6rem 1.2rem; border:none; border-radius:5px; text-decoration:none; display:inline-block; transition: background 0.3s; }
         .btn:hover { background: #8a66a0; }
 
-        /* CONTENIDO DEL ARTÍCULO */
         .article-content-wrapper { 
             max-width: 800px; 
             margin: 2rem auto; 
@@ -46,11 +44,25 @@
         .article-content-wrapper ul { margin-bottom: 1.5rem; padding-left: 1.5rem; }
         .article-content-wrapper li { margin-bottom: 0.5rem; }
 
-        /* FOOTER Y WHATSAPP */
         footer{ background:#38264e; color:#fff; text-align:center; padding:2rem 1rem; margin-top:3rem; }
         footer a { color: #fff; text-decoration: none; margin: 0 .4rem; font-size: 1.2rem; }
+        footer a, footer a i { color: #fff !important; }
         .whatsapp-float{ position:fixed; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); transition:all .3s; }
         .whatsapp-float:hover{ background:#1ebe57; transform:scale(1.05); }
+
+        /* Botón Volver */
+        .top-bar-nav { display: flex; align-items: center; gap: 0.8rem; }
+        .btn-volver { 
+            background: #9f7db4; 
+            color: #fff !important; 
+            padding: 0.3rem 0.9rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .btn-volver:hover { background: #8a66a0; }
         
         @media (max-width:600px){ 
             .main-header h1 { font-size: 1.6rem; }
@@ -69,7 +81,10 @@
             <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo"><i class="fas fa-envelope"></i></a> |
             <a href="tel:+34695136810" aria-label="Llamar por teléfono"><i class="fas fa-phone"></i></a>
         </div>
-        <div class="lang-switcher"><a href="#">Català</a></div>
+        <div class="top-bar-nav">
+            <a href="blog.html" class="btn-volver">← Volver</a>
+            <a href="#">Català</a>
+        </div>
     </header>
 
     <div class="main-header">
@@ -90,7 +105,7 @@
         <h2>La trampa de la procrastinación: más que pereza, es protección</h2>
         <p>Solemos fustigarnos pensando que procrastinar es sinónimo de ser vagos. Nada más lejos de la realidad. La procrastinación es, esencialmente, un mecanismo de defensa. Cuando nos enfrentamos a una tarea que percibimos como abrumadora, difícil o que pone a prueba nuestra valía, nuestro cerebro detecta una amenaza.</p>
 
-        <p>Para reducir esa ansiedad inmediata, el cerebro busca una gratificación instantánea: revisar el móvil, limpiar la cocina o cualquier actividad que nos dé un alivio efímero. El alivio refuerza la conducta de evitación, y así nace el bucle. El problema es que, aunque la ansiedad desaparece un momento, vuelve multiplicada en forma de culpa. Para romper esto, el enfoque terapéutico nos invita a no esperar a <strong>"tener ganas"</strong> ,sino a actuar para que las ganas aparezcan.</p>
+        <p>Para reducir esa ansiedad inmediata, el cerebro busca una gratificación instantánea: revisar el móvil, limpiar la cocina o cualquier actividad que nos dé un alivio efímero. El alivio refuerza la conducta de evitación, y así nace el bucle. El problema es que, aunque la ansiedad desaparece un momento, vuelve multiplicada en forma de culpa. Para romper esto, el enfoque terapéutico nos invita a no esperar a <strong>"tener ganas"</strong>, sino a actuar para que las ganas aparezcan.</p>
 
         <h2>Estrategias de la Terapia de Metas: de lo abstracto a lo concreto</h2>
         <p>Uno de los mayores errores es fijar metas nebulosas. "Quiero ser más productivo" o "quiero cuidarme" son deseos, no objetivos. El cerebro necesita instrucciones precisas para no perderse en la ambigüedad. Aquí es donde la Terapia de Metas aporta estructura mediante el sistema de objetivos con sentido.</p>
@@ -104,7 +119,7 @@
         <h2>Gestionar el perfeccionismo y el miedo al fracaso</h2>
         <p>A menudo, detrás de la falta de acción se esconde un perfeccionismo paralizante. Es la creencia de que, si el resultado no va a ser excelente, no merece la pena el esfuerzo. Este pensamiento es una distorsión cognitiva común que genera un nivel de presión insoportable.</p>
 
-            </p>Para combatir esto, trabajamos el reencuadre cognitivo. Se trata de cambiar la narrativa interna:</p>
+        <p>Para combatir esto, trabajamos el reencuadre cognitivo. Se trata de cambiar la narrativa interna:</p>
         <ul>
             <li><strong>Aceptar la imperfección:</strong> El primer paso de cualquier cambio suele ser torpe. Permitirse ser un principiante es liberador.</li>
             <li><strong>El error como dato:</strong> En lugar de ver un fallo como una evidencia de incompetencia, lo tratamos como una variable del proceso que nos indica qué ajustar.</li>
@@ -136,7 +151,7 @@
         </div>
     </article>
 
-   <footer>
+    <footer>
         <p>Sígueme y contáctame:
             <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
             <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
