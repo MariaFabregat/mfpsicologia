@@ -10,7 +10,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
     <style>
-        /* ESTILOS CSS COMPLETOS DE SERVICIO_KINESIOLOGIAEMOCIONAL.HTML */
         body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
         header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
         header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
@@ -20,15 +19,13 @@
         .btn{ background:#9f7db4; color:#fff; padding:.6rem 1.2rem; border:none; border-radius:5px; text-decoration:none; display:inline-block; }
         section{ padding:2.5rem 1rem; max-width:1000px; margin:auto; }
         
-        /* ESTILOS ESPECÍFICOS DEL ARTÍCULO (Usamos el mismo wrapper de 1000px pero con nombre diferente) */
         .article-content-wrapper { 
-            max-width: 800px; /* Reducimos el ancho para mejor lectura de texto largo */
+            max-width: 800px;
             margin: 2rem auto; 
-            padding: 0 20px;
+            padding: 2rem;
             line-height: 1.7; 
-            background:#fff; /* Fondo blanco como tus secciones de servicio */
+            background:#fff;
             border-radius:8px; 
-            padding:2rem; 
             box-shadow:0 2px 10px rgba(0,0,0,.06);
         }
         .article-content-wrapper h2 {
@@ -47,14 +44,28 @@
             margin-left: 20px;
         }
 
-        /* ESTILOS ORIGINALES DEL FOOTER Y WHATSAPP FLOTANTE */
         footer a { color: #fff; text-decoration: none; margin: 0 .4rem;}
         footer a i { color: inherit;}
         footer a, footer a i { color: #fff !important; }
         footer{ background:#38264e; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
         .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); transition:all .3s; }
         .whatsapp-float:hover{ background:#1ebe57; transform:scale(1.05); }
-        @media (max-width:900px){ .main-header{ padding:2rem 1rem; } .service-hero{ padding:1.2rem; } }
+
+        /* Botón Volver */
+        .top-bar-nav { display: flex; align-items: center; gap: 0.8rem; }
+        .btn-volver { 
+            background: #9f7db4; 
+            color: #fff !important; 
+            padding: 0.3rem 0.9rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .btn-volver:hover { background: #8a66a0; }
+
+        @media (max-width:900px){ .main-header{ padding:2rem 1rem; } }
     </style>
 </head>
 
@@ -68,7 +79,10 @@
             <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo"><i class="fas fa-envelope"></i></a> |
             <a href="tel:+34695136810" aria-label="Llamar por teléfono"><i class="fas fa-phone"></i></a>
         </div>
-        <div class="lang-switcher"><a href="article-crisi-parella.html">Català</a></div>
+        <div class="top-bar-nav">
+            <a href="blog.html" class="btn-volver">← Volver</a>
+            <a href="article-crisi-parella.html">Català</a>
+        </div>
     </header>
 
     <div class="main-header">
@@ -77,7 +91,7 @@
                 <h1>"Ya no somos los mismos": navegando crisis de pareja</h1>
                 <p style="margin:0.5rem 0 0; color: #fff;">Publicado el 28 de noviembre de 2025</p>
             </div>
-            </div>
+        </div>
     </div>
 
     <div class="article-content-wrapper">
@@ -157,21 +171,20 @@
         <p><b>La crisis es una oportunidad disfrazada</b>. Es la invitación a dejar de ser la pareja que funcionaba en el pasado y atreverse a construir, juntos o por separado, una versión más auténtica y consciente de vosotros mismos.</p>
 
         <p style="text-align: center; margin-top: 30px;">
-    ¿Listos para romper el patrón? Agendad una primera sesión de terapia de pareja para comenzar a construir la relación que merecéis.
-</p>
+            ¿Listos para romper el patrón? Agendad una primera sesión de terapia de pareja para comenzar a construir la relación que merecéis.
+        </p>
 
-<p style="text-align: center; margin-bottom: 30px;">
-    <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn" style="background-color: #9f7db4; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        Reserva aquí
-    </a>
-</p>
-
+        <p style="text-align: center; margin-bottom: 30px;">
+            <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn" style="background-color: #9f7db4; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                Reserva aquí
+            </a>
+        </p>
     </div>
 
     <footer>
         <p>Sígueme y contáctame:
-            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
-            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
             <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo.%20%C2%BFPodr%C3%ADas%20decirme%20c%C3%B3mo%20podemos%20concretarla%3F%20Gracias" target="_blank">
                 <i class="fab fa-whatsapp"></i>
             </a> |
