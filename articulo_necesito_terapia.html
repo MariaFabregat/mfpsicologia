@@ -10,7 +10,6 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     
     <style>
-        /* ESTILOS CSS COMPLETOS DE SERVICIO_KINESIOLOGIAEMOCIONAL.HTML */
         body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
         header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
         header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
@@ -20,15 +19,13 @@
         .btn{ background:#9f7db4; color:#fff; padding:.6rem 1.2rem; border:none; border-radius:5px; text-decoration:none; display:inline-block; }
         section{ padding:2.5rem 1rem; max-width:1000px; margin:auto; }
         
-        /* ESTILOS ESPECÍFICOS DEL ARTÍCULO */
         .article-content-wrapper { 
-            max-width: 800px; 
+            max-width: 800px;
             margin: 2rem auto; 
-            padding: 0 20px;
+            padding: 2rem;
             line-height: 1.7; 
-            background:#fff; 
+            background:#fff;
             border-radius:8px; 
-            padding:2rem; 
             box-shadow:0 2px 10px rgba(0,0,0,.06);
         }
         .article-content-wrapper h2 {
@@ -47,14 +44,28 @@
             margin-left: 20px;
         }
 
-        /* ESTILOS ORIGINALES DEL FOOTER Y WHATSAPP FLOTANTE */
         footer a { color: #fff; text-decoration: none; margin: 0 .4rem;}
         footer a i { color: inherit;}
         footer a, footer a i { color: #fff !important; }
         footer{ background:#38264e; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
         .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); transition:all .3s; }
         .whatsapp-float:hover{ background:#1ebe57; transform:scale(1.05); }
-        @media (max-width:900px){ .main-header{ padding:2rem 1rem; } .service-hero{ padding:1.2rem; } }
+
+        /* Botón Volver */
+        .top-bar-nav { display: flex; align-items: center; gap: 0.8rem; }
+        .btn-volver { 
+            background: #9f7db4; 
+            color: #fff !important; 
+            padding: 0.3rem 0.9rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .btn-volver:hover { background: #8a66a0; }
+
+        @media (max-width:900px){ .main-header{ padding:2rem 1rem; } }
     </style>
 </head>
 
@@ -68,7 +79,10 @@
             <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo"><i class="fas fa-envelope"></i></a> |
             <a href="tel:+34695136810" aria-label="Llamar por teléfono"><i class="fas fa-phone"></i></a>
         </div>
-        <div class="lang-switcher"><a href="article-necesito-terapia.html">Català</a></div>
+        <div class="top-bar-nav">
+            <a href="blog.html" class="btn-volver">← Volver</a>
+            <a href="article-necesito-terapia.html">Català</a>
+        </div>
     </header>
 
     <div class="main-header">
@@ -101,7 +115,7 @@
             <li><strong>Impacto físico (tu cuerpo habla)</strong>: Tu mente agotada comienza a somatizar.
                 <ul>
                     <li><strong>Sueño desregulado</strong>: Te cuesta conciliar el sueño o, por el contrario, no puedes levantarte de la cama.</li>
-                    <li><strong>Apetito y gigestión</strong>: Pierdes el apetito o usas la comida como el único consuelo para las emociones.</li>
+                    <li><strong>Apetito y digestión</strong>: Pierdes el apetito o usas la comida como el único consuelo para las emociones.</li>
                     <li><strong>Dolores sin causa</strong>: Dolores de cabeza recurrentes o problemas digestivos que los médicos no logran resolver. Es tu cuerpo gritando lo que la boca calla.</li>
                 </ul>
             </li>
@@ -147,21 +161,20 @@
         <p>Estas dos últimas señales marcan una desconexión profunda con tu presente y tu futuro.</p>
 
         <h2>Conclusión: El primer paso es el más valiente</h2>
-<p>Si te has reconocido en estas señales, es vital que te escuches. No tienes que esperar a tocar fondo para pedir ayuda. El momento ideal para la terapia es ahora, mientras aún tienes la energía para cambiar la trayectoria.</p>
-<p>Como psicóloga, te ofrezco un acompañamiento psicológico cercano para ayudarte a transformar estas señales de alarma en pasos concretos hacia tu bienestar emocional.</p>
-<p><b>Recuerda</b>: Yo no estoy aquí para darte soluciones mágicas, sino para ofrecerte el mapa, la linterna y un espacio seguro para que seas tú quien dirija la exploración de tu propio mundo interior.</p>
-<p>El hecho de informarte sobre terapia y salud mental ya es un acto de amor propio. Es reconocer tu valor y comprometerte con tu paz. Tu salud mental es el cimiento de todo lo demás.</p>
+        <p>Si te has reconocido en estas señales, es vital que te escuches. No tienes que esperar a tocar fondo para pedir ayuda. El momento ideal para la terapia es ahora, mientras aún tienes la energía para cambiar la trayectoria.</p>
+        <p>Como psicóloga, te ofrezco un acompañamiento psicológico cercano para ayudarte a transformar estas señales de alarma en pasos concretos hacia tu bienestar emocional.</p>
+        <p><b>Recuerda</b>: Yo no estoy aquí para darte soluciones mágicas, sino para ofrecerte el mapa, la linterna y un espacio seguro para que seas tú quien dirija la exploración de tu propio mundo interior.</p>
+        <p>El hecho de informarte sobre terapia y salud mental ya es un acto de amor propio. Es reconocer tu valor y comprometerte con tu paz. Tu salud mental es el cimiento de todo lo demás.</p>
 
-<p style="text-align: center; margin-top: 30px;">
-    El primer paso es lo más importante. Comienza tu proceso de sanación y bienestar conmigo.
-</p>
+        <p style="text-align: center; margin-top: 30px;">
+            El primer paso es lo más importante. Comienza tu proceso de sanación y bienestar conmigo.
+        </p>
 
-<p style="text-align: center; margin-bottom: 30px;">
-    <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn" style="background-color: #9f7db4; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        Reserva aquí
-    </a>
-</p>
-
+        <p style="text-align: center; margin-bottom: 30px;">
+            <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn" style="background-color: #9f7db4; color: #fff; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
+                Reserva aquí
+            </a>
+        </p>
     </div>
 
     <footer>
