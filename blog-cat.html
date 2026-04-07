@@ -3,229 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Un espai de reflexió psicològica sobre salut emocional i creixement personal. Articles per comprendre't millor, cuidar-te i afavorir la transformació interior.">
-    <title>Blog de psicologia | Reflexió, benestar i creixement personal | Maria Fabregat psicòloga</title>
+    <meta name="description" content="Un espai de reflexió psicològica on la comprensió obre camí a la transformació personal. Articles per comprendre't, cuidar-te i créixer.">
+    <title>Blog de Psicologia | Reflexió, benestar i creixement personal | Maria Fabregat psicòloga</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
-        /* estilos tomados del sitio principal (compactados para esta página) */
         body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
         header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
         header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
         .main-header{ background:#bfa4d1; color:white; text-align:left; padding:3.2rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
         .main-header-inner{ max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; width:100%; }
         .main-header h1{ font-family:'Playfair Display',serif; font-size:2rem; margin:.5rem 0; color:#fff; }
-        .btn{ background:#9f7db4; color:#fff; padding:.6rem 1.2rem; border:none; border-radius:5px; text-decoration:none; display:inline-block; }
-        section{ padding:2.5rem 1rem; max-width:1000px; margin:auto; }
-        .service-hero{ max-width:980px; margin:2rem auto; background:#fff; border-radius:8px; padding:2rem; box-shadow:0 2px 10px rgba(0,0,0,.06); }
-        .service-hero h1{ font-family:'Playfair Display',serif; color:#38264e; margin:0 0 0.6rem 0; }
-        .service-hero p.lead{ margin:0 0 1rem 0; color:#444; font-size:1.05rem; line-height:1.5; }
-        .service-puntos{ display:flex; flex-direction:column; gap:1rem; margin-top:1rem; }
-        .service-puntos li{ background:#f9f3fc; padding:1rem; border-radius:8px; list-style:none; border-left:4px solid #9f7db4; color:#333; }
-        .service-footer{ text-align:center; margin-top:2rem; }
-        footer a { color: #fff; text-decoration: none; margin: 0 .4rem;}
-        footer a i { color: inherit;}
-        footer a, footer a i { color: #fff !important; }
-        footer{ background:#38264e; color:#fff; text-align:center; padding:1rem; margin-top:2rem; }
-        .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); transition:all .3s; }
-        .whatsapp-float:hover{ background:#1ebe57; transform:scale(1.05); }
-        @media (max-width:900px){ .main-header{ padding:2rem 1rem; } .service-hero{ padding:1.2rem; } }
         
-        /* Estilos específicos para la lista del blog (para que no se vea el código Jekyll) */
-        .blog-list {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,.06);
+        /* Barra de Categorías */
+        .blog-categories-bar { background: #ffffff; border-bottom: 1px solid #e6d4ef; padding: 1.2rem 0; text-align: center; width: 100%; clear: both; }
+        .blog-categories-bar ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
+        .blog-categories-bar a { text-decoration: none; color: #555; font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease; cursor: pointer; }
+        .blog-categories-bar a:hover, .blog-categories-bar a.active { color: #38264e; border-bottom: 2px solid #bfa4d1; }
+
+        /* Lista del Blog */
+        .blog-list { max-width: 900px; margin: 2rem auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+        .blog-list article { border-bottom: 1px solid #ddd; padding-bottom: 20px; margin-bottom: 20px; }
+        .blog-list article:last-child { border-bottom: none; }
+        .blog-list h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 5px; color: #38264e; }
+        .blog-list a { text-decoration: none; color: #38264e; }
+
+        /* Paginación */
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 2rem 0; padding-bottom: 1rem; }
+        .pagination a, .pagination span { padding: 8px 14px; border-radius: 4px; border: 1px solid #ccc; text-decoration: none; color: #38264e; background: #fff; }
+        .pagination .current { background: #38264e; color: #fff; }
+
+        footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
+        footer a { color: #fff !important; text-decoration: none; margin: 0 .4rem; }
+        .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); }
+
+        /* Botón Inicio */
+        .top-bar-nav { display: flex; align-items: center; gap: 0.8rem; }
+        .btn-inicio { 
+            background: #9f7db4; 
+            color: #fff !important; 
+            padding: 0.3rem 0.9rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
         }
-        .blog-list article {
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        .blog-list article:last-child {
-            border-bottom: none;
-        }
-        .blog-list h2 {
-            font-family: 'Playfair Display', serif; 
-            font-size: 1.8rem; 
-            margin-bottom: 5px;
-            color: #38264e; /* Color principal */
-        }
-        .blog-list a {
-            text-decoration: none;
-            color: #38264e;
-        }
+        .btn-inicio:hover { background: #8a66a0; }
     </style>
 </head>
 <body>
     <header class="top-bar">
-    <div>
-      Segueix-me i contacta'm:
-      <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> |
-      <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> |
-      <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies" target="_blank"><i class="fab fa-whatsapp"></i></a> |
-      <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo"><i class="fas fa-envelope"></i></a> |
-      <a href="tel:+34695136810" aria-label="Llamar por teléfono"><i class="fas fa-phone"></i></a>
-    </div>
-    <div class="lang-switcher"><a href="blog.html">Castellano</a></div>
-  </header>
+        <div>
+            Segueix-me i contacta'm:
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank" aria-label="Seguir a Instagram"><i class="fab fa-instagram"></i></a> |
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank" aria-label="Seguir a Facebook"><i class="fab fa-facebook-f"></i></a> |
+            <a href="https://wa.me/34695136810" target="_blank" aria-label="Contactar per WhatsApp"><i class="fab fa-whatsapp"></i></a> |
+            <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correu"><i class="fas fa-envelope"></i></a> |
+            <a href="tel:+34695136810" aria-label="Trucar per telèfon"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="top-bar-nav">
+            <a href="mfpsicologia.html" class="btn-inicio">Inici</a>
+            <a href="blog.html">Castellano</a>
+        </div>
+    </header>
 
     <div class="main-header">
         <div class="main-header-inner">
             <div class="header-content">
-                <h1>Blog de psicologia</h1>
-                <p style="margin:0.5rem 0 0;">Un espai de reflexió psicològica sobre salut emocional i creixement personal. Articles per comprendre't millor, cuidar-te i afavorir la transformació interior.</p>
+                <h1>Blog de Psicologia</h1>
+                <p>Un espai de reflexió psicològica on la comprensió obre camí a la transformació personal.</p>
             </div>
-            </div>
-    </div>
+        </div>
+    </div> 
+
+    <nav class="blog-categories-bar">
+        <ul>
+            <li><a href="blog-cat.html" class="active">Tots</a></li>
+            <li><a href="categoria-processos-cat.html">Processos Psicològics</a></li>
+            <li><a href="categoria-eines-cat.html">Eines</a></li>
+            <li><a href="categoria-tecniques-cat.html">Tècniques</a></li>
+        </ul>
+    </nav>
     
     <div class="blog-list">
-        
-        <article>
-            <a href="article-necesito-terapia.html">
-                <h2>Necessito teràpia? 5 senyals de que és el teu moment</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicat el 2 de desembre del 2025
-            </p>
-            <p style="margin-top: 10px;">
-                Una guia honesta i profunda per identificar 5 senyals clau que indiquen que el teu malestar és significatiu...
-            </p>
-            <a href="article-necesito-terapia.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar llegint...
-            </a>
+
+        <article class="category-herramientas">
+            <a href="article-posar-limits-sense-culpa.html"><h2>L'Art de posar límits sense sentir culpa</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 12 de març de 2026</p>
+            <p>Aprèn a posar límits de forma saludable. Descobreix com dir "no", protegir la teva energia i enfortir la teva autoestima sense malmetre les teves relacions...</p>
+            <a href="article-posar-limits-sense-culpa.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
         </article>
 
-        <article>
-            <a href="article-crisi-parella.html">
-                <h2>"Ja no som els mateixos": navegant crisi de parella</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicat el 2 de desembre del 2025
-            </p>
-            <p style="margin-top: 10px;">
-                Guia exhaustiva per comprendre les dinàmiques destructives a la parella des de l'enfocament sistèmic. Aprèn a millorar la comunicació, trencar patrons rígids i decidir si és el moment de reparar o tancar cicles de manera sana.
-            </p>
-            <a href="article-crisi-parella.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar llegint...
-            </a>
+        <article class="category-procesos">
+            <a href="article-intimitat-en-parella.html"><h2>L'intimitat en parella: com tornar a regar-la</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 28 de febrer de 2026</p>
+            <p>Sents que la intimitat en parella s'apaga? Descobreix com reconnectar, enfortir el vincle i cuidar la vostra relació...</p>
+            <a href="article-intimitat-en-parella.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
         </article>
 
-         <article>
-            <a href="article-rols-reactius.html">
-                <h2>Víctima, salvador i perseguidor: rols que fan malbé les teves relacions</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicat el 18 de desembre del 2025
-            </p>
-            <p style="margin-top: 10px;">
-               Descobreix com reconèixer els rols reactius que afecten els teus vincles i aprèn a respondre amb calma, claredat i respecte per construir relacions més conscients i equilibrades.
-            </p>
-            <a href="article-rols-reactius.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar llegint...
-            </a>
-        </article>
-
-        <article>
-            <a href="article-valors-personals.html">
-                <h2>Valors personals: la brúixola interna per viure amb coherència</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicat el 18 de desembre del 2025
-            </p>
-            <p style="margin-top: 10px;">
-               Connecta amb els teus valors personals per prendre decisions amb més claredat. T’ofereixo una activitat pràctica perquè puguis identificar-los i viure amb més coherència amb tu mateix/a.
-            </p>
-            <a href="article-valors-personals.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar llegint...
-            </a>
-        </article>
-
-        <article>
-            <a href="article-preguntes-frequents.html">
-                <h2>Preguntes freqüents</h2>
-            </a>
-            <p class="post-meta" style="color: #6d6d6d; font-size: 0.9rem;">
-                Publicat el 18 de desembre del 2025
-            </p>
-            <p style="margin-top: 10px;">
-               Aquí recullo les preguntes que més sovint em plantegeu, amb les meves respostes, perquè puguis resoldre els teus dubtes de manera clara i ràpida.
-            </p>
-            <a href="article-preguntes-frequents.html" style="color: #9f7db4; font-weight: bold;">
-                Continuar llegint...
-            </a>
-        </article>
-
-        <article>
-            <a href="article-kinesiologia-emocional.html">
-                <h2>Kinesiologia Emocional: gestionar emocions</h2>
-            </a>
-            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">
-                Publicat el 21 de desembre de 2025
-            </p>
-            <p style="margin-top: 10px;">
-                Descobreix com el cos actua com un arxiu biològic...</p>
-            <a href="article-kinesiologia-emocional.html" style="color:#9f7db4; font-weight:bold;">
-                Continuar llegint...
-            </a>
-        </article>
-
-
-
-        <article>
-            <a href="article-reprocessament-de-traumes.html"><h2>Reescriu la teva història amb EMDR</h2></a>
-            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat l'11 de gener de 2026</p>
-            <p>La teva història no és la teva presó. Descobreix com les tècniques de reprocessament poden ajudar-te a transformar els records dolorosos en experiències que ja no et limiten.</p>
-            <a href="article-reprocessament-de-traumes.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
-        </article>
-
-        <article>
-            <a href="article-ansietat.html"><h2>El Cercle Viciós de l'Ansietat: Com trencar-lo</h2></a>
+        <article class="category-procesos">
+            <a href="article-ansietat.html"><h2>El Cercle Viciós de l'Ansietat: Com Trencar-lo?</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 19 de febrer de 2026</p>
             <p>L'ansietat s'alimenta de pensaments catastrofistes i conductes d'evitació. Aprèn a trencar aquest cercle...</p>
             <a href="article-ansietat.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
         </article>
-
-        <article>
-            <a href="article-intimitat-parella.html"><h2>La intimitat en la parella: com tornar a regar-la</h2></a>
-            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 28 de febrer de 2026</p>
-            <p>Sents que la intimitat de parella s'apaga? Descobreix com reconnectar, enfortir el vincle i cuidar la vostra relació...</p>
-            <a href="article-intimitat-parella.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
-        </article>
-
-        <article>
-            <a href="article-posar-limits-sense-culpa.html"><h2>L'art de posar límits sense sentir culpa</h2></a>
-            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 12 de març de 2026</p>
-            <p>Aprèn a posar límits de manera saludable. Descobreix com dir "no", protegir la teva energia i enfortir la teva autoetima sense fer malbé les teves relacions... </p>
-            <a href="article-posar-limits-sense-culpa.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
-        </article>
         
+        <article class="category-herramientas">
+            <a href="article-del-desig-a-l-accio.html"><h2>Del desig a l'acció: Claus per a la motivació duradora</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 27 de gener de 2026</p>
+            <p>Per què costa mantenir la motivació? Des de la teràpia cognitiva...</p>
+            <a href="article-del-desig-a-l-accio.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
+
+        <article class="category-tecnicas">
+            <a href="article-reprocessament-de-traumes.html"><h2>Reescriu la teva Història amb EMDR</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 11 de gener de 2026</p>
+            <p>La teva història no és la teva presó. Descobreix com les tècniques de reprocessament...</p>
+            <a href="article-reprocessament-de-traumes.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
+
+        <article class="category-procesos">
+            <a href="article-preguntes-frequents.html"><h2>Preguntes freqüents sobre Teràpia</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 22 de desembre de 2025</p>
+            <p>Resolc els dubtes més comuns sobre la durada de les sessions...</p>
+            <a href="article-preguntes-frequents.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
+
+        <article class="category-tecnicas">
+            <a href="article-kinesiologia-emocional.html"><h2>Kinesiologia Emocional: gestionar emocions</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 21 de desembre de 2025</p>
+            <p>Descobreix com el cos actua com un arxiu biològic...</p>
+            <a href="article-kinesiologia-emocional.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
+
+        <div class="pagination">
+            <span>&laquo; Anterior</span> 
+            <span class="current">1</span>
+            <a href="blog-2-cat.html">2</a>
+            <a href="blog-2-cat.html">Següent &raquo;</a>
         </div>
+    </div>
 
     <footer>
-  <p>Segueix-me i contacta'm:
-    <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
-    <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
-    <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies" target="_blank">
-      <i class="fab fa-whatsapp"></i>
-    </a> | 
-    <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo">
-      <i class="fas fa-envelope"></i>
-    </a> | 
-    <a href="tel:+34695136810">
-      <i class="fas fa-phone"></i>
-    </a>
-  </p>
-  <p>&copy; 2026 Maria Fabregat</p>
-  </footer>
+        <p>Segueix-me i contacta'm:
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank" aria-label="Seguir a Instagram"><i class="fab fa-instagram"></i></a> | 
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank" aria-label="Seguir a Facebook"><i class="fab fa-facebook-f"></i></a> | 
+            <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20em%20gustaria%20tenir%20una%20sessi%C3%B3%20amb%20tu." target="_blank" aria-label="Contactar per WhatsApp"><i class="fab fa-whatsapp"></i></a> |
+            <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correu"><i class="fas fa-envelope"></i></a> |
+            <a href="tel:+34695136810" aria-label="Trucar per telèfon"><i class="fas fa-phone"></i></a>
+        </p>
+        <p>&copy; 2026 Maria Fabregat | Psicòloga Col. nº 22083</p>
+    </footer>
 
-    <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies"
+    <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20em%20gustaria%20tenir%20una%20sessi%C3%B3%20amb%20tu."
         class="whatsapp-float"
         target="_blank"
-        aria-label="Contactar por WhatsApp">
+        aria-label="Contactar per WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 </body>
