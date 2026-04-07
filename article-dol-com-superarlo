@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="El dol no és una malaltia que cal guarir, sinó un procés que cal transitar. Descobreix com integrar la pèrdua i tornar a trobar sentit amb acompanyament psicològic a Barcelona.">
+    <title>Superant el dol: més enllà de l'adéu | Psicòloga Barcelona</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        body { margin:0; font-family:'Open Sans',sans-serif; background:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
+        header.top-bar{ background:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:.5rem 1rem; font-size:.9rem; }
+        header.top-bar a{ margin:0 .5rem; text-decoration:none; color:#333; }
+        .main-header{ background:#bfa4d1; color:white; text-align:left; padding:3.2rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:1.5rem; }
+        .main-header-inner{ max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; width:100%; }
+        .main-header h1{ font-family:'Playfair Display',serif; font-size:2rem; margin:.5rem 0; color:#fff; line-height: 1.2; }
+        .btn{ background:#9f7db4; color:#fff; padding:.6rem 1.2rem; border:none; border-radius:5px; text-decoration:none; display:inline-block; transition: background 0.3s; text-align: center; }
+        .btn:hover { background: #8a66a0; }
+
+        .article-content-wrapper { 
+            max-width: 800px; 
+            margin: 2rem auto; 
+            padding: 2rem;
+            line-height: 1.7; 
+            background:#fff; 
+            border-radius:8px; 
+            box-shadow:0 2px 10px rgba(0,0,0,.06);
+        }
+        .article-content-wrapper h2 {
+            font-family: 'Playfair Display', serif;
+            color: #38264e;
+            margin-top: 2rem;
+            padding-top: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        .article-content-wrapper h3 {
+            color: #38264e;
+            margin-top: 1.5rem;
+            font-family: 'Playfair Display', serif;
+        }
+        .article-content-wrapper ul {
+            list-style: disc;
+            margin-left: 20px;
+            margin-bottom: 1.5rem;
+        }
+        .highlight-box {
+            background-color: #f9f6fb;
+            border-left: 4px solid #bfa4d1;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+        }
+
+        footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
+        footer a { color: #fff; text-decoration: none; margin: 0 .4rem;}
+        footer a, footer a i { color: #fff !important; }
+        .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); transition:all .3s; }
+        .whatsapp-float:hover{ background:#1ebe57; transform:scale(1.05); }
+
+        /* Botón Volver */
+        .top-bar-nav { display: flex; align-items: center; gap: 0.8rem; }
+        .btn-volver { 
+            background: #9f7db4; 
+            color: #fff !important; 
+            padding: 0.3rem 0.9rem; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: background 0.3s;
+        }
+        .btn-volver:hover { background: #8a66a0; }
+        
+        @media (max-width:900px){ 
+            .main-header{ padding:2rem 1rem; } 
+            .main-header h1 { font-size: 1.6rem; }
+            .article-content-wrapper { margin: 1rem; padding: 1.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top-bar">
+        <div>
+            Segueix-me i contacta'm:
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> |
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> |
+            <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies" target="_blank"><i class="fab fa-whatsapp"></i></a> |
+            <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo"><i class="fas fa-envelope"></i></a> |
+            <a href="tel:+34695136810" aria-label="Llamar por teléfono"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="lang-switcher"><a href="articulo-duelo-como-superarlo.html">Castellano</a></div>
+    </header>
+
+    <div class="main-header">
+        <div class="main-header-inner">
+            <div class="header-content">
+                <h1>Superant el dol: més enllà de l'adéu</h1>
+                <p style="margin:0.5rem 0 0; color: #fff; opacity: 0.9;">Publicat el 12 de març de 2026</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="article-content-wrapper">
+        <p>Hi ha moments a la vida en què el rellotge sembla aturar-se en sec. Una pèrdua -ja sigui per la mort d'un ésser estimat, una ruptura de parella o fins i tot la fi d'una etapa vital important- ens deixa en un territori desconegut. Com a psicòloga, he acompanyat moltes persones en aquest paisatge gris, i el primer que sempre els dic és: <strong>el dol no és una malaltia que cal guarir, sinó un procés que cal transitar</strong>.</p>
+
+        <p>No es tracta de “superar-ho” per tornar a ser la mateixa persona d'abans. Es tracta d'aprendre a viure amb aquesta absència, integrant-la a la nostra nova identitat.</p>
+
+        <div class="highlight-box">
+            "El dol no és una escala recta, sinó més aviat una espiral. Hi ha dies en què sents que has avançat i, de sobte, una olor o una cançó et tornen al punt de partida."
+        </div>
+
+        <h2>Les fases del dol: Un camí que no és lineal</h2>
+        <p>Segurament hauràs sentit a parlar de les etapes del dol: negació, ira, negociació, depressió i acceptació. Puc confirmar que el dol no és una escala recta, sinó més aviat una espiral. Hi ha dies en què sents que has avançat i, de sobte, una olor o una cançó et tornen al punt de partida.</p>
+        <p>Des de l'enfocament humanista i existencial, entenem que aquest caos emocional és necessari. No hi ha un temps “correcte” per estar malament. Cada persona té el seu propi ritme i la pròpia manera de dir adéu. La clau no és evitar el dolor, sinó no deixar que el dolor es converteixi en patiment crònic per no permetre'ns sentir-lo.</p>
+
+        <h2>Eines per integrar la pèrdua</h2>
+        <p>Si estàs travessant un procés de dol, m'agradaria compartir amb tu algunes claus que treballem en teràpia per ajudar-te a trobar una mica de llum entre les ombres:</p>
+        <ul>
+            <li><strong>Valida la teva emoció:</strong> No et forcis a estar bé "pels altres". Si necessites plorar, plora. Si sents ràbia, permet-te sentir-la. La resistència a l'emoció només la fa més forta i persistent.</li>
+            <li><strong>Crea els teus propis rituals:</strong> De vegades, els comiats formals no són suficients. Escriure una carta a la persona que ja no hi és, plantar un arbre o dedicar un espai de casa teva a la seva memòria pot ajudar-te a canalitzar aquest amor que ja no té un destinatari físic.</li>
+            <li><strong>L'autocura com a àncora:</strong> En ple dol, les necessitats bàsiques se solen oblidar. Menjar, dormir i caminar una mica cada dia són actes de regulació emocional. El teu cos necessita energia per processar l'impacte emocional.</li>
+            <li><strong>Busca el "per a què":</strong> Pots plantejar-te com aquesta pèrdua transforma la teva visió del món. No per buscar un “perquè” (que sovint no té resposta), sinó un “per a què”: Quin llegat em deixa aquesta persona? Què he après sobre la meva pròpia capacitat de resiliència?</li>
+        </ul>
+
+        <h2>Trobar un nou significat</h2>
+        <p>El final del dol no és l'oblit. Oblidar seria perdre una part de nosaltres mateixos. L'objectiu és arribar a un lloc on el record ja no faci mal, sinó que acompanyi. És passar del <strong>"dolor que paralitza"</strong> a <strong>"l'amor que recorda"</strong>.</p>
+        <p>Sovint, la pèrdua ens posa cara a cara amb la nostra pròpia finitud, i això, encara que espanta, també ens dóna una oportunitat única per reavaluar les nostres prioritats i decidir com volem viure el temps que tenim per endavant.</p>
+
+        <h2>El meu acompanyament per a tu</h2>
+        <p>Sé que ara mateix et pot semblar impossible veure el final del túnel. Sé que el buit se sent immens. Però també sé, pel que veig cada dia a la meva consulta, que l'ésser humà té una capacitat sorprenent per reconstruir-se sobre les seves pròpies cendres.</p>
+        <p>Si sents que t'has quedat bloquejat/da en alguna etapa, que el pes és massa gran per portar-lo tot/a sol/a o que necessites un espai segur on poder parlar de la teva pèrdua sense judicis ni presses, sóc aquí per caminar al teu costat.</p>
+        <p><strong>El dol és un procés sagrat que mereix ser respectat i acompanyat amb tendresa.</strong> Si necessites ajuda per integrar la teva pèrdua i tornar a trobar un sentit, posa't en contacte amb mi: buscarem la manera d'honrar el teu passat mentre reconstrueixes el teu present.</p>
+
+        <div style="text-align: center; margin-top: 40px; border-top: 1px solid #eee; padding-top: 20px;">
+            <h3>Necessites un espai segur per transitar el teu dol?</h3>
+            <p>No has de carregar amb aquest pes en soledat. Treballarem plegats per integrar la pèrdua i trobar un nou camí cap endavant.</p>
+            <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn" style="font-weight: bold; padding: 12px 30px;">
+                Reservar una sessió aquí
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Segueix-me i contacta'm:
+    <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
+    <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
+    <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies" target="_blank">
+      <i class="fab fa-whatsapp"></i>
+    </a> | 
+    <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correo">
+      <i class="fas fa-envelope"></i>
+    </a> | 
+    <a href="tel:+34695136810">
+      <i class="fas fa-phone"></i>
+    </a>
+  </p>
+  <p>&copy; 2026 Maria Fabregat</p>
+  </footer>
+
+    <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies"
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Contactar per WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
