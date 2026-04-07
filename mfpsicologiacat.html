@@ -147,9 +147,7 @@
       display: none;
       max-width: 600px;
       min-height: 260px;
-      /* Altura mínima */
       max-height: 320px;
-      /* Altura máxima */
       margin: 2rem auto;
       background: #fff;
       border-radius: 8px;
@@ -163,10 +161,7 @@
     .modal {
       position: relative;
       width: 100%;
-      /* o el ancho que uses */
       height: 100%;
-      /* o la altura que uses */
-      /* ...otros estilos... */
     }
 
     .modal-footer {
@@ -178,7 +173,6 @@
       display: flex;
       justify-content: space-between;
       background: white;
-      /* o el color de fondo de tu modal */
       box-sizing: border-box;
     }
 
@@ -209,9 +203,7 @@
       flex-direction: column;
       align-items: center;
       gap: 1.25rem;
-      /* espacio entre intro y tarjeta */
       padding: 2.5rem 1rem;
-      /* conserva el padding */
       box-sizing: border-box;
     }
 
@@ -223,9 +215,7 @@
       font-size: 1rem;
       line-height: 1.4;
       margin: 0 auto;
-      /* mantener centrado */
       padding: 0 1rem;
-      /* evita que el texto pegue en los laterales */
     }
 
     .testimonial-carousel-controls {
@@ -291,7 +281,6 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 5rem;
-      /* más espacio para flechas y comentarios largos */
     }
 
     .testimonial {
@@ -326,18 +315,13 @@
     .image-container {
       display: flex;
       justify-content: center;
-      /* Centers the image horizontally */
       align-items: center;
-      /* Centers the image vertically (if needed) */
       margin-top: 1rem;
-      /* Optional: Adds spacing above the image */
     }
 
     .image-container img {
       width: 40%;
-      /* Adjust the size of the image */
       border-radius: 8px;
-      /* Keeps the rounded corners */
     }
 
     .image-carousel {
@@ -345,10 +329,8 @@
       width: 100%;
       min-width: 250px;
       max-width: 100%;
-      /* Cambia esto para que ocupe todo el ancho de la columna */
       aspect-ratio: 4/3;
       margin: 1rem 0;
-      /* Elimina el auto para alinear a la izquierda */
       display: flex;
       align-items: center;
       justify-content: center;
@@ -367,7 +349,6 @@
 
     .carousel-img.active {
       display: block;
-
     }
 
     .carousel-btn {
@@ -422,9 +403,7 @@
       display: flex;
       gap: 2rem;
       align-items: center;
-      /* centra verticalmente */
       justify-content: center;
-      /* centra horizontalmente */
       margin-bottom: 2rem;
     }
 
@@ -432,7 +411,6 @@
       flex: 1 1 0;
       min-width: 250px;
       max-width: 500px;
-      /* Cambiado a 600px */
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -444,7 +422,6 @@
       width: 100%;
       min-width: 250px;
       max-width: 500px;
-      /* Cambiado a 600px */
       aspect-ratio: 4/3;
       margin: 1rem 0;
       display: flex;
@@ -493,17 +470,13 @@
     .reserve-section {
       text-align: center;
       margin: 3rem 0;
-      /* separa del contenido */
       display: flex;
       justify-content: center;
-      /* centra horizontalmente */
       gap: 0.75rem;
-      /* separación entre botones */
     }
 
     .reserve-section .btn {
       padding: 0.8rem 1.2rem;
-      /* opcional para consistencia */
     }
 
     footer {
@@ -523,7 +496,6 @@
       display: block;
       margin-bottom: 2rem;
       max-width: 1200px;
-      /* pon el ancho que prefieras */
       margin: 2rem auto 2rem;
     }
 
@@ -552,7 +524,7 @@
     }
 
     @media (max-width: 1000px) {
-      .tabs-modalidad {
+      .tabs-modalitat {
         margin-left: 1rem;
         max-width: 100%;
         gap: 1.2rem;
@@ -569,7 +541,6 @@
       margin-bottom: 2rem;
     }
 
-    /* Botón flotante de WhatsApp */
     .whatsapp-float {
       position: fixed !important;
       bottom: 20px;
@@ -597,7 +568,6 @@
       position: fixed !important;
     }
 
-    /* --- MOBILE STYLES --- */
     @media (max-width: 768px) {
       header.top-bar {
         flex-direction: column;
@@ -826,14 +796,12 @@
       opacity: 1;
       padding-top: 0.6rem;
       max-height: 400px;
-      /* suficiente alto para respuestas */
     }
 
     .faq-item.open .faq-q .arrow {
       transform: rotate(180deg);
     }
 
-    /* pequeña mejora responsive */
     @media (max-width:600px) {
       .faq-band {
         padding: 1.25rem 0.75rem;
@@ -844,7 +812,6 @@
       }
     }
 
-    /* enlaces inline (excluir botones .btn) */
     main a:not(.btn),
     section a:not(.btn),
     .article a:not(.btn),
@@ -854,7 +821,6 @@
       text-decoration: none;
     }
 
-    /* forzar si alguna regla lo sobreescribe */
     main a:not(.btn),
     section a:not(.btn),
     .doctoralia-intro a:not(.btn),
@@ -862,17 +828,14 @@
       color: #9f7db4 !important;
     }
 
-    /* Mantener colores específicos dentro de Doctoralia */
     .doctoralia-strip a[href*="#profile-reviews"],
     .doctoralia-strip a[style*="background:#00bfae"] {
       color: #fff !important;
-      /* 'Opiniones' en blanco */
       text-decoration: none;
     }
 
     .doctoralia-strip a[style*="color:#00bfae"] {
       color: #00bfae !important;
-      /* 'Reserva cita' en verde */
       text-decoration: none;
     }
 
@@ -987,27 +950,15 @@
         <li>Treballo des d'un enfocament <b>integratiu</b>, constructivista i <b>sistèmic</b>.</li>
         <li>Aplico diverses <b>tècniques</b> com
           <a href="tecnica-emdr-catala.html" target="_blank" rel="noopener" aria-label="Enviar correo">EMDR /
-            estimulació
-            bilateral</a>, de <b>PNL</b> i de <b>teràpia Gestalt</b>, quan és adequat.
+            estimulació bilateral</a>, de <b>PNL</b> i de <b>teràpia Gestalt</b>, quan és adequat.
         </li>
         <li>Explico conceptes i <b>teories</b> per facilitar una millor comprensió de l'ésser humà.</li>
         <li>Ofereixo <b>recursos</b> i eines pràtiques per gestionar les emocions i l'actitud davant la vida.</li>
-        <li>Si la persona ho desitja, proposo <b>tasques</b> o reflexions entre sessions per seguir integrant el procés.
-        </li>
+        <li>Si la persona ho desitja, proposo <b>tasques</b> o reflexions entre sessions per seguir integrant el procés.</li>
       </ul>
     </section>
 
-    <script>
-      document.getElementById('abrir-pago').onclick = function () {
-        document.getElementById('modal-pago').style.display = 'flex';
-      };
-      document.getElementById('cerrar-pago').onclick = function () {
-        document.getElementById('modal-pago').style.display = 'none';
-      };
-    </script>
-
     <section class="presencial-online">
-
       <div class="tabs-modalidad" style="max-width:600px;margin:0 auto 2rem; justify-content:flex-start;">
         <button class="tab-btn active" data-tab="barcelona" style="margin-right:0;">Psicòloga a Barcelona</button>
         <button class="tab-btn" data-tab="online" style="margin-left:0;">Teràpia online</button>
@@ -1015,19 +966,13 @@
       <div class="tab-content" id="tab-barcelona" style="display:block;">
         <p style="margin-top:1.2rem; margin-bottom:2rem; font-size:1.08rem; color:#38264e;">
           Amb ganes d'acompanyar-te en aquest espai acollidor, pensat per a què et sentis còmode/a i puguis expressar
-          amb
-          llibertat allò que et preocupa. <b>La consulta es troba a Barcelona, al costat de Sagrera:</b> a l'Avinguda
+          amb llibertat allò que et preocupa. <b>La consulta es troba a Barcelona, al costat de Sagrera:</b> a l'Avinguda
           Meridiana, 308, entresol G-51. Sant Andreu, 08027 Barcelona.
         </p>
         <div class="content-flex" style="margin-top:3rem;">
           <div class="carousel-col">
             <div class="image-carousel">
               <img src="./images/consulta.jpg" alt="Consulta psicológica" class="carousel-img active">
-              <!---  <img src="./images/cuadros.jpg" alt="Cuadros en la consulta" class="carousel-img">
-          <img src="./images/agua.jpg" alt="Agua para pacientes" class="carousel-img">
-          <img src="./images/panuelos.jpg" alt="Pañuelos en la consulta" class="carousel-img">
-          <button class="carousel-btn prev">&#10094;</button>
-          <button class="carousel-btn next">&#10095;</button>-->
             </div>
           </div>
           <div class="map-col">
@@ -1049,29 +994,22 @@
           <p>La teràpia online és igualment eficaç i permet un acompanyament proper, estiguis on estiguis.</p>
           <p>Les sessions online tenen la mateixa durada i cost que les presencials.</p>
           <p>Existeix la possibilitat de combinar sessions online i presencials, si ho necessites.</p>
-
           <div style="display:flex; gap: 20px; justify-content: center; margin: 20px auto;">
-
             <a href="terapia_online.html" class="btn" style="background:#9f7db4; border:1px solid #9f7db4; color:#fff;
                 display:inline-block; width:fit-content; text-decoration: none; padding: 10px 20px;">
               Com funciona?
             </a>
-
             <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn"
               style="background:#9f7db4; border:1px solid #9f7db4; color:#fff;
-          display:inline-block;
-          width:fit-content; text-decoration: none; padding: 10px 20px;
-          /* --- CORRECCIÓN FORZADA DE CAPAS --- */
-          position: relative;
-          z-index: 999;">
+          display:inline-block; width:fit-content; text-decoration: none; padding: 10px 20px;
+          position: relative; z-index: 999;">
               Reserva una sessió
             </a>
           </div>
         </div>
-
-      </div>
       </div>
     </section>
+
     <section class="doctoralia-strip"
       style="background:#e6d4ef; width:100vw; min-width:100vw; margin-left:-50vw; left:50%; right:50%; position:relative; display:flex; justify-content:center; padding:2.5rem 1rem; box-sizing:border-box;">
       <div class="doctoralia-intro">
@@ -1102,25 +1040,22 @@
           style="color:#00bfae; font-size:0.98rem; text-decoration:none; margin-top:0.2rem;">Reserva cita</a>
       </div>
     </section>
+
     <section class="testimonios">
       <h2>Testimonis</h2>
       <div class="testimonial-carousel-controls">
         <button class="testimonial-prev btn" aria-label="Anterior">&#10094;</button>
-        <div class="testimonial-container" id="testimonial-container">
-          <!-- Los testimonios se insertarán aquí por JS -->
-        </div>
+        <div class="testimonial-container" id="testimonial-container"></div>
         <button class="testimonial-next btn" aria-label="Siguiente">&#10095;</button>
       </div>
     </section>
 
-    <!-- FAQ: franja lila con acordeón -->
     <section class="faq-band" aria-labelledby="faq-title">
       <div class="faq-container">
         <h2 id="faq-title" style="text-align:center; margin:0 0 0.5rem;">Preguntes freqüents</h2>
         <p class="faq-intro" style="text-align:center; color:#38264e; margin-bottom:1rem;">
           Aquí tens respostes breus als dubtes més habituals:
         </p>
-
         <div class="faq-list" id="faq-list">
           <div class="faq-item">
             <button class="faq-q" type="button" aria-expanded="false">
@@ -1129,13 +1064,11 @@
             </button>
             <div class="faq-a">
               <p>El meu calendari està actualitzat. <b>Només has de triar el dia i l'hora que et vagi millor</b> i fer
-                la
-                reserva gratuïta. Em posaré en contacte amb tu i rebràs un recordatori abans de la visita. <a
+                la reserva gratuïta. Em posaré en contacte amb tu i rebràs un recordatori abans de la visita. <a
                   href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank"
                   rel="noopener">Reserva una sessió</a>.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" type="button" aria-expanded="false">
               <span>Per a quan podria tenir una sessió?</span>
@@ -1144,13 +1077,11 @@
             <div class="faq-a">
               <p>Depenent de la setmana, <b>sovint hi ha hores disponibles</b> dins dels pròxims dies. Les hores més
                 demanades són les de la tarda, a les 18h i les 19h. Et recomano consultar la meva agenda i escollir el
-                dia
-                i l'hora que millor s'adapti a tu. <a
+                dia i l'hora que millor s'adapti a tu. <a
                   href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank"
                   rel="noopener">Reserva una sessió</a>.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" type="button" aria-expanded="false">
               <span>Treballes amb asseguradores?</span>
@@ -1162,7 +1093,6 @@
                 part o la totalitat de les sessions.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" type="button" aria-expanded="false">
               <span>Què passa a la primera sessió?</span>
@@ -1170,12 +1100,11 @@
             </button>
             <div class="faq-a">
               <p>A la primera sessió ens coneixem i explorem <b>què t'ha portat a demanar ajuda, com t'estàs sentint i
-                  què
-                  necessites</b>. Parlem del que t'agradaria aconseguir amb la teràpia i valorem com enfocar-ho plegats.
-                El més important és <b>fer el primer pas</b> per començar a comprendre't i acompanyar-te millor.</p>
+                  què necessites</b>. Parlem del que t'agradaria aconseguir amb la teràpia i valorem com enfocar-ho
+                plegats. El més important és <b>fer el primer pas</b> per començar a comprendre't i acompanyar-te
+                millor.</p>
             </div>
           </div>
-
           <div class="faq-item">
             <button class="faq-q" type="button" aria-expanded="false">
               <span>Quina durada i freqüència tenen les sessions?</span>
@@ -1192,56 +1121,6 @@
       </div>
     </section>
 
-    <script>
-      // Acordeón FAQ básico: insertar después del HTML (evita múltiples inclusiones)
-      (function () {
-        const list = document.getElementById('faq-list');
-        if (!list) return;
-        // inicializa colapsadas
-        list.querySelectorAll('.faq-a').forEach(a => a.style.maxHeight = '0');
-        list.addEventListener('click', function (e) {
-          const btn = e.target.closest('.faq-q');
-          if (!btn) return;
-          const item = btn.parentElement;
-          const answer = item.querySelector('.faq-a');
-          const open = item.classList.contains('open');
-
-          // cerrar otros (mantener solo uno abierto)
-          list.querySelectorAll('.faq-item.open').forEach(it => {
-            if (it !== item) {
-              it.classList.remove('open');
-              it.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-              const a = it.querySelector('.faq-a');
-              if (a) a.style.maxHeight = '0';
-            }
-          });
-
-          if (open) {
-            item.classList.remove('open');
-            btn.setAttribute('aria-expanded', 'false');
-            if (answer) answer.style.maxHeight = '0';
-          } else {
-            item.classList.add('open');
-            btn.setAttribute('aria-expanded', 'true');
-            if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
-          }
-        });
-      })();
-    </script>
-
-    <!--<section id="contacto">
-      <h2 style="text-align:left; max-width:500px; margin:0 auto 2rem auto;">Contacte</h2>
-      <form>
-        <input type="text" name="nombre" placeholder="Nom" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="tel" name="telefono" placeholder="Telèfon">
-        <textarea name="mensaje" rows="4" placeholder="Escriu el teu missatge..."></textarea>
-        <button type="submit" class="btn">Enviar</button>
-      </form>
-    </section>-->
-
-    <!-- Se eliminan los bloques de modalidades y la sección oculta explicativa -->
-    <!-- ...footer... -->
     <footer>
       <p>Segueix-me i contacta'm:
         <a href="https://www.instagram.com/mfpsicologia/" target="_blank" aria-label="Seguir a Instagram"><i
@@ -1263,7 +1142,7 @@
     </footer>
   </main>
 
-  <!-- AÑADE AQUÍ EL MODAL Y EL SCRIPT, ANTES DE </body> -->
+  <!-- MODAL CV -->
   <div id="cv-modal"
     style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.5); z-index:9999; justify-content:center; align-items:center;">
     <div
@@ -1277,7 +1156,6 @@
         <li>Màster en Teràpia Cognitivo-Social per la Universitat de Barcelona</li>
         <li>Monogràfic de Teràpia de Parella a Dendros Centre de Psicologia</li>
         <li>Curs de Kinesiologia Emocional al Centre Uniun</li>
-
       </ul>
       <p>Tota aquesta formació teòrica i pràctica m'ha proporcionat les eines</p>
       <p>per <b>acompanyar-te d'una manera segura, propera i efectiva</b>, amb l'objectiu</p>
@@ -1286,6 +1164,7 @@
   </div>
 
   <script>
+    // Modal CV
     document.getElementById('open-cv-modal').onclick = function (e) {
       e.preventDefault();
       document.getElementById('cv-modal').style.display = 'flex';
@@ -1297,9 +1176,9 @@
       if (e.target === this) this.style.display = 'none';
     };
   </script>
+
   <script>
-    // Dades de serveis (comentades - actualment no s'utilitzen)
-    /*
+    // ✅ Array de serveis DESCOMENTADO - necessari per als botons "Saber-ne més"
     const servicios = [
       {
         titulo: "Psicoteràpia individual - 60€/1h",
@@ -1340,38 +1219,35 @@
         fraseFinal: "Es pot realitzar de forma <b>individual</b> o en petit <b>grup</b>, entre els quals es comparteix el cost."
       }
     ];
-    */
 
     document.querySelectorAll('.saber-mas').forEach((btn, i) => {
       btn.onclick = function (e) {
         e.preventDefault();
-        // Oculta todos los detalles abiertos
+        // Oculta tots els detalls oberts
         document.querySelectorAll('.servicio-detalle').forEach(det => det.style.display = 'none');
-        // Muestra el detalle correspondiente
         const servicio = servicios[i];
         const detalle = btn.nextElementSibling;
         detalle.innerHTML = `
-  <div
-    style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:1.2rem; margin-top:1rem;">
-    <h4 style="color:#9f7db4; margin-bottom:1rem;">${servicio.titulo}</h4>
-    <p style="margin-bottom:1rem;">${servicio.introduccion}</p>
-    <ul style="display:flex; flex-direction:column; gap:1rem;">
-      ${servicio.puntos.map(punto => `<li>${punto}</li>`).join('')}
-    </ul>
-    ${servicio.fraseFinal ? `<p style="margin-top:1.5rem;">${servicio.fraseFinal}</p>` : ""}
-    <button class="btn cerrar-detalle" style="margin-top:1.2rem;">Cerrar</button>
-  </div>
-  `;
+          <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:1.2rem; margin-top:1rem;">
+            <h4 style="color:#9f7db4; margin-bottom:1rem;">${servicio.titulo}</h4>
+            <p style="margin-bottom:1rem;">${servicio.introduccion}</p>
+            <ul style="display:flex; flex-direction:column; gap:1rem;">
+              ${servicio.puntos.map(punto => `<li>${punto}</li>`).join('')}
+            </ul>
+            ${servicio.fraseFinal ? `<p style="margin-top:1.5rem;">${servicio.fraseFinal}</p>` : ""}
+            <button class="btn cerrar-detalle" style="margin-top:1.2rem;">Tancar</button>
+          </div>
+        `;
         detalle.style.display = 'block';
-        // Cerrar detalle
         detalle.querySelector('.cerrar-detalle').onclick = function () {
           detalle.style.display = 'none';
         };
       };
     });
   </script>
+
   <script>
-    // Carrusel de imágenes
+    // Carrusel d'imatges
     const imgs = document.querySelectorAll('.image-carousel .carousel-img');
     const prevBtn = document.querySelector('.image-carousel .prev');
     const nextBtn = document.querySelector('.image-carousel .next');
@@ -1380,7 +1256,6 @@
     function showImg(idx) {
       imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
     }
-    // Només configurar el carrusel si els botons existeixen (poden estar comentats)
     if (prevBtn && nextBtn && imgs.length > 0) {
       prevBtn.onclick = () => {
         current = (current - 1 + imgs.length) % imgs.length;
@@ -1392,8 +1267,9 @@
       };
     }
   </script>
+
   <script>
-    // Tabs para modalidad presencial/online
+    // Tabs per a modalitat presencial/online
     const tabBtns = document.querySelectorAll('.tab-btn');
     const tabContents = {
       barcelona: document.getElementById('tab-barcelona'),
@@ -1413,41 +1289,22 @@
       };
     });
   </script>
+
   <script>
-    // Carrusel de testimonios por grupos
+    // Carrusel de testimonis
     const testimonios = [
-      {
-        texto: "Ha estat un gran regal conèixer la Maria. Des del primer moment m'he sentit acompanyat quan més ho necessitava i m'ha regalat eines molt potents per superar-me i estimar-me. És una extraordinaria profesional per vocació i per implicació. Per cert, moltes gràcies per la teva puntualitat en les sessions!"
-      },
-      {
-        texto: "Escogimos a Maria para hacer terapia de pareja y nuestra convivencia ha cambiado por completo gracias a Maria. Nos sentimos totalmente acompañados durante todo el proceso y Maria nos dotó de muchas herramientas para comunicarnos y entender el punto de vista del otro. Sin duda, una de las mejores decisiones que hemos tomado."
-      },
-      {
-        texto: "Muy contento con Maria, es una persona que da mucha confianza y que te aporta paz escuchar."
-      },
-      {
-        texto: "Maria es una excelente profesional, en la primera visita ya me ha hecho entender lo que me sucedía. Trato muy cercano. Estoy muy agradecido a sus consejos. Recomendable 100%."
-      },
-      {
-        texto: "Maria és una gran professional i persona, ho pots sentir des de la primera visita. Et fa sentir còmode i és molt atenta, presta atenció als detalls i et dona les ferramentes necessàries per ajudar-te i guiar-te en el dia a dia."
-      },
-      {
-        texto: "Maria hace un acompañamiento increíble. Siempre he sentido que respeta los tiempos que he necesitado. Nuestras sesiones son online y súper contenta con como las lleva, 10/10."
-      },
-      {
-        texto: "Muy atenta y dedicada de la que estoy aprendiendo mucho, profesional de 10."
-      },
-      {
-        texto: "No havia tingut gaires bones experiències amb psicòlegs i la Maria em va ajudar molt, en un procés d'autoconeixement personal, és una especialista molt propera, que et fa sentir còmode en tot moment. Molt agraïda i comenta amb ella!"
-      },
-      {
-        texto: "El fet que trobo que ha fet que la Maria m'hagi pogut ajudar tant és la coherència entre allò que diu i allò que transmet. Et dona pau des del punt més profund de tots. Moltes gràcies Maria."
-      },
-      {
-        texto: "La Maria m'ha acompanyat en els últims 2 anys i mig i puc dir que ha sigut tot un plaer comptar amb ella. Sempre m'he sentit escoltada amb molta atenció i cura, fent-me sentir vàlida i present amb el què sento. Recomanaria a tothom d'anar amb la Maria per la seva professionalitat, però sobretot per la proximitat i saviesa. Tant de bo que més persones puguin trobar el seu caminet amb tu!"
-      }
+      { texto: "Ha estat un gran regal conèixer la Maria. Des del primer moment m'he sentit acompanyat quan més ho necessitava i m'ha regalat eines molt potents per superar-me i estimar-me. És una extraordinaria profesional per vocació i per implicació. Per cert, moltes gràcies per la teva puntualitat en les sessions!" },
+      { texto: "Escogimos a Maria para hacer terapia de pareja y nuestra convivencia ha cambiado por completo gracias a Maria. Nos sentimos totalmente acompañados durante todo el proceso y Maria nos dotó de muchas herramientas para comunicarnos y entender el punto de vista del otro. Sin duda, una de las mejores decisiones que hemos tomado." },
+      { texto: "Muy contento con Maria, es una persona que da mucha confianza y que te aporta paz escuchar." },
+      { texto: "Maria es una excelente profesional, en la primera visita ya me ha hecho entender lo que me sucedía. Trato muy cercano. Estoy muy agradecido a sus consejos. Recomendable 100%." },
+      { texto: "Maria és una gran professional i persona, ho pots sentir des de la primera visita. Et fa sentir còmode i és molt atenta, presta atenció als detalls i et dona les ferramentes necessàries per ajudar-te i guiar-te en el dia a dia." },
+      { texto: "Maria hace un acompañamiento increíble. Siempre he sentido que respeta los tiempos que he necesitado. Nuestras sesiones son online y súper contenta con como las lleva, 10/10." },
+      { texto: "Muy atenta y dedicada de la que estoy aprendiendo mucho, profesional de 10." },
+      { texto: "No havia tingut gaires bones experiències amb psicòlegs i la Maria em va ajudar molt, en un procés d'autoconeixement personal, és una especialista molt propera, que et fa sentir còmode en tot moment. Molt agraïda i comenta amb ella!" },
+      { texto: "El fet que trobo que ha fet que la Maria m'hagi pogut ajudar tant és la coherència entre allò que diu i allò que transmet. Et dona pau des del punt més profund de tots. Moltes gràcies Maria." },
+      { texto: "La Maria m'ha acompanyat en els últims 2 anys i mig i puc dir que ha sigut tot un plaer comptar amb ella. Sempre m'he sentit escoltada amb molta atenció i cura, fent-me sentir vàlida i present amb el què sento. Recomanaria a tothom d'anar amb la Maria per la seva professionalitat, però sobretot per la proximitat i saviesa. Tant de bo que més persones puguin trobar el seu caminet amb tu!" }
     ];
-    const testimoniosPorVista = 3; // Cambia a 4 si quieres mostrar 4 a la vez
+    const testimoniosPorVista = 3;
     let idxTestimonio = 0;
 
     function renderTestimonios() {
@@ -1458,7 +1315,7 @@
         const t = testimonios[tIdx];
         const div = document.createElement('div');
         div.className = 'testimonial';
-        div.innerHTML = '<i class="fas fa-quote-left"></i><p>“' + t.texto + '”</p>';
+        div.innerHTML = '<i class="fas fa-quote-left"></i><p>"' + t.texto + '"</p>';
         cont.appendChild(div);
       }
     }
@@ -1472,28 +1329,70 @@
       renderTestimonios();
     };
     renderTestimonios();
+  </script>
 
+  <script>
+    // Formes de pagament
     document.getElementById('abrir-pago-cat').onclick = function (e) {
       e.preventDefault();
       const detalle = document.getElementById('pago-detalle-cat');
+      if (detalle.style.display === 'block') {
+        detalle.style.display = 'none';
+        return;
+      }
       detalle.innerHTML = `
-    <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:1.2rem; margin-top:1rem;">
-      <h4 style="color:#9f7db4; margin-bottom:1rem;">Formes de pagament</h4>
-      <p>Ofereixo diverses opcions per facilitar-ho:</p>
-      <ul style="display:flex; flex-direction:column; gap:1.1rem;">
-        <li>Transferència bancària</li>
-        <li>Targeta</li>
-        <li>Efectiu</li>
-      </ul>
-      <p>El pagament es pot realitzar abans o just després de la sessió, segons el que et sigui més còmode.</p>
-      <button class="btn cerrar-pago" style="margin-top:1.2rem;">Cerrar</button>
-    </div>
-  `;
+        <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:1.2rem; margin-top:1rem;">
+          <h4 style="color:#9f7db4; margin-bottom:1rem;">Formes de pagament</h4>
+          <p>Ofereixo diverses opcions per facilitar-ho:</p>
+          <ul style="display:flex; flex-direction:column; gap:1.1rem;">
+            <li>Transferència bancària</li>
+            <li>Targeta</li>
+            <li>Efectiu</li>
+          </ul>
+          <p>El pagament es pot realitzar abans o just després de la sessió, segons el que et sigui més còmode.</p>
+          <button class="btn cerrar-pago" style="margin-top:1.2rem;">Tancar</button>
+        </div>
+      `;
       detalle.style.display = 'block';
       detalle.querySelector('.cerrar-pago').onclick = function () {
         detalle.style.display = 'none';
       };
     };
+  </script>
+
+  <script>
+    // Acordeó FAQ
+    (function () {
+      const list = document.getElementById('faq-list');
+      if (!list) return;
+      list.querySelectorAll('.faq-a').forEach(a => a.style.maxHeight = '0');
+      list.addEventListener('click', function (e) {
+        const btn = e.target.closest('.faq-q');
+        if (!btn) return;
+        const item = btn.parentElement;
+        const answer = item.querySelector('.faq-a');
+        const open = item.classList.contains('open');
+
+        list.querySelectorAll('.faq-item.open').forEach(it => {
+          if (it !== item) {
+            it.classList.remove('open');
+            it.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+            const a = it.querySelector('.faq-a');
+            if (a) a.style.maxHeight = '0';
+          }
+        });
+
+        if (open) {
+          item.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+          if (answer) answer.style.maxHeight = '0';
+        } else {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+          if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    })();
   </script>
 
   <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies"
