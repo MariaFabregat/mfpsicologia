@@ -11,799 +11,156 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
   <link rel="preload" href="./images/logoH_negatiu.png" as="image" fetchpriority="high">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f1f1f1;
-      color: #333;
-      font-size: 16px;
-      overflow-x: hidden;
-    }
-
-    header.top-bar {
-      background-color: #e6d4ef;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-    }
-
-    header.top-bar a {
-      margin: 0 0.5rem;
-      text-decoration: none;
-      color: #333;
-    }
-
-    .lang-switcher {
-      margin-left: auto;
-    }
-
-    .main-header {
-      background-color: #bfa4d1;
-      color: white;
-      text-align: left;
-      padding: 4rem 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-
-    .main-header-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-      width: 100%;
-    }
-
-    .main-header .header-content {
-      flex: 1;
-    }
-
-    .main-header img {
-      height: 160px;
-      margin-bottom: 0;
-      margin-left: 2rem;
-    }
-
-    .main-header h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      margin: 0.5rem 0;
-    }
-
-    .main-header p {
-      margin: 0.5rem 0 1.5rem;
-    }
-
-    .btn {
-      background-color: #9f7db4;
-      color: rgb(255, 255, 255);
-      padding: 0.6rem 1.2rem;
-      border: none;
-      border-radius: 5px;
-      text-decoration: none;
-    }
-
-    section {
-      padding: 3rem 1rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .about {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
-    }
-
-    .about img {
-      max-width: 200px;
-      border-radius: 8px;
-      flex-shrink: 0;
-    }
-
-    h2,
-    h3 {
-      font-family: 'Playfair Display', serif;
-      font-weight: 700;
-    }
-
-    .about div {
-      flex: 1;
-    }
-
-    /* ✅ FIX: Contenedor de botones "Sobre mi" con flex-wrap */
-    .about-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.75rem;
-      margin-top: 0.5rem;
-    }
-
-    .about-buttons .btn {
-      flex-shrink: 0;
-    }
-
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      text-align: center;
-    }
-
-    .service {
-      background-color: #f9f3fc;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-
-    .service-icon {
-      font-size: 2rem;
-      color: #ddc8f1;
-      margin-bottom: 0.5rem;
-    }
-
-    #servicios-detalle {
-      display: none;
-      max-width: 600px;
-      min-height: 260px;
-      max-height: 320px;
-      margin: 2rem auto;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-      padding: 2rem;
-      position: relative;
-      overflow: visible;
-      transition: min-height 0.2s, max-height 0.2s;
-    }
-
-    .modal {
-      position: relative;
-      width: 100%;
-      height: 100%;
-    }
-
-    .modal-footer {
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      background: white;
-      box-sizing: border-box;
-    }
-
-    .quote {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      padding: 2rem 1rem;
-      background-color: #e5daf0;
-    }
-
-    .testimonios {
-      background-color: #bfa4d1;
-      padding: 3.5rem 0;
-      text-align: center;
-      width: 100vw;
-      min-width: 100vw;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-      position: relative;
-      box-sizing: border-box;
-    }
-
-    .doctoralia-strip {
-      display: flex !important;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.25rem;
-      padding: 2.5rem 1rem;
-      box-sizing: border-box;
-    }
-
-    .doctoralia-intro {
-      max-width: 980px;
-      width: 100%;
-      text-align: center;
-      color: #38264e;
-      font-size: 1rem;
-      line-height: 1.4;
-      margin: 0 auto;
-      padding: 0 1rem;
-    }
-
-    .testimonial-carousel-controls {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      max-width: 1200px;
-      margin: 0 auto 1.5rem auto;
-      height: auto;
-      gap: 0;
-    }
-
-    .testimonial-prev,
-    .testimonial-next {
-      background: #9f7db4;
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 2.5rem;
-      height: 2.5rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-      z-index: 2;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-      transition: background 0.2s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .testimonial-carousel-controls .testimonial-container {
-      flex: 1 1 auto;
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      flex-wrap: nowrap;
-      overflow: hidden;
-      max-width: 1200px;
-      margin: 0;
-      padding: 0 1rem;
-    }
-
-    @media (max-width: 1300px) {
-      .testimonial-carousel-controls .testimonial-container {
-        max-width: 98vw;
-        padding: 0 0.5rem;
-        gap: 1rem;
-      }
-    }
-
-    @media (max-width: 900px) {
-      .testimonial-carousel-controls .testimonial-container {
-        gap: 0.5rem;
-      }
-    }
-
-    .testimonial-container {
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      flex-wrap: nowrap;
-      overflow: hidden;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 5rem;
-    }
-
-    .testimonial {
-      background-color: white;
-      border: 1px solid #ddd;
-      border-radius: 12px;
-      padding: 2rem 1.5rem;
-      width: 370px;
-      min-height: 180px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.10);
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .testimonial p {
-      margin: 1.5rem 0 0;
-      font-size: .90rem;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    .testimonial i {
-      color: #bfa4d1;
-      font-size: 1.7rem;
-      position: absolute;
-      top: 1rem;
-      left: 1rem;
-    }
-
-    .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 1rem;
-    }
-
-    .image-container img {
-      width: 40%;
-      border-radius: 8px;
-    }
-
-    .image-carousel {
-      position: relative;
-      width: 100%;
-      min-width: 250px;
-      max-width: 100%;
-      aspect-ratio: 4/3;
-      margin: 1rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    .carousel-img {
-      display: none;
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      object-fit: cover;
-    }
-
-    .carousel-img.active {
-      display: block;
-    }
-
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(159, 125, 180, 0.8);
-      color: #fff;
-      border: none;
-      border-radius: 50%;
-      width: 2.2rem;
-      height: 2.2rem;
-      font-size: 1.5rem;
-      cursor: pointer;
-      z-index: 2;
-      transition: background 0.2s;
-    }
-
-    .carousel-btn.prev { left: 10px; }
-    .carousel-btn.next { right: 10px; }
-    .carousel-btn:hover { background: #9f7db4; }
-
-    form {
-      display: grid;
-      gap: 1rem;
-      max-width: 500px;
-      margin: auto;
-    }
-
-    input,
-    textarea {
-      padding: 0.6rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 1rem;
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    button[type="submit"].btn {
-      font-size: 1rem;
-    }
-
-    .content-flex {
-      display: flex;
-      gap: 2rem;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 2rem;
-    }
-
-    .carousel-col {
-      flex: 1 1 0;
-      min-width: 250px;
-      max-width: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      height: 300px;
-    }
-
-    .image-carousel {
-      position: relative;
-      width: 100%;
-      min-width: 250px;
-      max-width: 500px;
-      aspect-ratio: 4/3;
-      margin: 1rem 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      overflow: hidden;
-      border-radius: 8px;
-      background: #fff;
-    }
-
-    .map-col {
-      flex: 1 1 0;
-      min-width: 250px;
-      max-width: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      height: 300px;
-    }
-
-    .map-col iframe {
-      width: 100%;
-      height: 100%;
-      min-width: 250px;
-      max-width: 500px;
-      min-height: 250px;
-      max-height: 300px;
-      border-radius: 8px;
-      border: 0;
-      display: block;
-      box-sizing: border-box;
-    }
-
-    @media (max-width: 900px) {
-      .content-flex {
-        flex-direction: column;
-        gap: 1rem;
-      }
-      .map-col,
-      .carousel-col {
-        max-width: 100%;
-      }
-    }
-
-    .reserve-section {
-      text-align: center;
-      margin: 3rem 0;
-      display: flex;
-      justify-content: center;
-      gap: 0.75rem;
-    }
-
-    .reserve-section .btn {
-      padding: 0.8rem 1.2rem;
-    }
-
-    footer {
-      background-color: #38264e;
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-
-    footer a {
-      color: white;
-      margin: 0 0.5rem;
-      text-decoration: none;
-    }
-
-    .tabs-modalidad {
-      display: block;
-      margin-bottom: 2rem;
-      max-width: 1200px;
-      margin: 2rem auto 2rem;
-    }
-
-    .tab-btn {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.35rem;
-      font-weight: 700;
-      background: none;
-      border: none;
-      color: #9f7db4;
-      padding: 0.7rem 2.2rem;
-      border-radius: 8px 8px 0 0;
-      cursor: pointer;
-      transition: background 0.18s, color 0.18s;
-      margin: 0;
-      letter-spacing: 0.01em;
-    }
-
-    .tab-btn.active {
-      background: #e6d4ef;
-      color: #38264e;
-    }
-
-    .tab-btn:focus {
-      outline: 2px solid #bfa4d1;
-    }
-
-    @media (max-width: 1000px) {
-      .tabs-modalitat {
-        margin-left: 1rem;
-        max-width: 100%;
-        gap: 1.2rem;
-      }
-      .tab-btn {
-        font-size: 1.08rem;
-        padding: 0.7rem 1.2rem;
-      }
-    }
-
-    #contacto h2 {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    .whatsapp-float {
-      position: fixed !important;
-      bottom: 20px;
-      right: 20px;
-      width: 60px;
-      height: 60px;
-      background-color: #25d366;
-      color: white;
-      border-radius: 50%;
-      text-align: center;
-      font-size: 32px;
-      line-height: 60px;
-      z-index: 9999;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-      background-color: #1ebe57;
-      transform: scale(1.1);
-    }
-
-    a.whatsapp-float {
-      display: inline-block !important;
-      position: fixed !important;
-    }
-
-    @media (max-width: 768px) {
-      header.top-bar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-        font-size: 0.85rem;
-      }
-      .main-header {
-        flex-direction: column;
-        text-align: center;
-        padding: 2rem 1rem;
-      }
-      .main-header-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-      }
-      .main-header img {
-        margin: 1.5rem 0 0;
-        height: 120px;
-      }
-      .about {
-        flex-direction: column;
-        text-align: center;
-      }
-      .about img {
-        max-width: 150px;
-      }
-      /* ✅ FIX MÓVIL: botones centrados y con salto de línea correcto */
-      .about-buttons {
-        justify-content: center;
-      }
-      .services {
-        grid-template-columns: 1fr 1fr;
-      }
-      .testimonial-container {
-        padding: 0 1rem;
-        gap: 1rem;
-      }
-      .testimonial {
-        width: 90%;
-        max-width: 320px;
-      }
-      .tabs-modalidad {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .tab-btn {
-        flex: 1 1 100%;
-        text-align: center;
-        font-size: 1.1rem;
-      }
-      .content-flex {
-        flex-direction: column;
-        align-items: center;
-      }
-      .carousel-col,
-      .map-col {
-        max-width: 100%;
-        height: auto;
-      }
-      iframe {
-        min-height: 200px;
-      }
-      form {
-        width: 95%;
-      }
-    }
-
-    @media (max-width: 480px) {
-      body { font-size: 15px; }
-      .services { grid-template-columns: 1fr; }
-      .testimonial { width: 100%; padding: 1.2rem; }
-      .main-header h1 { font-size: 1.6rem; }
-      .quote { font-size: 1.2rem; padding: 1.5rem; }
-    }
-
-    @media (max-width: 600px) {
-      #cv-modal > div {
-        max-width: 95vw !important;
-        padding: 1.2rem !important;
-        font-size: 1rem;
-        top: 10vh;
-        left: 2vw;
-        right: 2vw;
-        border-radius: 10px;
-      }
-      #cv-modal {
-        align-items: flex-start !important;
-        justify-content: center !important;
-      }
-      #close-cv-modal {
-        top: 0.7rem !important;
-        right: 0.7rem !important;
-        font-size: 1.3rem !important;
-      }
-    }
-
-    @media (max-width: 600px) {
-      .testimonial-carousel-controls {
-        flex-direction: column;
-        gap: 0.5rem;
-        width: 100%;
-        max-width: 98vw;
-        padding: 0 0.5rem;
-      }
-      .testimonial-prev,
-      .testimonial-next {
-        width: 3rem;
-        height: 3rem;
-        font-size: 2rem;
-        margin: 0.5rem auto;
-      }
-      .testimonial-container {
-        gap: 0.5rem !important;
-        padding: 0 !important;
-        flex-wrap: wrap !important;
-        max-width: 88vw !important;
-        min-width: 0 !important;
-      }
-      .testimonial {
-        width: 100% !important;
-        max-width: 340px !important;
-        margin: 0 auto;
-        font-size: 1rem;
-        padding: 1.2rem;
-      }
-    }
-
-    .faq-band {
-      background: #e6d4ef;
-      width: 100vw;
-      min-width: 100vw;
-      left: 50%;
-      margin-left: -50vw;
-      position: relative;
-      padding: 2rem 1rem;
-      box-sizing: border-box;
-    }
-
-    .faq-container {
-      max-width: 980px;
-      margin: 0 auto;
-    }
-
-    .faq-intro {
-      text-align: center;
-      color: #38264e;
-      margin-bottom: 1rem;
-    }
-
-    .faq-list {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .faq-item {
-      background: #fff;
-      border-radius: 8px;
-      padding: 0.9rem 1rem;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-      overflow: hidden;
-    }
-
-    .faq-q {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      cursor: pointer;
-      background: transparent;
-      border: none;
-      width: 100%;
-      text-align: left;
-      font-weight: 700;
-      color: #38264e;
-      padding: 0;
-    }
-
-    .faq-q .arrow {
-      color: #9f7db4;
-      transition: transform .25s ease;
-    }
-
-    .faq-a {
-      max-height: 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: max-height .3s ease, opacity .2s ease, padding .2s;
-      padding-top: 0;
-    }
-
-    .faq-item.open .faq-a {
-      opacity: 1;
-      padding-top: 0.6rem;
-      max-height: 400px;
-    }
-
-    .faq-item.open .faq-q .arrow {
-      transform: rotate(180deg);
+    body { margin:0; font-family:'Open Sans',sans-serif; background-color:#f1f1f1; color:#333; font-size:16px; overflow-x:hidden; }
+    header.top-bar { background-color:#e6d4ef; display:flex; justify-content:space-between; align-items:center; padding:0.5rem 1rem; font-size:0.9rem; }
+    header.top-bar a { margin:0 0.5rem; text-decoration:none; color:#333; }
+    .lang-switcher { margin-left:auto; }
+
+    /* ─── MAIN HEADER ─── */
+    .main-header { background-color:#bfa4d1; color:white; text-align:left; padding:4rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:2rem; box-sizing:border-box; }
+    .main-header-inner { max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; width:100%; }
+    .main-header .header-content { flex:1; min-width:0; }
+    .main-header img { height:160px; width:auto; flex-shrink:0; margin-bottom:0; margin-left:2rem; }
+    .main-header h1 { font-family:'Playfair Display',serif; font-size:2rem; margin:0.5rem 0; }
+    .main-header p { margin:0.5rem 0 1.5rem; }
+
+    .btn { background-color:#9f7db4; color:rgb(255,255,255); padding:0.6rem 1.2rem; border:none; border-radius:5px; text-decoration:none; }
+    section { padding:3rem 1rem; max-width:1000px; margin:auto; }
+    .about { display:flex; flex-wrap:wrap; align-items:center; gap:2rem; }
+    .about img { max-width:200px; border-radius:8px; flex-shrink:0; }
+    h2, h3 { font-family:'Playfair Display',serif; font-weight:700; }
+    .about div { flex:1; }
+    .about-buttons { display:flex; flex-wrap:wrap; gap:0.75rem; margin-top:0.5rem; }
+    .about-buttons .btn { flex-shrink:0; }
+    .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; text-align:center; }
+    .service { background-color:#f9f3fc; padding:1rem; border-radius:8px; }
+    .service-icon { font-size:2rem; color:#ddc8f1; margin-bottom:0.5rem; }
+    .quote { text-align:center; font-family:'Playfair Display',serif; font-size:1.4rem; padding:2rem 1rem; background-color:#e5daf0; }
+
+    .testimonios { background-color:#bfa4d1; padding:3.5rem 0; text-align:center; width:100vw; min-width:100vw; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; position:relative; box-sizing:border-box; }
+    .doctoralia-strip { display:flex !important; flex-direction:column; align-items:center; gap:1.25rem; padding:2.5rem 1rem; box-sizing:border-box; }
+    .doctoralia-intro { max-width:980px; width:100%; text-align:center; color:#38264e; font-size:1rem; line-height:1.4; margin:0 auto; padding:0 1rem; }
+
+    .testimonial-carousel-controls { display:flex; align-items:center; justify-content:center; max-width:1200px; margin:0 auto 1.5rem auto; height:auto; gap:0; }
+    .testimonial-prev, .testimonial-next { background:#9f7db4; color:#fff; border:none; border-radius:50%; width:2.5rem; height:2.5rem; font-size:1.5rem; cursor:pointer; z-index:2; box-shadow:0 2px 6px rgba(0,0,0,0.08); transition:background 0.2s; display:flex; align-items:center; justify-content:center; }
+    .testimonial-carousel-controls .testimonial-container { flex:1 1 auto; display:flex; justify-content:center; gap:2.5rem; flex-wrap:nowrap; overflow:hidden; max-width:1200px; margin:0; padding:0 1rem; }
+    .testimonial-container { display:flex; justify-content:center; gap:2.5rem; flex-wrap:nowrap; overflow:hidden; max-width:1200px; margin:0 auto; padding:0 5rem; }
+    .testimonial { background-color:white; border:1px solid #ddd; border-radius:12px; padding:2rem 1.5rem; width:370px; min-height:180px; box-shadow:0 2px 8px rgba(0,0,0,0.10); position:relative; display:flex; flex-direction:column; justify-content:center; }
+    .testimonial p { margin:1.5rem 0 0; font-size:.90rem; color:#333; line-height:1.6; }
+    .testimonial i { color:#bfa4d1; font-size:1.7rem; position:absolute; top:1rem; left:1rem; }
+
+    .image-carousel { position:relative; width:100%; min-width:250px; max-width:500px; aspect-ratio:4/3; margin:1rem 0; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:8px; background:#fff; }
+    .carousel-img { display:none; width:100%; height:auto; border-radius:8px; object-fit:cover; }
+    .carousel-img.active { display:block; }
+    .carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(159,125,180,0.8); color:#fff; border:none; border-radius:50%; width:2.2rem; height:2.2rem; font-size:1.5rem; cursor:pointer; z-index:2; transition:background 0.2s; }
+    .carousel-btn.prev { left:10px; }
+    .carousel-btn.next { right:10px; }
+    .carousel-btn:hover { background:#9f7db4; }
+
+    form { display:grid; gap:1rem; max-width:500px; margin:auto; }
+    input, textarea { padding:0.6rem; border:1px solid #ccc; border-radius:4px; font-size:1rem; font-family:'Open Sans',sans-serif; }
+    button[type="submit"].btn { font-size:1rem; }
+
+    .content-flex { display:flex; gap:2rem; align-items:center; justify-content:center; margin-bottom:2rem; }
+    .carousel-col { flex:1 1 0; min-width:250px; max-width:500px; display:flex; align-items:center; justify-content:flex-start; height:300px; }
+    .map-col { flex:1 1 0; min-width:250px; max-width:500px; display:flex; align-items:center; justify-content:flex-start; height:300px; }
+    .map-col iframe { width:100%; height:100%; min-width:250px; max-width:500px; min-height:250px; max-height:300px; border-radius:8px; border:0; display:block; box-sizing:border-box; }
+    .reserve-section { text-align:center; margin:3rem 0; display:flex; justify-content:center; gap:0.75rem; }
+    .reserve-section .btn { padding:0.8rem 1.2rem; }
+
+    footer { background-color:#38264e; color:white; text-align:center; padding:1rem; }
+    footer a { color:white; margin:0 0.5rem; text-decoration:none; }
+
+    .tabs-modalidad { display:block; margin-bottom:2rem; max-width:1200px; margin:2rem auto 2rem; }
+    .tab-btn { font-family:'Playfair Display',serif; font-size:1.35rem; font-weight:700; background:none; border:none; color:#9f7db4; padding:0.7rem 2.2rem; border-radius:8px 8px 0 0; cursor:pointer; transition:background 0.18s,color 0.18s; margin:0; letter-spacing:0.01em; }
+    .tab-btn.active { background:#e6d4ef; color:#38264e; }
+    .tab-btn:focus { outline:2px solid #bfa4d1; }
+
+    .whatsapp-float { position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background-color:#25d366; color:white; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,0.3); transition:all 0.3s ease; }
+    .whatsapp-float:hover { background-color:#1ebe57; transform:scale(1.1); }
+    a.whatsapp-float { display:inline-block !important; position:fixed !important; }
+
+    /* ─── FAQ ─── */
+    .faq-band { background:#e6d4ef; width:100vw; min-width:100vw; left:50%; margin-left:-50vw; position:relative; padding:2rem 1rem; box-sizing:border-box; }
+    .faq-container { max-width:980px; margin:0 auto; }
+    .faq-intro { text-align:center; color:#38264e; margin-bottom:1rem; }
+    .faq-list { display:flex; flex-direction:column; gap:0.75rem; }
+    .faq-item { background:#fff; border-radius:8px; padding:0.9rem 1rem; box-shadow:0 2px 8px rgba(0,0,0,0.06); overflow:hidden; }
+    .faq-q { display:flex; justify-content:space-between; align-items:center; cursor:pointer; background:transparent; border:none; width:100%; text-align:left; font-weight:700; color:#38264e; padding:0; }
+    .faq-q .arrow { color:#9f7db4; transition:transform .25s ease; }
+    .faq-a { max-height:0; overflow:hidden; opacity:0; transition:max-height .3s ease,opacity .2s ease,padding .2s; padding-top:0; }
+    .faq-item.open .faq-a { opacity:1; padding-top:0.6rem; max-height:400px; }
+    .faq-item.open .faq-q .arrow { transform:rotate(180deg); }
+
+    /* ─── LINK COLORS ─── */
+    main a:not(.btn), section a:not(.btn), .doctoralia-intro a:not(.btn), .faq-a a:not(.btn) { color:#9f7db4 !important; text-decoration:none; }
+    .doctoralia-strip a[href*="#profile-reviews"], .doctoralia-strip a[style*="background:#00bfae"] { color:#fff !important; text-decoration:none; }
+    .doctoralia-strip a[style*="color:#00bfae"] { color:#00bfae !important; text-decoration:none; }
+    .enlace-malva { color:#9f7db4; }
+
+    /* ═══════════════════════════════════════
+       MOBILE FIXES
+       ═══════════════════════════════════════ */
+    @media (max-width:768px) {
+      header.top-bar { flex-direction:column; align-items:flex-start; gap:0.5rem; font-size:0.85rem; }
+
+      .main-header { padding:2rem 1rem 2.5rem; flex-direction:column; }
+      .main-header-inner { flex-direction:column; align-items:center; text-align:center; gap:1.5rem; width:100%; }
+      .main-header .header-content { width:100%; order:1; }
+      .main-header img { order:2; height:auto; width:clamp(90px,38vw,140px); margin-left:0; margin-top:0.5rem; }
+      .main-header h1 { font-size:1.55rem; }
+
+      .about { flex-direction:column; text-align:center; }
+      .about img { max-width:150px; }
+      .about-buttons { justify-content:center; }
+      .services { grid-template-columns:1fr 1fr; }
+
+      .testimonial-container { padding:0 1rem; gap:1rem; }
+      .testimonial { width:90%; max-width:320px; }
+
+      .tabs-modalidad { display:flex; flex-wrap:wrap; justify-content:center; }
+      .tab-btn { flex:1 1 100%; text-align:center; font-size:1.1rem; }
+
+      .content-flex { flex-direction:column; align-items:center; }
+      .carousel-col, .map-col { max-width:100%; width:100%; height:auto; }
+      .image-carousel { max-width:100%; }
+      iframe { min-height:200px; }
+      form { width:95%; }
+    }
+
+    @media (max-width:1300px) {
+      .testimonial-carousel-controls .testimonial-container { max-width:98vw; padding:0 0.5rem; gap:1rem; }
+    }
+    @media (max-width:900px) {
+      .testimonial-carousel-controls .testimonial-container { gap:0.5rem; }
+      .content-flex { flex-direction:column; gap:1rem; }
+      .map-col, .carousel-col { max-width:100%; }
+      .tab-btn { font-size:1.08rem; padding:0.7rem 1.2rem; }
     }
 
     @media (max-width:600px) {
-      .faq-band { padding: 1.25rem 0.75rem; }
-      .faq-item { padding: 0.75rem; }
+      #cv-modal > div { max-width:95vw !important; padding:1.2rem !important; font-size:1rem; top:10vh; left:2vw; right:2vw; border-radius:10px; }
+      #cv-modal { align-items:flex-start !important; justify-content:center !important; }
+      #close-cv-modal { top:0.7rem !important; right:0.7rem !important; font-size:1.3rem !important; }
+      .faq-band { padding:1.25rem 0.75rem; }
+      .faq-item { padding:0.75rem; }
+      .testimonial-carousel-controls { flex-direction:column; gap:0.5rem; width:100%; max-width:98vw; padding:0 0.5rem; }
+      .testimonial-prev, .testimonial-next { width:3rem; height:3rem; font-size:2rem; margin:0.5rem auto; }
+      .testimonial-container { gap:0.5rem !important; padding:0 !important; flex-wrap:wrap !important; max-width:88vw !important; min-width:0 !important; }
+      .testimonial { width:100% !important; max-width:340px !important; margin:0 auto; font-size:1rem; padding:1.2rem; }
+      #tab-online div[style*="display:flex"] { flex-direction:column; align-items:center; gap:0.75rem !important; }
     }
 
-    main a:not(.btn),
-    section a:not(.btn),
-    .article a:not(.btn),
-    .doctoralia-intro a:not(.btn),
-    .faq-a a:not(.btn) {
-      color: #9f7db4;
-      text-decoration: none;
+    @media (max-width:480px) {
+      body { font-size:15px; }
+      .services { grid-template-columns:1fr; }
+      .testimonial { width:100%; padding:1.2rem; }
+      .main-header h1 { font-size:1.4rem; }
+      .quote { font-size:1.1rem; padding:1.5rem; }
     }
-
-    main a:not(.btn),
-    section a:not(.btn),
-    .doctoralia-intro a:not(.btn),
-    .faq-a a:not(.btn) {
-      color: #9f7db4 !important;
-    }
-
-    .doctoralia-strip a[href*="#profile-reviews"],
-    .doctoralia-strip a[style*="background:#00bfae"] {
-      color: #fff !important;
-      text-decoration: none;
-    }
-
-    .doctoralia-strip a[style*="color:#00bfae"] {
-      color: #00bfae !important;
-      text-decoration: none;
-    }
-
-    .enlace-malva { color: #9f7db4; }
   </style>
 </head>
 
@@ -813,9 +170,7 @@
       Segueix-me i contacta'm:
       <a href="https://www.instagram.com/mfpsicologia/" target="_blank" aria-label="Seguir a Instagram"><i class="fab fa-instagram"></i></a> |
       <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank" aria-label="Seguir a Facebook"><i class="fab fa-facebook-f"></i></a> |
-      <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies" target="_blank" aria-label="Contactar per WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a> |
+      <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies" target="_blank" aria-label="Contactar per WhatsApp"><i class="fab fa-whatsapp"></i></a> |
       <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correu"><i class="fas fa-envelope"></i></a> |
       <a href="tel:+34695136810" aria-label="Trucar per telèfon"><i class="fas fa-phone"></i></a>
     </div>
@@ -843,7 +198,6 @@
         <p style="margin-bottom:1.1rem;">Soc psicòloga i psicoterapeuta amb <b>10 anys d'experiència</b>.</p>
         <p style="margin-bottom:1.1rem;">Serà un plaer acompanyar-te en el teu procés de transformació personal,</p>
         <p style="margin-bottom:1.5rem;">oferint-te un espai segur on pots sentir-te amb total llibertat.</p>
-        <!-- ✅ FIX: div con clase about-buttons para wrap correcto en móvil -->
         <div class="about-buttons">
           <a href="#" class="btn" id="open-cv-modal">Veure la meva formació</a>
           <a href="biocat.html" class="btn" aria-label="Bio">Bio</a>
@@ -894,7 +248,7 @@
       <div id="pago-detalle-cat" style="display:none;"></div>
       <ul style="display:flex; flex-direction:column; gap:1.1rem;">
         <li>Treballo des d'un enfocament <b>integratiu</b>, constructivista i <b>sistèmic</b>.</li>
-        <li>Aplico diverses <b>tècniques</b> com <a href="tecnica-emdr-catala.html" target="_blank" rel="noopener" aria-label="Enviar correo">EMDR / estimulació bilateral</a>, de <b>PNL</b> i de <b>teràpia Gestalt</b>, quan és adequat.</li>
+        <li>Aplico diverses <b>tècniques</b> com <a href="tecnica-emdr-catala.html" target="_blank" rel="noopener">EMDR / estimulació bilateral</a>, de <b>PNL</b> i de <b>teràpia Gestalt</b>, quan és adequat.</li>
         <li>Explico conceptes i <b>teories</b> per facilitar una millor comprensió de l'ésser humà.</li>
         <li>Ofereixo <b>recursos</b> i eines pràtiques per gestionar les emocions i l'actitud davant la vida.</li>
         <li>Si la persona ho desitja, proposo <b>tasques</b> o reflexions entre sessions per seguir integrant el procés.</li>
@@ -931,10 +285,10 @@
           <p>La teràpia online és igualment eficaç i permet un acompanyament proper, estiguis on estiguis.</p>
           <p>Les sessions online tenen la mateixa durada i cost que les presencials.</p>
           <p>Existeix la possibilitat de combinar sessions online i presencials, si ho necessites.</p>
-          <div style="display:flex; gap: 20px; justify-content: center; margin: 20px auto;">
-            <a href="terapia_online.html" class="btn" style="background:#9f7db4; border:1px solid #9f7db4; color:#fff; display:inline-block; width:fit-content; text-decoration: none; padding: 10px 20px;">Com funciona?</a>
-            <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn" style="background:#9f7db4; border:1px solid #9f7db4; color:#fff; display:inline-block; width:fit-content; text-decoration: none; padding: 10px 20px; position: relative; z-index: 999;">Reserva una sessió</a>
-          </div>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:16px; justify-content:center; margin:20px auto; padding:0 1rem; box-sizing:border-box;">
+          <a href="terapia_online.html" class="btn" style="background:#9f7db4; border:1px solid #9f7db4; color:#fff; display:inline-block; width:fit-content; text-decoration:none; padding:10px 20px;">Com funciona?</a>
+          <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn" style="background:#9f7db4; border:1px solid #9f7db4; color:#fff; display:inline-block; width:fit-content; text-decoration:none; padding:10px 20px; position:relative; z-index:999;">Reserva una sessió</a>
         </div>
       </div>
     </section>
@@ -975,44 +329,24 @@
         <p class="faq-intro" style="text-align:center; color:#38264e; margin-bottom:1rem;">Aquí tens respostes breus als dubtes més habituals:</p>
         <div class="faq-list" id="faq-list">
           <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span>Com puc reservar una sessió?</span><span class="arrow">▾</span>
-            </button>
-            <div class="faq-a">
-              <p>El meu calendari està actualitzat. <b>Només has de triar el dia i l'hora que et vagi millor</b> i fer la reserva gratuïta. Em posaré en contacte amb tu i rebràs un recordatori abans de la visita. <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" rel="noopener">Reserva una sessió</a>.</p>
-            </div>
+            <button class="faq-q" type="button" aria-expanded="false"><span>Com puc reservar una sessió?</span><span class="arrow">▾</span></button>
+            <div class="faq-a"><p>El meu calendari està actualitzat. <b>Només has de triar el dia i l'hora que et vagi millor</b> i fer la reserva gratuïta. Em posaré en contacte amb tu i rebràs un recordatori abans de la visita. <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" rel="noopener">Reserva una sessió</a>.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span>Per a quan podria tenir una sessió?</span><span class="arrow">▾</span>
-            </button>
-            <div class="faq-a">
-              <p>Depenent de la setmana, <b>sovint hi ha hores disponibles</b> dins dels pròxims dies. Les hores més demanades són les de la tarda, a les 18h i les 19h. Et recomano consultar la meva agenda i escollir el dia i l'hora que millor s'adapti a tu. <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" rel="noopener">Reserva una sessió</a>.</p>
-            </div>
+            <button class="faq-q" type="button" aria-expanded="false"><span>Per a quan podria tenir una sessió?</span><span class="arrow">▾</span></button>
+            <div class="faq-a"><p>Depenent de la setmana, <b>sovint hi ha hores disponibles</b> dins dels pròxims dies. Les hores més demanades són les de la tarda, a les 18h i les 19h. Et recomano consultar la meva agenda i escollir el dia i l'hora que millor s'adapti a tu. <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" rel="noopener">Reserva una sessió</a>.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span>Treballes amb asseguradores?</span><span class="arrow">▾</span>
-            </button>
-            <div class="faq-a">
-              <p>No treballo amb asseguradores. Les meves sessions són per a <b>pacients particulars</b>. Si ho necessites, et puc facilitar <b>el justificant o la factura</b> perquè la teva empresa et pugui abonar part o la totalitat de les sessions.</p>
-            </div>
+            <button class="faq-q" type="button" aria-expanded="false"><span>Treballes amb asseguradores?</span><span class="arrow">▾</span></button>
+            <div class="faq-a"><p>No treballo amb asseguradores. Les meves sessions són per a <b>pacients particulars</b>. Si ho necessites, et puc facilitar <b>el justificant o la factura</b> perquè la teva empresa et pugui abonar part o la totalitat de les sessions.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span>Què passa a la primera sessió?</span><span class="arrow">▾</span>
-            </button>
-            <div class="faq-a">
-              <p>A la primera sessió ens coneixem i explorem <b>què t'ha portat a demanar ajuda, com t'estàs sentint i què necessites</b>. Parlem del que t'agradaria aconseguir amb la teràpia i valorem com enfocar-ho plegats. El més important és <b>fer el primer pas</b> per començar a comprendre't i acompanyar-te millor.</p>
-            </div>
+            <button class="faq-q" type="button" aria-expanded="false"><span>Què passa a la primera sessió?</span><span class="arrow">▾</span></button>
+            <div class="faq-a"><p>A la primera sessió ens coneixem i explorem <b>què t'ha portat a demanar ajuda, com t'estàs sentint i què necessites</b>. Parlem del que t'agradaria aconseguir amb la teràpia i valorem com enfocar-ho plegats. El més important és <b>fer el primer pas</b> per començar a comprendre't i acompanyar-te millor.</p></div>
           </div>
           <div class="faq-item">
-            <button class="faq-q" type="button" aria-expanded="false">
-              <span>Quina durada i freqüència tenen les sessions?</span><span class="arrow">▾</span>
-            </button>
-            <div class="faq-a">
-              <p>Les sessions duren <b>una hora</b>. La freqüència depèn de cada cas: al principi acostuma a ser <b>setmanal o quinzenal</b>, i més endavant s'adapta segons el nivell de malestar, el moment vital i les preferències de la persona.</p>
-            </div>
+            <button class="faq-q" type="button" aria-expanded="false"><span>Quina durada i freqüència tenen les sessions?</span><span class="arrow">▾</span></button>
+            <div class="faq-a"><p>Les sessions duren <b>una hora</b>. La freqüència depèn de cada cas: al principi acostuma a ser <b>setmanal o quinzenal</b>, i més endavant s'adapta segons el nivell de malestar, el moment vital i les preferències de la persona.</p></div>
           </div>
         </div>
       </div>
@@ -1042,23 +376,14 @@
         <li>Monogràfic de Teràpia de Parella a Dendros Centre de Psicologia</li>
         <li>Curs de Kinesiologia Emocional al Centre Uniun</li>
       </ul>
-      <p>Tota aquesta formació teòrica i pràctica m'ha proporcionat les eines</p>
-      <p>per <b>acompanyar-te d'una manera segura, propera i efectiva</b>, amb l'objectiu</p>
-      <p>que puguis millorar el teu benestar emocional.</p>
+      <p>Tota aquesta formació teòrica i pràctica m'ha proporcionat les eines per <b>acompanyar-te d'una manera segura, propera i efectiva</b>, amb l'objectiu que puguis millorar el teu benestar emocional.</p>
     </div>
   </div>
 
   <script>
-    document.getElementById('open-cv-modal').onclick = function (e) {
-      e.preventDefault();
-      document.getElementById('cv-modal').style.display = 'flex';
-    };
-    document.getElementById('close-cv-modal').onclick = function () {
-      document.getElementById('cv-modal').style.display = 'none';
-    };
-    document.getElementById('cv-modal').onclick = function (e) {
-      if (e.target === this) this.style.display = 'none';
-    };
+    document.getElementById('open-cv-modal').onclick = function(e) { e.preventDefault(); document.getElementById('cv-modal').style.display = 'flex'; };
+    document.getElementById('close-cv-modal').onclick = function() { document.getElementById('cv-modal').style.display = 'none'; };
+    document.getElementById('cv-modal').onclick = function(e) { if (e.target === this) this.style.display = 'none'; };
   </script>
 
   <script>
@@ -1066,9 +391,7 @@
     const prevBtn = document.querySelector('.image-carousel .prev');
     const nextBtn = document.querySelector('.image-carousel .next');
     let current = 0;
-    function showImg(idx) {
-      imgs.forEach((img, i) => img.classList.toggle('active', i === idx));
-    }
+    function showImg(idx) { imgs.forEach((img, i) => img.classList.toggle('active', i === idx)); }
     if (prevBtn && nextBtn && imgs.length > 0) {
       prevBtn.onclick = () => { current = (current - 1 + imgs.length) % imgs.length; showImg(current); };
       nextBtn.onclick = () => { current = (current + 1) % imgs.length; showImg(current); };
@@ -1077,21 +400,13 @@
 
   <script>
     const tabBtns = document.querySelectorAll('.tab-btn');
-    const tabContents = {
-      barcelona: document.getElementById('tab-barcelona'),
-      online: document.getElementById('tab-online')
-    };
+    const tabContents = { barcelona: document.getElementById('tab-barcelona'), online: document.getElementById('tab-online') };
     tabBtns.forEach(btn => {
-      btn.onclick = function () {
+      btn.onclick = function() {
         tabBtns.forEach(b => b.classList.remove('active'));
         this.classList.add('active');
-        if (this.dataset.tab === 'barcelona') {
-          tabContents.barcelona.style.display = 'block';
-          tabContents.online.style.display = 'none';
-        } else {
-          tabContents.barcelona.style.display = 'none';
-          tabContents.online.style.display = 'block';
-        }
+        if (this.dataset.tab === 'barcelona') { tabContents.barcelona.style.display = 'block'; tabContents.online.style.display = 'none'; }
+        else { tabContents.barcelona.style.display = 'none'; tabContents.online.style.display = 'block'; }
       };
     });
   </script>
@@ -1116,80 +431,51 @@
       cont.innerHTML = '';
       for (let i = 0; i < testimoniosPorVista; i++) {
         const tIdx = (idxTestimonio + i) % testimonios.length;
-        const t = testimonios[tIdx];
         const div = document.createElement('div');
         div.className = 'testimonial';
-        div.innerHTML = '<i class="fas fa-quote-left"></i><p>"' + t.texto + '"</p>';
+        div.innerHTML = '<i class="fas fa-quote-left"></i><p>"' + testimonios[tIdx].texto + '"</p>';
         cont.appendChild(div);
       }
     }
-    document.querySelector('.testimonial-prev').onclick = function () {
-      idxTestimonio = (idxTestimonio - testimoniosPorVista + testimonios.length) % testimonios.length;
-      renderTestimonios();
-    };
-    document.querySelector('.testimonial-next').onclick = function () {
-      idxTestimonio = (idxTestimonio + testimoniosPorVista) % testimonios.length;
-      renderTestimonios();
-    };
+    document.querySelector('.testimonial-prev').onclick = function() { idxTestimonio = (idxTestimonio - testimoniosPorVista + testimonios.length) % testimonios.length; renderTestimonios(); };
+    document.querySelector('.testimonial-next').onclick = function() { idxTestimonio = (idxTestimonio + testimoniosPorVista) % testimonios.length; renderTestimonios(); };
     renderTestimonios();
   </script>
 
   <script>
-    document.getElementById('abrir-pago-cat').onclick = function (e) {
+    document.getElementById('abrir-pago-cat').onclick = function(e) {
       e.preventDefault();
       const detalle = document.getElementById('pago-detalle-cat');
-      if (detalle.style.display === 'block') {
-        detalle.style.display = 'none';
-        return;
-      }
+      if (detalle.style.display === 'block') { detalle.style.display = 'none'; return; }
       detalle.innerHTML = `
         <div style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08); padding:1.2rem; margin-top:1rem;">
           <h4 style="color:#9f7db4; margin-bottom:1rem;">Formes de pagament</h4>
           <p>Ofereixo diverses opcions per facilitar-ho:</p>
-          <ul style="display:flex; flex-direction:column; gap:1.1rem;">
-            <li>Transferència bancària</li>
-            <li>Targeta</li>
-            <li>Efectiu</li>
-          </ul>
+          <ul style="display:flex; flex-direction:column; gap:1.1rem;"><li>Transferència bancària</li><li>Targeta</li><li>Efectiu</li></ul>
           <p>El pagament es pot realitzar abans o just després de la sessió, segons el que et sigui més còmode.</p>
           <button class="btn cerrar-pago" style="margin-top:1.2rem;">Tancar</button>
-        </div>
-      `;
+        </div>`;
       detalle.style.display = 'block';
-      detalle.querySelector('.cerrar-pago').onclick = function () {
-        detalle.style.display = 'none';
-      };
+      detalle.querySelector('.cerrar-pago').onclick = function() { detalle.style.display = 'none'; };
     };
   </script>
 
   <script>
-    (function () {
+    (function() {
       const list = document.getElementById('faq-list');
       if (!list) return;
       list.querySelectorAll('.faq-a').forEach(a => a.style.maxHeight = '0');
-      list.addEventListener('click', function (e) {
+      list.addEventListener('click', function(e) {
         const btn = e.target.closest('.faq-q');
         if (!btn) return;
         const item = btn.parentElement;
         const answer = item.querySelector('.faq-a');
         const open = item.classList.contains('open');
         list.querySelectorAll('.faq-item.open').forEach(it => {
-          if (it !== item) {
-            it.classList.remove('open');
-            it.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
-            const a = it.querySelector('.faq-a');
-            if (a) a.style.maxHeight = '0';
-          }
+          if (it !== item) { it.classList.remove('open'); it.querySelector('.faq-q').setAttribute('aria-expanded','false'); const a = it.querySelector('.faq-a'); if (a) a.style.maxHeight = '0'; }
         });
-        if (open) {
-          item.classList.remove('open');
-          btn.setAttribute('aria-expanded', 'false');
-          if (answer) answer.style.maxHeight = '0';
-        } else {
-          item.classList.add('open');
-          btn.setAttribute('aria-expanded', 'true');
-          if (answer) answer.style.maxHeight = answer.scrollHeight + 'px';
-        }
+        if (open) { item.classList.remove('open'); btn.setAttribute('aria-expanded','false'); if (answer) answer.style.maxHeight = '0'; }
+        else { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); if (answer) answer.style.maxHeight = answer.scrollHeight + 'px'; }
       });
     })();
   </script>
@@ -1199,5 +485,4 @@
     <i class="fab fa-whatsapp"></i>
   </a>
 </body>
-
 </html>
