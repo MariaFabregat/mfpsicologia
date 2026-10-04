@@ -45,6 +45,10 @@ a[href^="mailto:"] {
   color: #fff !important;
 }
   </style>
+  <!-- Cookies y Google Analytics (solo con consentimiento) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
+  <script defer src="cookies.js"></script>
 </head>
 <body>
   <header class="top-bar">
@@ -65,7 +69,7 @@ a[href^="mailto:"] {
         <h1>Els meus enllaços</h1>
         <p style="margin:0.5rem 0 0;">Accés ràpid a la reserva, el meu perfil professional i els meus continguts.</p>
       </div>
-      <img src="./images/logoH_negatiu.png" alt="Logo María Fabregat" style="height:90px;">
+      <img src="./images/logoH_negatiu.png?v=eed12e92" alt="Logo María Fabregat" style="height:90px;">
     </div>
   </div>
 
@@ -125,6 +129,7 @@ a[href^="mailto:"] {
     </a>
   </p>
   <p>&copy; 2026 Maria Fabregat</p>
+  <p style="font-size:.85rem;"><a href="avis-legal.html">Avís legal</a> · <a href="privacitat.html">Privacitat</a> · <a href="politica-galetes.html">Galetes</a> · <a href="#" data-cc="show-preferencesModal">Configura les galetes</a></p>
   </footer>
 
   <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20m%27agradaria%20tenir%20una%20sessi%C3%B3%20amb%20tu.%20Em%20podries%20dir%20com%20ho%20podem%20concretar%3F%20Gr%C3%A0cies"

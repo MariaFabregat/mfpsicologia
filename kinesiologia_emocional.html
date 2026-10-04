@@ -55,6 +55,10 @@
         .whatsapp-float{ position:fixed !important; bottom:20px; right:20px; width:60px; height:60px; background:#25d366; color:#fff; border-radius:50%; text-align:center; font-size:32px; line-height:60px; z-index:9999; box-shadow:0 2px 6px rgba(0,0,0,.3); transition:all .3s; }
         @media (max-width:900px){ .main-header{ padding:2rem 1rem; } }
     </style>
+  <!-- Cookies y Google Analytics (solo con consentimiento) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
+  <script defer src="cookies.js"></script>
 </head>
 
 <body>
@@ -135,7 +139,8 @@
             </a>
         </p>
         <p>&copy; 2026 Maria Fabregat</p>
-    </footer>
+  <p style="font-size:.85rem;"><a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="politica-cookies.html">Cookies</a> · <a href="#" data-cc="show-preferencesModal">Configurar cookies</a></p>
+  </footer>
 
     <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo.%20%C2%BFPodr%C3%ADas%20decirme%20c%C3%B3mo%20podemos%20concretarla%3F%20Gracias"
         class="whatsapp-float"

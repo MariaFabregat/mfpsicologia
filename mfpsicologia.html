@@ -10,17 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-  <link rel="preload" href="./images/logoH_negatiu.png" as="image" fetchpriority="high">
+  <link rel="preload" href="./images/logoH_negatiu.png?v=eed12e92" as="image" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans&display=swap"
     rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-WNHK6D9FLW"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-WNHK6D9FLW');
-  </script>
   <style>
     body {
       margin: 0;
@@ -791,6 +784,10 @@
       .quote { font-size: 1.1rem; padding: 1.5rem; }
     }
   </style>
+  <!-- Cookies y Google Analytics (solo con consentimiento) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
+  <script defer src="cookies.js"></script>
 </head>
 
 <body>
@@ -816,12 +813,12 @@
           <p>Psicoterapia integradora para adultos y parejas</p>
           <a href="https://www.doctoralia.es/maria-fabregat-i-giribet/psicologo/barcelona" target="_blank" class="btn">Reserva una sesión</a>
         </div>
-        <img src="./images/logoH_negatiu.png" alt="Logo María Fabregat" fetchpriority="high">
+        <img src="./images/logoH_negatiu.png?v=eed12e92" alt="Logo María Fabregat" fetchpriority="high">
       </div>
     </div>
 
     <section class="about">
-      <img src="./images/maria-fabregat-psicologa-barcelona.jpg" alt="Maria Fabregat">
+      <img src="./images/maria-fabregat-psicologa-barcelona.jpg?v=cf7c9284" alt="Maria Fabregat">
       <div>
         <h2>Sobre mí</h2>
         <p style="margin-bottom:1.1rem;">Soy psicóloga y psicoterapeuta con <b>10 años de experiencia</b>.</p>
@@ -919,11 +916,11 @@
         <div class="content-flex" style="margin-top:3rem;">
           <div class="carousel-col">
             <div class="image-carousel">
-              <img src="./images/psicologa-consulta-barcelona.jpg" alt="Consulta psicológica" class="carousel-img active">
+              <img src="./images/psicologa-consulta-barcelona.jpg?v=c6313977" alt="Consulta psicológica" class="carousel-img active">
             </div>
           </div>
           <div class="map-col">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.668792385364!2d2.1718998121556505!3d41.42470789355895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3a28c1e7b05%3A0xbd73673816a85ae!2sPsicologa%20Maria%20Fabregat!5e0!3m2!1sca!2ses!4v1749044221132!5m2!1sca!2ses"
+            <iframe class="consent-map" data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.668792385364!2d2.1718998121556505!3d41.42470789355895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a3a28c1e7b05%3A0xbd73673816a85ae!2sPsicologa%20Maria%20Fabregat!5e0!3m2!1sca!2ses!4v1749044221132!5m2!1sca!2ses"
               style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
           </div>
@@ -1055,6 +1052,46 @@
       })();
     </script>
 
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="2e630715-87f4-478e-80ba-42e7c995fb14">
+        <input type="hidden" name="subject" value="Nuevo mensaje desde la web (ES)">
+        <input type="hidden" name="from_name" value="Web Maria Fabregat">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <input type="text" name="nombre" placeholder="Nombre" autocomplete="name" required>
+        <input type="email" name="email" placeholder="Email" autocomplete="email" required>
+        <input type="tel" name="telefono" placeholder="Teléfono (opcional)" autocomplete="tel">
+        <textarea name="mensaje" rows="4" placeholder="Escribe tu mensaje..." required></textarea>
+        <label style="font-size:.9rem; display:flex; gap:.5rem; align-items:flex-start;">
+          <input type="checkbox" required style="margin-top:.2rem;">
+          <span>He leído y acepto la <a href="privacidad.html">política de privacidad</a>.</span>
+        </label>
+        <button type="submit" class="btn">Enviar</button>
+        <p id="form-status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+    <script>
+      (function () {
+        var form = document.getElementById('contact-form');
+        var status = document.getElementById('form-status');
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var btn = form.querySelector('button[type="submit"]');
+          btn.disabled = true;
+          status.textContent = 'Enviando...';
+          fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+            .then(function (res) { return res.json(); })
+            .then(function (data) {
+              if (data.success) { form.reset(); status.textContent = '¡Gracias! He recibido tu mensaje y te responderé lo antes posible.'; }
+              else { status.textContent = 'No se ha podido enviar. Escríbeme a mariafabregat@copc.cat o por WhatsApp.'; }
+            })
+            .catch(function () { status.textContent = 'No se ha podido enviar. Escríbeme a mariafabregat@copc.cat o por WhatsApp.'; })
+            .finally(function () { btn.disabled = false; });
+        });
+      })();
+    </script>
+
     <footer>
       <p>Sígueme y contáctame:
         <a href="https://www.instagram.com/mfpsicologia/" target="_blank" aria-label="Seguir en Instagram"><i class="fab fa-instagram"></i></a> |
@@ -1064,7 +1101,8 @@
         <a href="tel:+34695136810" aria-label="Llamar por teléfono"><i class="fas fa-phone"></i></a>
       </p>
       <p>&copy; 2026 Maria Fabregat</p>
-    </footer>
+  <p style="font-size:.85rem;"><a href="aviso-legal.html">Aviso legal</a> · <a href="privacidad.html">Privacidad</a> · <a href="politica-cookies.html">Cookies</a> · <a href="#" data-cc="show-preferencesModal">Configurar cookies</a></p>
+  </footer>
   </main>
 
   <!-- Modal Ver mi formación -->

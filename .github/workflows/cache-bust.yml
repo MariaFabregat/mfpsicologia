@@ -1,0 +1,35 @@
+# Actualiza la versión (?v=...) de las imágenes cada vez que cambia una imagen o una página,
+# para que los navegadores no muestren versiones antiguas guardadas en caché.
+name: Versionar imágenes
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "images/**"
+      - "*.html"
+      - "tools/cache-bust.py"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  cache-bust:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Actualizar versiones de imágenes
+        run: python3 tools/cache-bust.py
+
+      - name: Guardar cambios
+        run: |
+          if git diff --quiet; then
+            echo "Las versiones ya estaban al día."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
+          git commit -am "Actualizar versiones de imágenes"
+          git push
