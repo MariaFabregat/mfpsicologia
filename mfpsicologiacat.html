@@ -38,6 +38,7 @@
     .services { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:1rem; text-align:center; }
     .service { background-color:#f9f3fc; padding:1rem; border-radius:8px; }
     .service-icon { font-size:2rem; color:#ddc8f1; margin-bottom:0.5rem; }
+    .service-img { display:block; width:100%; aspect-ratio:4/3; height:auto; object-fit:cover; border-radius:6px; margin-bottom:0.5rem; }
     .quote { text-align:center; font-family:'Playfair Display',serif; font-size:1.4rem; padding:2rem 1rem; background-color:#e5daf0; }
 
     .testimonios { background-color:#bfa4d1; padding:3.5rem 0; text-align:center; width:100vw; min-width:100vw; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; position:relative; box-sizing:border-box; }
@@ -53,7 +54,7 @@
     .testimonial i { color:#bfa4d1; font-size:1.7rem; position:absolute; top:1rem; left:1rem; }
 
     .image-carousel { position:relative; width:100%; min-width:250px; max-width:500px; aspect-ratio:4/3; margin:1rem 0; display:flex; align-items:center; justify-content:center; overflow:hidden; border-radius:8px; background:#fff; }
-    .carousel-img { display:none; width:100%; height:auto; border-radius:8px; object-fit:cover; }
+    .carousel-img { display:none; width:100%; height:100%; border-radius:8px; object-fit:cover; }
     .carousel-img.active { display:block; }
     .carousel-btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(159,125,180,0.8); color:#fff; border:none; border-radius:50%; width:2.2rem; height:2.2rem; font-size:1.5rem; cursor:pointer; z-index:2; transition:background 0.2s; }
     .carousel-btn.prev { left:10px; }
@@ -195,7 +196,7 @@
     </div>
 
     <section class="about">
-      <img src="./images/maria-fabregat-psicologa-barcelona.jpg?v=97fac81e" alt="Maria Fabregat">
+      <img src="./images/maria-fabregat-psicologa-barcelona-optimizada.jpg" alt="Maria Fabregat, psicòloga a Barcelona">
       <div>
         <h2>Sobre mi</h2>
         <p style="margin-bottom:1.1rem;">Soc psicòloga i psicoterapeuta amb <b>12 anys d'experiència</b>.</p>
@@ -213,22 +214,22 @@
       <h2>Serveis</h2>
       <div class="services">
         <div class="service">
-          <div class="service-icon"><i class="fas fa-user"></i></div>
+          <img class="service-img" src="./images/terapia-individual-barcelona-optimizada.jpg" alt="Psicoteràpia individual a Barcelona" loading="lazy" style="object-position:center 58%;">
           <h3>Psicoteràpia individual</h3>
           <a href="servicio_psicoterapiacat.html" class="btn">Saber-ne més</a>
         </div>
         <div class="service">
-          <div class="service-icon"><i class="fas fa-users"></i></div>
+          <img class="service-img" src="./images/terapia-pareja-barcelona-optimizada.jpg" alt="Teràpia de parella a Barcelona" loading="lazy" style="object-position:center 40%;">
           <h3>Teràpia de parella</h3>
           <a href="servicio_terapiaparejacat.html" class="btn">Saber-ne més</a>
         </div>
         <div class="service">
-          <div class="service-icon"><i class="fas fa-spa"></i></div>
+          <img class="service-img" src="./images/terapia-kinesiologia-barcelona-optimizada.jpg" alt="Kinesiologia emocional a Barcelona" loading="lazy" style="object-position:center 20%;">
           <h3>Kinesiologia emocional</h3>
           <a href="servicio_kinesiologiaemocionalcat.html" class="btn">Saber-ne més</a>
         </div>
         <div class="service">
-          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <img class="service-img" src="./images/supervision-psicologos-barcelona-optimizada.jpg" alt="Supervisió de teràpies per a psicòlegs a Barcelona" loading="lazy" style="object-position:center 35%;">
           <h3>Supervisió de teràpies</h3>
           <a href="servicio_supervisionterapiascat.html" class="btn">Saber-ne més</a>
         </div>
@@ -256,6 +257,7 @@
         <li>Ofereixo <b>recursos</b> i eines pràtiques per gestionar les emocions i l'actitud davant la vida.</li>
         <li>Si la persona ho desitja, proposo <b>tasques</b> o reflexions entre sessions per seguir integrant el procés.</li>
       </ul>
+      <img src="./images/psicoterapia-integrativa-barcelona-optimizada.jpg" alt="Consulta de psicoteràpia integrativa a Barcelona" loading="lazy" style="display:block; width:100%; max-width:700px; height:auto; margin:2rem auto 0; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.08);">
     </section>
 
     <section class="presencial-online">
@@ -270,7 +272,10 @@
         <div class="content-flex" style="margin-top:3rem;">
           <div class="carousel-col">
             <div class="image-carousel">
-              <img src="./images/psicologa-consulta-barcelona.jpg?v=c6313977" alt="Consulta psicológica" class="carousel-img active">
+              <img src="./images/psicologa-consulta-barcelona.jpg?v=c6313977" alt="Consulta psicològica" class="carousel-img active">
+              <img src="./images/consulta-psicologia-barcelona-optimizada.jpg" alt="Racó de la consulta de psicologia a Barcelona" class="carousel-img" loading="lazy">
+              <button class="carousel-btn prev" type="button" aria-label="Foto anterior">&#10094;</button>
+              <button class="carousel-btn next" type="button" aria-label="Foto següent">&#10095;</button>
             </div>
           </div>
           <div class="map-col">
