@@ -18,20 +18,23 @@
         .main-header-inner{ max-width:1000px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:2rem; width:100%; }
         .main-header h1{ font-family:'Playfair Display',serif; font-size:2rem; margin:.5rem 0; color:#fff; }
         
+        /* Barra de Categorías */
         .blog-categories-bar { background: #ffffff; border-bottom: 1px solid #e6d4ef; padding: 1.2rem 0; text-align: center; width: 100%; clear: both; }
         .blog-categories-bar ul { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; flex-wrap: wrap; gap: 2rem; }
         .blog-categories-bar a { text-decoration: none; color: #555; font-weight: 600; font-size: 0.95rem; transition: all 0.3s ease; cursor: pointer; }
         .blog-categories-bar a:hover, .blog-categories-bar a.active { color: #38264e; border-bottom: 2px solid #bfa4d1; }
 
+        /* Lista del Blog */
         .blog-list { max-width: 900px; margin: 2rem auto; padding: 20px; background: #fff; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
         .blog-list article { border-bottom: 1px solid #ddd; padding-bottom: 20px; margin-bottom: 20px; }
         .blog-list article:last-child { border-bottom: none; }
         .blog-list h2 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 5px; color: #38264e; }
         .blog-list a { text-decoration: none; color: #38264e; }
 
+        /* Paginación */
         .pagination { display: flex; justify-content: center; align-items: center; gap: 8px; margin: 2rem 0; padding-bottom: 1rem; }
         .pagination a, .pagination span { padding: 8px 14px; border-radius: 4px; border: 1px solid #ccc; text-decoration: none; color: #38264e; background: #fff; }
-        .pagination .current { background: #38264e; color: #fff; border-color: #38264e; }
+        .pagination .current { background: #38264e; color: #fff; }
 
         footer{ background:#38264e; color:#fff; text-align:center; padding:1.5rem; margin-top:2rem; }
         footer a { color: #fff !important; text-decoration: none; margin: 0 .4rem; }
@@ -60,14 +63,14 @@
     <header class="top-bar">
         <div>
             Segueix-me i contacta'm:
-            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> |
-            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> |
-            <a href="https://wa.me/34695136810" target="_blank"><i class="fab fa-whatsapp"></i></a> |
-            <a href="mailto:mariafabregat@copc.cat"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank" aria-label="Seguir a Instagram"><i class="fab fa-instagram"></i></a> |
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank" aria-label="Seguir a Facebook"><i class="fab fa-facebook-f"></i></a> |
+            <a href="https://wa.me/34695136810" target="_blank" aria-label="Contactar per WhatsApp"><i class="fab fa-whatsapp"></i></a> |
+            <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correu"><i class="fas fa-envelope"></i></a>
         </div>
         <div class="top-bar-nav">
             <a href="mfpsicologiacat.html" class="btn-inicio">Inici</a>
-            <a href="blog.html">Castellano</a>
+            <a href="blog-2.html">Castellano</a>
         </div>
     </header>
 
@@ -82,7 +85,7 @@
 
     <nav class="blog-categories-bar">
         <ul>
-            <li><a href="blog-cat2.html" class="active">Tots</a></li>
+            <li><a href="blog-cat.html" class="active">Tots</a></li>
             <li><a href="categoria-processos.html">Processos Psicològics</a></li>
             <li><a href="categoria-eines.html">Eines</a></li>
             <li><a href="categoria-tecniques.html">Tècniques</a></li>
@@ -92,6 +95,47 @@
     
     <div class="blog-list">
 
+        <article class="category-eines">
+            <a href="posar-limits-sense-culpa.html"><h2>L'Art de posar límits sense sentir culpa</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 12 de març de 2026</p>
+            <p>Aprèn a posar límits de forma saludable. Descobreix com dir "no", protegir la teva energia i enfortir la teva autoestima sense malmetre les teves relacions...</p>
+            <a href="posar-limits-sense-culpa.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
+
+        <article class="category-processos">
+            <a href="intimitat-parella.html"><h2>L'intimitat en parella: com tornar a regar-la</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 28 de febrer de 2026</p>
+            <p>Sents que la intimitat en parella s'apaga? Descobreix com reconnectar, enfortir el vincle i cuidar la vostra relació...</p>
+            <a href="intimitat-parella.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
+
+        <article class="category-processos">
+            <a href="ansietat.html"><h2>El Cercle Viciós de l'Ansietat: Com Trencar-lo?</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 19 de febrer de 2026</p>
+            <p>L'ansietat s'alimenta de pensaments catastrofistes i conductes d'evitació. Aprèn a trencar aquest cercle...</p>
+            <a href="ansietat.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
+
+        <article class="category-eines">
+            <a href="del-desig-a-l-accio.html"><h2>Del desig a l'acció: Claus per a la motivació duradera</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 27 de gener de 2026</p>
+            <p>Per què costa tant mantenir la motivació? Des de la teràpia cognitiva...</p>
+            <a href="del-desig-a-l-accio.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
+
+        <article class="category-tecniques">
+            <a href="reprocessament-de-traumes.html"><h2>Reescriu la teva Història amb EMDR</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 11 de gener de 2026</p>
+            <p>La teva història no és la teva presó. Descobreix com les tècniques de reprocessament...</p>
+            <a href="reprocessament-de-traumes.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
+
+        <article class="category-processos">
+            <a href="crisi-parella.html"><h2>"Ja no som els mateixos”: navegant crisi de parella</h2></a>
+            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 28 de desembre de 2025</p>
+            <p>Descobreix com entendre la dinàmica de la relació i decidir si reparar o acabar-la...</p>
+            <a href="crisi-parella.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
+        </article>
 
         <article class="category-processos">
             <a href="preguntes-frequents.html"><h2>Preguntes freqüents sobre Teràpia</h2></a>
@@ -106,7 +150,7 @@
             <p>Descobreix com el cos actua com un arxiu biològic...</p>
             <a href="kinesiologia-emocional.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
         </article>
-        
+
         <article class="category-eines">
             <a href="article-rols-reactius.html"><h2>Víctima, salvador i perseguidor: rols que fan malbé les teves relacions</h2></a>
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 18 de desembre de 2025</p>
@@ -119,13 +163,6 @@
             <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 18 de desembre de 2025</p>
             <p>Connecta amb els teus valors personals per prendre decisions amb més claredat...</p>
             <a href="valors-personals.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
-        </article>
-
-        <article class="category-processos">
-            <a href="crisi-parella.html"><h2>"Ja no som els mateixos”: navegant crisi de parella</h2></a>
-            <p class="post-meta" style="color:#6d6d6d; font-size:0.9rem;">Publicat el 28 de desembre de 2025</p>
-            <p>Descobreix com entendre la dinàmica de la relació i decidir si reparar o acabar-la...</p>
-            <a href="crisi-parella.html" style="color:#9f7db4; font-weight:bold;">Continuar llegint...</a>
         </article>
 
         <article class="category-processos">
@@ -145,16 +182,19 @@
 
     <footer>
         <p>Segueix-me i contacta'm:
-            <a href="https://www.instagram.com/mfpsicologia/" target="_blank"><i class="fab fa-instagram"></i></a> | 
-            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank"><i class="fab fa-facebook-f"></i></a> | 
-            <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20me%20gustar%C3%ADa%20tener%20una%20sesi%C3%B3n%20contigo." target="_blank"><i class="fab fa-whatsapp"></i></a> |
-            <a href="mailto:mariafabregat@copc.cat"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.instagram.com/mfpsicologia/" target="_blank" aria-label="Seguir a Instagram"><i class="fab fa-instagram"></i></a> | 
+            <a href="https://www.facebook.com/profile.php?id=100013945921998" target="_blank" aria-label="Seguir a Facebook"><i class="fab fa-facebook-f"></i></a> | 
+            <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20em%20gustaria%20tenir%20una%20sessi%C3%B3%20amb%20tu." target="_blank" aria-label="Contactar per WhatsApp"><i class="fab fa-whatsapp"></i></a> |
+            <a href="mailto:mariafabregat@copc.cat" aria-label="Enviar correu"><i class="fas fa-envelope"></i></a>
         </p>
         <p>&copy; 2026 Maria Fabregat | Psicòloga Col. nº 22083</p>
   <p style="font-size:.85rem;"><a href="avis-legal.html">Avís legal</a> · <a href="privacitat.html">Privacitat</a> · <a href="politica-galetes.html">Galetes</a> · <a href="#" data-cc="show-preferencesModal">Configura les galetes</a></p>
   </footer>
 
-    <a href="https://wa.me/34695136810" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+    <a href="https://wa.me/34695136810?text=Hola%20Maria%2C%20em%20gustaria%20tenir%20una%20sessi%C3%B3%20amb%20tu."
+        class="whatsapp-float"
+        target="_blank"
+        aria-label="Contactar per WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 </body>
